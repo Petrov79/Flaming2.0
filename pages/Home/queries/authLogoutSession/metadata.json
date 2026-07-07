@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4cc5104ac43d2e7de42d86_19ac5e1d-a728-4e47-9c4f-01b0dd9bbf86",
-  "id": "Logowanie_createSession",
+  "gitSyncId": "6a4d033ae3824d264e76aad9_a9379db8-f2a9-48fd-bf2e-efe06d3cef2b",
+  "id": "Home_authLogoutSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO sessions\n(\n    user_id,\n    expires_at\n)\nVALUES\n(\n    {{ loginUser.data?.[0]?.id ?? -1 }},\n    CURRENT_TIMESTAMP + interval '30 minutes'\n)\nRETURNING\n    token,\n    expires_at,\n    created_at;",
+      "body": "DELETE\nFROM sessions\nWHERE token = {{ appsmith.store.session.token }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "createSession",
-    "pageId": "Logowanie",
+    "name": "authLogoutSession",
+    "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

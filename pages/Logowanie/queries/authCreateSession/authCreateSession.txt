@@ -5,7 +5,7 @@ INSERT INTO sessions
 )
 VALUES
 (
-    {{ loginUser.data?.[0]?.id ?? -1 }},
+    {{ authLogin.data?.[0]?.id ?? -1 }},
     CURRENT_TIMESTAMP + interval '30 minutes'
 )
 RETURNING

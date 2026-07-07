@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_864ffdfe-2928-4e9e-8abc-54706a14ced9",
-  "id": "Home_Auth.logout",
+  "gitSyncId": "6a4d033ae3824d264e76aad9_84f477aa-f8ec-4b65-aa92-cf17fda618e5",
+  "id": "Home_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "Auth.logout",
-    "name": "logout",
+    "fullyQualifiedName": "Auth.forceLogout",
+    "name": "forceLogout",
     "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

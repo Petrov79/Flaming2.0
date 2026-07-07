@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4cc5104ac43d2e7de42d86_a5a30dc7-3a9b-43fc-84c4-ee6885d199d4",
-  "id": "Logowanie_loginUser",
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_19ac5e1d-a728-4e47-9c4f-01b0dd9bbf86",
+  "id": "Logowanie_authCreateSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    u.id,\n    u.name,\n    u.mail,\n    r.id   AS role_id,\n    r.code AS role_code,\n    r.name AS role_name\nFROM users u\nJOIN roles r\n    ON r.id = u.role_id\nWHERE\n    u.mail = {{ mail_input.text }}\n    AND u.password = crypt({{ password_input.text }}, u.password);",
+      "body": "INSERT INTO sessions\n(\n    user_id,\n    expires_at\n)\nVALUES\n(\n    {{ authLogin.data?.[0]?.id ?? -1 }},\n    CURRENT_TIMESTAMP + interval '30 minutes'\n)\nRETURNING\n    token,\n    expires_at,\n    created_at;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "loginUser",
+    "name": "authCreateSession",
     "pageId": "Logowanie",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

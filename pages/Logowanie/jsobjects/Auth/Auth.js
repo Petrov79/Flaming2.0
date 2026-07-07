@@ -3,47 +3,51 @@ export default {
     try {
 
       // 1. Sprawdzenie loginu i hasła
-      await loginUser.run();
+      await authLogin.run();
 
-      if (loginUser.data.length === 0) {
-        showAlert("Niepoprawny login lub hasło", "error");
+      if (!authLogin.data?.length) {
+        showAlert("Niepoprawny login lub hasło.", "error");
         return;
       }
 
+      const user = authLogin.data[0];
+
       // 2. Usunięcie poprzednich sesji użytkownika
-      await deleteOldSessions.run();
+      await authDeleteSessions.run();
 
       // 3. Utworzenie nowej sesji
-      await createSession.run();
+      await authCreateSession.run();
+
+      const session = authCreateSession.data[0];
 
       // 4. Wyczyszczenie store
       await clearStore();
 
       // 5. Zapis sesji
       await storeValue("session", {
-        token: createSession.data[0].token,
-        createdAt: createSession.data[0].created_at,
-        expiresAt: createSession.data[0].expires_at,
+        token: session.token,
+        createdAt: session.created_at,
+        expiresAt: session.expires_at,
 
         user: {
-          id: loginUser.data[0].id,
-          name: loginUser.data[0].name,
-          mail: loginUser.data[0].mail,
+          id: user.id,
+          name: user.name,
+          mail: user.mail,
 
           role: {
-            id: loginUser.data[0].role_id,
-            code: loginUser.data[0].role_code,
-            name: loginUser.data[0].role_name
+            id: user.role_id,
+            code: user.role_code,
+            name: user.role_name
           }
         }
       });
 
       // 6. Przejście do strony głównej
-      navigateTo("Home");
+      await navigateTo("Home");
 
     } catch (e) {
       console.error(e);
-      showAlert("Błąd logowania", "error");
+      showAlert("Błąd logowania: " + e.message, "error");
     }
   }
 }

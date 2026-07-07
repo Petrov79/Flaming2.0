@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4cc5104ac43d2e7de42d86_2c91ae62-5dd4-4915-948f-12a6b1f56115",
-  "id": "Logowanie_deleteOldSessions",
+  "gitSyncId": "6a4d033ae3824d264e76aad9_827216cb-2584-41c0-bc24-3024628186cf",
+  "id": "Home_Test",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE\nFROM sessions\nWHERE user_id = {{ loginUser.data?.[0]?.id ?? -1 }};",
+      "body": "UPDATE sessions\nSET expires_at = CURRENT_TIMESTAMP - interval '1 minute'\nWHERE token = {{ appsmith.store.session.token }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "deleteOldSessions",
-    "pageId": "Logowanie",
+    "name": "Test",
+    "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
