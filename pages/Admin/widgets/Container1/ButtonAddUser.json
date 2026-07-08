@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 51,
+  "bottomRow": 52,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
@@ -24,12 +24,14 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "plus",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": "{{ Auth.isAdmin() }}",
   "key": "w8zcprme51",
-  "leftColumn": 51,
+  "leftColumn": 50,
   "minWidth": 120,
   "mobileBottomRow": 91,
   "mobileLeftColumn": 25,
@@ -47,7 +49,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 62,
   "text": "DODAJ UŻYTKOWNIKA",
-  "topRow": 47,
+  "topRow": 48,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "6bsodo53rp",

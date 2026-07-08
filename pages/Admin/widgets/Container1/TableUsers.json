@@ -43,14 +43,14 @@
     "role_id",
     "id"
   ],
-  "columnUpdatedAt": 1783547234237,
+  "columnUpdatedAt": 1783549385734,
   "columnWidthMap": {
     "customColumn1": 60,
     "customColumn2": 60,
     "customColumn3": 60,
     "id": 60,
-    "mail": 278,
-    "name": 243,
+    "mail": 332,
+    "name": 320,
     "role": 211,
     "role_code": 320
   },
@@ -426,7 +426,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "KOD KONTA",
       "notation": "standard",
       "originalId": "role_code",
