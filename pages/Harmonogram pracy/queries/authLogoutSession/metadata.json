@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a2fb7abb910071184e58185_1b7f4cd9-6b47-4f1a-b290-cf39e92f53ef",
-  "id": "Eksperci_Query1",
+  "gitSyncId": "6a4d033ae3824d264e76aad9_f0e15a80-277c-4554-9eac-be027a6a41b8",
+  "id": "Harmonogram pracy_authLogoutSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  kategorie_id,\n  dziedziny_id,\n  COUNT(*) AS liczba\nFROM kategorie_dziedziny\nGROUP BY \n  kategorie_id,\n  dziedziny_id\nHAVING COUNT(*) > 1;",
+      "body": "DELETE\nFROM sessions\nWHERE token = {{ appsmith.store.session.token }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "Neon_postgres",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Query1",
-    "pageId": "Eksperci",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "authLogoutSession",
+    "pageId": "Harmonogram pracy",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

@@ -14,9 +14,6 @@
     },
     {
       "key": "isDisabled"
-    },
-    {
-      "key": "labelTextColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,13 +22,10 @@
       "key": "sourceData"
     },
     {
-      "key": "isDisabled"
-    },
-    {
       "key": "onOptionChange"
     },
     {
-      "key": "labelTextColor"
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -44,39 +38,39 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "hr79i9bq62",
+  "key": "5ny4v8xd1u",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "",
-  "labelTextColor": "\t{{\n  SelectWyszukaj.selectedOptionValue\n    ? \"#4a5768\"\n    : \"#DC2626\"\n}}",
   "labelTextSize": "0.875rem",
+  "labelTooltip": "Wybierz dziedzinę, kategorię lub obszar",
   "labelWidth": 5,
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 56,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 49,
+  "mobileBottomRow": 25,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 6,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onOptionChange": "{{\n  (async () => {\n    const typ = Number(RadioGroupWyszukaj.selectedOptionValue);\n    const wartosc = Number(SelectWyszukaj.selectedOptionValue);\n\n    if (!wartosc) {\n      return;\n    }\n\n    if (typ === 1) {\n      return Promise.all([\n        eksperciDziedziny.run(),\n       dziedzinyZKategoriami.run()\n      ]);\n    }\n\n    if (typ === 2) {\n      return Promise.all([\n        eksperciKategorie.run(),\n        kategorieZDziedzinami.run()\n      ]);\n    }\n\n    if (typ === 3) {\n      return eksperciObszary.run();\n    }\n  })()\n}}",
+  "onOptionChange": "{{\n(async () => {\n\n  const typ = Number(RadioGroupWyszukaj.selectedOptionValue);\n  const wartosci = SelectWyszukaj.selectedOptionValues || [];\n\n  // Jeżeli nic nie wybrano - pokaż pełną listę ekspertów\n  if (wartosci.length === 0) {\n\n    await eksperciWykaz.run();\n\n    return;\n\n  }\n\n  // Wyszukiwanie po dziedzinach\n  if (typ === 1) {\n\n    return Promise.all([\n      eksperciDziedziny.run(),\n      dziedzinyZKategoriami.run()\n    ]);\n\n  }\n\n  // Wyszukiwanie po kategoriach\n  if (typ === 2) {\n\n    return Promise.all([\n      eksperciKategorie.run(),\n      kategorieZDziedzinami.run()\n    ]);\n\n  }\n\n  // Wyszukiwanie po obszarach\n  if (typ === 3) {\n\n    return eksperciObszary.run();\n\n  }\n\n})();\n}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 21,
-  "originalTopRow": 17,
-  "parentColumnSpace": 19.8125,
+  "originalBottomRow": 18,
+  "originalTopRow": 14,
+  "parentColumnSpace": 30.25,
   "parentId": "0",
   "parentRowSpace": 10,
-  "placeholderText": "Wybierz dziedzinę, kategorię lub obszar",
+  "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{\n  RadioGroupWyszukaj.selectedOptionValue == 1\n    ? (getDziedziny.data || []).map(row => ({\n        label: row.nazwa,\n        value: String(row.id)\n      }))\n    : RadioGroupWyszukaj.selectedOptionValue == 2\n      ? (getKategorie.data || []).map(row => ({\n          label: row.id + \" - \" + row.nazwa_kategorie,\n          value: String(row.id)\n        }))\n      : RadioGroupWyszukaj.selectedOptionValue == 3\n        ? (getObszary.data || []).map(row => ({\n            label: row.symbol_ob + \" - \" + row.nazwa_ob,\n            value: String(row.id)\n          }))\n        : []\n}}",
   "topRow": 14,
-  "type": "SELECT_WIDGET",
+  "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
-  "widgetId": "fzunqxs9nx",
+  "widgetId": "03r48qp92j",
   "widgetName": "SelectWyszukaj"
 }

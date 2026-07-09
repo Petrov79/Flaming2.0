@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "animateLoading": "{{ appsmith.store.modalLoading === true }}",
+  "animateLoading": false,
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
   "borderWidth": "1",
@@ -94,9 +94,6 @@
       "key": "primaryColumns.obszar_id.computedValue"
     },
     {
-      "key": "animateLoading"
-    },
-    {
       "key": "isVisible"
     },
     {
@@ -109,9 +106,6 @@
     },
     {
       "key": "onRowSelected"
-    },
-    {
-      "key": "animateLoading"
     },
     {
       "key": "isVisible"
@@ -456,7 +450,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n  (() => {\n    const typ = Number(RadioGroupWyszukaj.selectedOptionValue);\n    const wartosc = SelectWyszukaj.selectedOptionValue;\n\n    if (typ === 0) {\n      const dane = eksperciWykaz.data || [];\n      return dane.map((row, index) => ({\n        lp: index + 1,\n        ...row\n      }));\n    }\n\n    if (!wartosc) {\n      return [];\n    }\n\n    const dane =\n      typ === 1\n        ? eksperciDziedziny.data\n        : typ === 2\n          ? eksperciKategorie.data\n          : typ === 3\n            ? eksperciObszary.data\n            : [];\n\n    return Array.isArray(dane)\n      ? dane.map((row, index) => ({\n          lp: index + 1,\n          ...row\n        }))\n      : [];\n  })()\n}}",
+  "tableData": "{{\n(() => {\n\n  const typ = Number(RadioGroupWyszukaj.selectedOptionValue);\n  const wartosci = SelectWyszukaj.selectedOptionValues || [];\n\n  // Wykaz - zawsze pokazuj wszystkich ekspertów\n  if (typ === 0) {\n\n    const dane = eksperciWykaz.data || [];\n\n    return dane.map((row, index) => ({\n      lp: index + 1,\n      ...row\n    }));\n\n  }\n\n  // Dziedziny / Kategorie / Obszary\n  // Jeżeli nic nie wybrano - pusta tabela\n  if (wartosci.length === 0) {\n    return [];\n  }\n\n  let dane = [];\n\n  if (typ === 1) {\n    dane = eksperciDziedziny.data || [];\n  } else if (typ === 2) {\n    dane = eksperciKategorie.data || [];\n  } else if (typ === 3) {\n    dane = eksperciObszary.data || [];\n  }\n\n  return dane.map((row, index) => ({\n    lp: index + 1,\n    ...row\n  }));\n\n})()\n}}",
   "textSize": "0.875rem",
   "topRow": 20,
   "topRowBeforeCollapse": 20,

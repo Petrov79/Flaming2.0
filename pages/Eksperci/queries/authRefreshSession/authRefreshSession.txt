@@ -1,0 +1,11 @@
+UPDATE sessions
+SET
+    last_activity = CURRENT_TIMESTAMP,
+    expires_at = CURRENT_TIMESTAMP + interval '30 minutes'
+WHERE
+    token = {{ appsmith.store.session.token }}
+    AND active = true
+    AND expires_at > CURRENT_TIMESTAMP
+RETURNING
+    user_id,
+    expires_at;

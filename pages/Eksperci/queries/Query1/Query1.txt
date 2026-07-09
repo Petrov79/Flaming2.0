@@ -1,9 +1,0 @@
-SELECT 
-  kategorie_id,
-  dziedziny_id,
-  COUNT(*) AS liczba
-FROM kategorie_dziedziny
-GROUP BY 
-  kategorie_id,
-  dziedziny_id
-HAVING COUNT(*) > 1;

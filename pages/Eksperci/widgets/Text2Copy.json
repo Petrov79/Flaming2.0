@@ -30,7 +30,7 @@
   "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{ \n  Number(RadioGroupWyszukaj.selectedOptionValue) === 1 ||\n  Number(RadioGroupWyszukaj.selectedOptionValue) === 2\n}}",
+  "isVisible": "{{ RadioGroupWyszukaj.selectedOptionValue == 2 }}\t",
   "key": "7tot1j4whr",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
