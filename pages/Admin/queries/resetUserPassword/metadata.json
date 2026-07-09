@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE users\nSET\n    password = crypt(\n        {{ InputNewPassword.text }},\n        gen_salt('bf')\n    )\nWHERE\n    id = {{ appsmith.store.editUser.id }}\nRETURNING\n    id;",
+      "body": "UPDATE users\nSET\n    password = crypt(\n        {{ InputNewPassword.text }},\n        gen_salt('bf')\n    ),\n    must_change_password = true\nWHERE\n    id = {{ appsmith.store.editUser.id }}\nRETURNING\n    id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

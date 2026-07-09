@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4cc5104ac43d2e7de42d86_a5a30dc7-3a9b-43fc-84c4-ee6885d199d4",
-  "id": "Logowanie_authLogin",
+  "gitSyncId": "6a2fb7abb910071184e58185_b03ae8f7-de35-4321-886a-44538905f18b",
+  "id": "ZmianaHasla_changeOwnPassword",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    u.id,\n    u.name,\n    u.mail,\n    u.must_change_password,\n    r.id AS role_id,\n    r.code AS role_code,\n    r.name AS role_name\nFROM users u\nJOIN roles r\n    ON r.id = u.role_id\nWHERE\n    u.mail = {{ mail_input.text }}\n    AND u.active = true\n    AND u.password = crypt(\n        {{ password_input.text }},\n        u.password\n    );",
+      "body": "UPDATE users\nSET\n    password = crypt(\n        {{ InputNewPassword.text }},\n        gen_salt('bf')\n    ),\n    must_change_password = false\nWHERE\n    id = {{ appsmith.store.session.user.id }}\nRETURNING\n    id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "authLogin",
-    "pageId": "Logowanie",
+    "name": "changeOwnPassword",
+    "pageId": "ZmianaHasla",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

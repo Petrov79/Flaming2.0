@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 51,
+  "bottomRow": 52,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -47,7 +47,7 @@
   "text": "{{\n  \"  LICZBA UŻYTKOWNIKÓW: \" + (\n    Array.isArray(TableUsers.filteredTableData)\n      ? TableUsers.filteredTableData.length\n      : (\n          Array.isArray(TableUsers.tableData)\n            ? TableUsers.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
   "textColor": "#818fa2",
-  "topRow": 47,
+  "topRow": 48,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

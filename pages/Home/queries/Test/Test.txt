@@ -1,3 +1,0 @@
-UPDATE sessions
-SET expires_at = CURRENT_TIMESTAMP - interval '1 minute'
-WHERE token = {{ appsmith.store.session.token }};

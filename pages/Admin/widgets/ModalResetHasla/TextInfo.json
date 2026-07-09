@@ -37,7 +37,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{\n\" RESET HASŁA:     \" + appsmith.store.editUser?.name\n}}",
+  "text": "{{\n\" RESET HASŁA DLA UŻYTKOWNIKA:     \" + appsmith.store.editUser?.name\n}}",
   "textAlign": "LEFT",
   "textColor": "#f8fafc",
   "topRow": 1,

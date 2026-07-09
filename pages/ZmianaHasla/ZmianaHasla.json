@@ -1,23 +1,24 @@
 {
-  "gitSyncId": "6a2fb7abb910071184e58185_2e4ca1a7-bf32-499c-91d7-6c869607703e",
+  "gitSyncId": "6a2fb7abb910071184e58185_8b86116d-7d5d-4a73-8cb2-1dfcb2841493",
   "unpublishedPage": {
-    "isHidden": false,
+    "isHidden": true,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 660,
+          "bottomRow": 520,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 920,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 90,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Admin",
-    "slug": "admin"
+    "name": "ZmianaHasla",
+    "slug": "zmianahasla"
   }
 }
