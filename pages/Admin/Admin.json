@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "null_b01ee629-33ec-4788-b68c-3094a9d0c1ad",
+  "gitSyncId": "6a2fb7abb910071184e58185_2e4ca1a7-bf32-499c-91d7-6c869607703e",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 760,
+          "bottomRow": 650,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 920,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 90,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "Home",
-    "slug": "home"
+    "name": "Admin",
+    "slug": "admin"
   }
 }

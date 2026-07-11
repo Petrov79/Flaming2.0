@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_f86060e4-b480-4c17-bc84-f4706fe5075c",
+  "id": "Zmiana hasła_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Zmiana hasła",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

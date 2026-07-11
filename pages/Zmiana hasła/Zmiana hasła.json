@@ -1,12 +1,12 @@
 {
-  "gitSyncId": "null_b01ee629-33ec-4788-b68c-3094a9d0c1ad",
+  "gitSyncId": "6a2fb7abb910071184e58185_8b86116d-7d5d-4a73-8cb2-1dfcb2841493",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 760,
+          "bottomRow": 640,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -27,7 +27,7 @@
         }
       }
     ],
-    "name": "Home",
-    "slug": "home"
+    "name": "Zmiana hasła",
+    "slug": "zmiana-hasa"
   }
 }

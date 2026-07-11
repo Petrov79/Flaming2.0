@@ -35,10 +35,6 @@
       "isDefault": false
     },
     {
-      "id": "ZmianaHasla",
-      "isDefault": false
-    },
-    {
       "id": "Harmonogram pracy",
       "isDefault": false
     },
@@ -79,7 +75,11 @@
       "isDefault": false
     },
     {
-      "id": "@",
+      "id": "Zmiana hasła",
+      "isDefault": false
+    },
+    {
+      "id": "Admin",
       "isDefault": false
     }
   ],
