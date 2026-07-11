@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_0fbd8f33-7507-48cb-8000-82c4e4c0c8aa",
+  "id": "MSIT_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "MSIT",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

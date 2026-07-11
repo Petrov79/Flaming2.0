@@ -1,0 +1,56 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7tot1j4whr",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 105,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 101,
+  "needsErrorInfo": false,
+  "originalBottomRow": 85,
+  "originalTopRow": 81,
+  "overflow": "NONE",
+  "parentColumnSpace": 19.8125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "shouldTruncate": false,
+  "text": "{{\n  \"  LICZBA WYNIKÓW: \" + (\n    Array.isArray(TableLokalizacje.filteredTableData)\n      ? TableLokalizacje.filteredTableData.length\n      : (\n          Array.isArray(TableLokalizacje.tableData)\n            ? TableLokalizacje.tableData.length\n            : 0\n        )\n  )\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#4a5768",
+  "topRow": 81,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "y7bosvr5x5",
+  "widgetName": "Text2CopyCopy1"
+}

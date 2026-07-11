@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_e511f146-9ceb-4b75-b026-63e08ae16c4c",
+  "id": "Wyloguj_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Wyloguj",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

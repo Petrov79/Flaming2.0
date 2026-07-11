@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_ef0d252c-a70a-4283-9897-c19e62025537",
+  "id": "Wyszukaj lokalizację_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Wyszukaj lokalizację",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM (\n  SELECT DISTINCT \n    eksperci.id AS ekspert_id,\n    NULL::integer AS dziedzina_id,\n    NULL::integer AS kategoria_id,\n    obszary.id AS obszar_id,\n    eksperci.nazwisko,\n    eksperci.email,\n    eksperci.telefon1,\n    eksperci.umowa\n  FROM eksperci\n  INNER JOIN wykaz_obszary \n    ON eksperci.id = wykaz_obszary.ekspert_id\n  INNER JOIN obszary \n    ON obszary.id = wykaz_obszary.obszar_id\n  WHERE \n    obszary.id = {{ Number(SelectWyszukaj.selectedOptionValue || 0) }}\n) AS wynik\nORDER BY nazwisko COLLATE \"pl-x-icu\";",
+      "body": "SELECT *\nFROM (\n    SELECT DISTINCT ON (eksperci.id)\n        eksperci.id AS ekspert_id,\n        NULL::integer AS dziedzina_id,\n        NULL::integer AS kategoria_id,\n        obszary.id AS obszar_id,\n        eksperci.nazwisko,\n        eksperci.email,\n        eksperci.telefon1,\n        eksperci.umowa\n    FROM eksperci\n    INNER JOIN wykaz_obszary\n        ON eksperci.id = wykaz_obszary.ekspert_id\n    INNER JOIN obszary\n        ON obszary.id = wykaz_obszary.obszar_id\n    WHERE\n        obszary.id = ANY(\n            string_to_array(\n                '{{ SelectWyszukaj.selectedOptionValues.join(\",\") }}',\n                ','\n            )::integer[]\n        )\n    ORDER BY\n        eksperci.id,\n        eksperci.nazwisko\n) wynik\nORDER BY\n    nazwisko COLLATE \"pl-x-icu\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

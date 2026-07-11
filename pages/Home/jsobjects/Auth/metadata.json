@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_d4730ab3-d927-4ad7-be43-a266525e5ec2",
+  "id": "Home_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

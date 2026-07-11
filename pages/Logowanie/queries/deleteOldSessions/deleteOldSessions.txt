@@ -1,3 +1,0 @@
-DELETE
-FROM sessions
-WHERE user_id = {{ loginUser.data?.[0]?.id ?? -1 }};

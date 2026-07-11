@@ -1,0 +1,17 @@
+INSERT INTO users (
+    name,
+    mail,
+    password,
+    role_id
+)
+VALUES (
+    {{ InputName.text }},
+    {{ InputMail.text }},
+    crypt({{ InputPassword.text }}, gen_salt('bf')),
+    {{ SelectRole.selectedOptionValue }}
+)
+RETURNING
+    id,
+    name,
+    mail,
+    role_id;

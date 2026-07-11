@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_d6223098-7469-47a8-899a-9dba7b66df04",
+  "id": "GPR_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "GPR",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

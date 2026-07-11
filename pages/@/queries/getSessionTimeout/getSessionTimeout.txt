@@ -1,0 +1,4 @@
+SELECT
+    value::integer AS session_timeout
+FROM app_settings
+WHERE code = 'SESSION_TIMEOUT';

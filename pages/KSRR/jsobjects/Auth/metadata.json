@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_87a0fc7a-6749-4376-8f03-2b3afb560794",
+  "id": "KSRR_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "KSRR",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

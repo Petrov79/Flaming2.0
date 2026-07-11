@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_744e588d-055b-4ea7-a2aa-b3140bbaeaf4",
+  "id": "Eksperci_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Eksperci",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "0.375rem",
+  "borderWidth": "1",
+  "bottomRow": 46,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "cachedTableData": {},
+  "canFreezeColumn": false,
+  "cellBackground": "",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "customColumn1",
+    "customColumn2",
+    "customColumn3",
+    "online",
+    "name",
+    "mail",
+    "role",
+    "role_code",
+    "role_id",
+    "id"
+  ],
+  "columnUpdatedAt": 1783624613723,
+  "columnWidthMap": {
+    "customColumn1": 60,
+    "customColumn2": 60,
+    "customColumn3": 60,
+    "id": 60,
+    "mail": 325,
+    "name": 282,
+    "online": 96,
+    "role": 211,
+    "role_code": 186
+  },
+  "compactMode": "SHORT",
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.name.computedValue"
+    },
+    {
+      "key": "primaryColumns.mail.computedValue"
+    },
+    {
+      "key": "primaryColumns.role.computedValue"
+    },
+    {
+      "key": "primaryColumns.role_code.computedValue"
+    },
+    {
+      "key": "headerTextColor"
+    },
+    {
+      "key": "primaryColumns.role_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn3.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn3.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn3.boxShadow"
+    },
+    {
+      "key": "primaryColumns.online.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn2.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn3.cellBackground"
+    },
+    {
+      "key": "primaryColumns.online.cellBackground"
+    },
+    {
+      "key": "primaryColumns.name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.mail.cellBackground"
+    },
+    {
+      "key": "primaryColumns.role.cellBackground"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "textSize"
+    },
+    {
+      "key": "primaryColumns.customColumn3.onClick"
+    },
+    {
+      "key": "primaryColumns.mail.cellBackground"
+    },
+    {
+      "key": "primaryColumns.role.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn2.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn3.cellBackground"
+    },
+    {
+      "key": "primaryColumns.online.cellBackground"
+    },
+    {
+      "key": "primaryColumns.name.cellBackground"
+    },
+    {
+      "key": "primaryColumns.name.textSize"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn3.onClick"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "endOfData": false,
+  "flexVerticalAlignment": "start",
+  "headerRowColor": "#64748b",
+  "headerTextColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "horizontalAlignment": "CENTER",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "5czl27mj4s",
+  "label": "Data",
+  "leftColumn": 2,
+  "minWidth": 450,
+  "mobileBottomRow": 49,
+  "mobileLeftColumn": 15,
+  "mobileRightColumn": 49,
+  "mobileTopRow": 21,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 30.25,
+  "parentId": "swk1glk43x",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "customColumn1": {
+      "alias": "",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "iconName": "edit",
+      "id": "customColumn1",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalEdytujUzytkownika\");\n})\n}}",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn2": {
+      "alias": "",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "iconName": "key",
+      "id": "customColumn2",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalResetHasla\");\n})\n}}",
+      "originalId": "customColumn2",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn3": {
+      "alias": "",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "iconName": "trash",
+      "id": "customColumn3",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalUsunUzytkownika\");\n})\n}}",
+      "originalId": "customColumn3",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "ID",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "mail": {
+      "alias": "mail",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"mail\"])) : mail })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "mail",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "E-MAIL",
+      "notation": "standard",
+      "originalId": "mail",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "name": {
+      "alias": "name",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"name\"])) : name })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "name",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "NAZWISKO IMIĘ",
+      "notation": "standard",
+      "originalId": "name",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "online": {
+      "alias": "online",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"online\"])) : online })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "online",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "ONLINE",
+      "notation": "standard",
+      "originalId": "online",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "role": {
+      "alias": "role",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"role\"])) : role })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "role",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "TYP KONTA",
+      "notation": "standard",
+      "originalId": "role",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "role_code": {
+      "alias": "role_code",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"role_code\"])) : role_code })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "role_code",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "KOD KONTA",
+      "notation": "standard",
+      "originalId": "role_code",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "role_id": {
+      "alias": "role_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"role_id\"])) : role_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "id": "role_id",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "role_id",
+      "notation": "standard",
+      "originalId": "role_id",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{getUsers.data}}",
+  "textSize": "0.8rem",
+  "topRow": 3,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "zrzssom2xo",
+  "widgetName": "TableUsers"
+}

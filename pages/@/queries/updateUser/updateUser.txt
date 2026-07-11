@@ -1,0 +1,12 @@
+UPDATE users
+SET
+    name = {{ InputEditName.text }},
+    mail = {{ InputEditMail.text }},
+    role_id = {{ SelectEditRole.selectedOptionValue }}
+WHERE
+    id = {{ appsmith.store.editUser.id }}
+RETURNING
+    id,
+    name,
+    mail,
+    role_id;

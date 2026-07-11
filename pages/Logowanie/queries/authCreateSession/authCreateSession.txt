@@ -1,0 +1,21 @@
+INSERT INTO sessions
+(
+    user_id,
+    expires_at
+)
+VALUES
+(
+    {{ authLogin.data?.[0]?.id ?? -1 }},
+    CURRENT_TIMESTAMP
+    + make_interval(
+        mins => (
+            SELECT value::integer
+            FROM app_settings
+            WHERE code = 'SESSION_TIMEOUT'
+        )
+    )
+)
+RETURNING
+    token,
+    expires_at,
+    created_at;

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_88b83d38-eeee-4866-9218-e9443ccdfcf0",
+  "id": "Wskaźnik zamożności JST_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Wskaźnik zamożności JST",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

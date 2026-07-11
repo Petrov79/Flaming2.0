@@ -1,0 +1,7 @@
+UPDATE users
+SET
+    active = false
+WHERE
+    id = {{ appsmith.store.editUser.id }}
+RETURNING
+    id;

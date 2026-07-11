@@ -1,0 +1,18 @@
+UPDATE sessions
+SET
+    last_activity = CURRENT_TIMESTAMP,
+    expires_at = CURRENT_TIMESTAMP
+    + make_interval(
+        mins => (
+            SELECT value::integer
+            FROM app_settings
+            WHERE code = 'SESSION_TIMEOUT'
+        )
+    )
+WHERE
+    token = {{ appsmith.store.session.token }}
+    AND active = true
+    AND expires_at > CURRENT_TIMESTAMP
+RETURNING
+    user_id,
+    expires_at;

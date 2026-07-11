@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a4d033ae3824d264e76aad9_bfecfbe7-de09-4a63-9bb8-73b656b20392",
+  "id": "Zdrowie ( AOS )_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Zdrowie ( AOS )",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

@@ -1,20 +1,29 @@
 SELECT *
 FROM (
-  SELECT DISTINCT 
-    eksperci.id AS ekspert_id,
-    NULL::integer AS dziedzina_id,
-    NULL::integer AS kategoria_id,
-    obszary.id AS obszar_id,
-    eksperci.nazwisko,
-    eksperci.email,
-    eksperci.telefon1,
-    eksperci.umowa
-  FROM eksperci
-  INNER JOIN wykaz_obszary 
-    ON eksperci.id = wykaz_obszary.ekspert_id
-  INNER JOIN obszary 
-    ON obszary.id = wykaz_obszary.obszar_id
-  WHERE 
-    obszary.id = {{ Number(SelectWyszukaj.selectedOptionValue || 0) }}
-) AS wynik
-ORDER BY nazwisko COLLATE "pl-x-icu";
+    SELECT DISTINCT ON (eksperci.id)
+        eksperci.id AS ekspert_id,
+        NULL::integer AS dziedzina_id,
+        NULL::integer AS kategoria_id,
+        obszary.id AS obszar_id,
+        eksperci.nazwisko,
+        eksperci.email,
+        eksperci.telefon1,
+        eksperci.umowa
+    FROM eksperci
+    INNER JOIN wykaz_obszary
+        ON eksperci.id = wykaz_obszary.ekspert_id
+    INNER JOIN obszary
+        ON obszary.id = wykaz_obszary.obszar_id
+    WHERE
+        obszary.id = ANY(
+            string_to_array(
+                '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
+                ','
+            )::integer[]
+        )
+    ORDER BY
+        eksperci.id,
+        eksperci.nazwisko
+) wynik
+ORDER BY
+    nazwisko COLLATE "pl-x-icu";

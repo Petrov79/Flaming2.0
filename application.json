@@ -35,7 +35,7 @@
       "isDefault": false
     },
     {
-      "id": "Zmiana hasla",
+      "id": "ZmianaHasla",
       "isDefault": false
     },
     {
@@ -63,7 +63,7 @@
       "isDefault": false
     },
     {
-      "id": "AOS",
+      "id": "Zdrowie ( AOS )",
       "isDefault": false
     },
     {
@@ -71,11 +71,15 @@
       "isDefault": false
     },
     {
-      "id": "Wyszukaj lokalizacje",
+      "id": "Wyszukaj lokalizację",
       "isDefault": false
     },
     {
-      "id": "Admin",
+      "id": "Wyloguj",
+      "isDefault": false
+    },
+    {
+      "id": "@",
       "isDefault": false
     }
   ],

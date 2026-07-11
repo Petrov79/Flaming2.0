@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  dziedziny.id AS dziedzina_id, \n  dziedziny.nazwa AS dziedzina_nazwa, \n  priorytety.numer AS priorytet\nFROM dziedziny\nINNER JOIN kategorie_dziedziny \n  ON dziedziny.id = kategorie_dziedziny.dziedziny_id\nINNER JOIN kategorie \n  ON kategorie.id = kategorie_dziedziny.kategorie_id\nINNER JOIN dziedziny_priorytety \n  ON dziedziny.id = dziedziny_priorytety.dziedziny_id\nINNER JOIN priorytety \n  ON dziedziny_priorytety.priorytety_id = priorytety.id\nWHERE \n  kategorie.id = {{ Number(SelectWyszukaj.selectedOptionValue || 0) }}\nORDER BY \n  priorytety.numer ASC,\n  dziedziny.nazwa COLLATE \"pl-x-icu\" ASC;",
+      "body": "SELECT\n    dziedziny.id AS dziedzina_id,\n    dziedziny.nazwa AS dziedzina_nazwa,\n    priorytety.numer AS priorytet,\n    string_agg(\n        DISTINCT kategorie.id::text,\n        ', '\n    ) AS dopasowanie\nFROM dziedziny\nINNER JOIN kategorie_dziedziny\n    ON dziedziny.id = kategorie_dziedziny.dziedziny_id\nINNER JOIN kategorie\n    ON kategorie.id = kategorie_dziedziny.kategorie_id\nINNER JOIN dziedziny_priorytety\n    ON dziedziny.id = dziedziny_priorytety.dziedziny_id\nINNER JOIN priorytety\n    ON dziedziny_priorytety.priorytety_id = priorytety.id\nWHERE\n    kategorie.id = ANY(\n        string_to_array(\n            '{{ SelectWyszukaj.selectedOptionValues.join(\",\") }}',\n            ','\n        )::integer[]\n    )\nGROUP BY\n    dziedziny.id,\n    dziedziny.nazwa,\n    priorytety.numer\nORDER BY\n    priorytety.numer ASC,\n    dziedziny.nazwa COLLATE \"pl-x-icu\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

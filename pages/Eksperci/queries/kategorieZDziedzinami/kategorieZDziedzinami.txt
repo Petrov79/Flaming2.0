@@ -1,18 +1,31 @@
-SELECT 
-  dziedziny.id AS dziedzina_id, 
-  dziedziny.nazwa AS dziedzina_nazwa, 
-  priorytety.numer AS priorytet
+SELECT
+    dziedziny.id AS dziedzina_id,
+    dziedziny.nazwa AS dziedzina_nazwa,
+    priorytety.numer AS priorytet,
+    string_agg(
+        DISTINCT kategorie.id::text,
+        ', '
+    ) AS dopasowanie
 FROM dziedziny
-INNER JOIN kategorie_dziedziny 
-  ON dziedziny.id = kategorie_dziedziny.dziedziny_id
-INNER JOIN kategorie 
-  ON kategorie.id = kategorie_dziedziny.kategorie_id
-INNER JOIN dziedziny_priorytety 
-  ON dziedziny.id = dziedziny_priorytety.dziedziny_id
-INNER JOIN priorytety 
-  ON dziedziny_priorytety.priorytety_id = priorytety.id
-WHERE 
-  kategorie.id = {{ Number(SelectWyszukaj.selectedOptionValue || 0) }}
-ORDER BY 
-  priorytety.numer ASC,
-  dziedziny.nazwa COLLATE "pl-x-icu" ASC;
+INNER JOIN kategorie_dziedziny
+    ON dziedziny.id = kategorie_dziedziny.dziedziny_id
+INNER JOIN kategorie
+    ON kategorie.id = kategorie_dziedziny.kategorie_id
+INNER JOIN dziedziny_priorytety
+    ON dziedziny.id = dziedziny_priorytety.dziedziny_id
+INNER JOIN priorytety
+    ON dziedziny_priorytety.priorytety_id = priorytety.id
+WHERE
+    kategorie.id = ANY(
+        string_to_array(
+            '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
+            ','
+        )::integer[]
+    )
+GROUP BY
+    dziedziny.id,
+    dziedziny.nazwa,
+    priorytety.numer
+ORDER BY
+    priorytety.numer ASC,
+    dziedziny.nazwa COLLATE "pl-x-icu" ASC;

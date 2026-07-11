@@ -1,0 +1,73 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 9,
+  "boxShadow": "none",
+  "defaultOptionValue": "0",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "qkaj1f5la5",
+  "label": "Wybierz rodzaj lokalizacji:",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#64748b",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 13,
+  "mobileRightColumn": 33,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "onSelectionChange": "{{\nstoreValue(\"lokalizacjeData\", []).then(() => {\n  resetWidget(\"TableLokalizacje\");\n  resetWidget(\"InputLokalizacja\");\n});\n}}",
+  "options": [
+    {
+      "label": "Miejscowość",
+      "value": "0"
+    },
+    {
+      "label": "Gmina",
+      "value": "1"
+    },
+    {
+      "label": "Powiat",
+      "value": "2"
+    }
+  ],
+  "originalBottomRow": 14,
+  "originalTopRow": 1,
+  "parentColumnSpace": 26.484375,
+  "parentId": "e1aev98i3i",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "topRow": 1,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "mive4z0ce3",
+  "widgetName": "RadioRodzaj"
+}

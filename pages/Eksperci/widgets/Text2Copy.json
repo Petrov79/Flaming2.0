@@ -1,7 +1,8 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 98,
+  "bottomRow": 94,
+  "bottomRowBeforeCollapse": 96,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -19,18 +20,21 @@
       "key": "isVisible"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "fontSize"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "0.8\nrem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{ \n  Number(RadioGroupWyszukaj.selectedOptionValue) === 1 ||\n  Number(RadioGroupWyszukaj.selectedOptionValue) === 2\n}}",
+  "isVisible": "{{ RadioGroupWyszukaj.selectedOptionValue == 2 }}\t",
   "key": "7tot1j4whr",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -41,8 +45,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
-  "originalBottomRow": 98,
-  "originalTopRow": 94,
+  "originalBottomRow": 139,
+  "originalTopRow": 135,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
@@ -54,7 +58,8 @@
   "text": "{{\n  Number(RadioGroupWyszukaj.selectedOptionValue) === 1\n    ? \"  LICZBA KATEGORII: \" + (dziedzinyKatTable.tableData?.length || 0)\n    : Number(RadioGroupWyszukaj.selectedOptionValue) === 2\n      ? \"  LICZBA DZIEDZIN: \" + (dziedzinyKatTable.tableData?.length || 0)\n      : \"\"\n}}",
   "textAlign": "LEFT",
   "textColor": "#4a5768",
-  "topRow": 94,
+  "topRow": 90,
+  "topRowBeforeCollapse": 92,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

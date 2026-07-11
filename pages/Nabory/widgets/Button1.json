@@ -34,6 +34,8 @@
   "mobileTopRow": 90,
   "needsErrorInfo": false,
   "onClick": "{{\n  storeValue(\"trybNaboru\", \"dodawanie\").then(() => {\n    storeValue(\"wybranyNaborId\", null).then(() => {\n      storeValue(\"naborZmieniony\", false).then(() => {\n        resetWidget(\"ModalEdycjaNaboru\", true);\n        showModal(\"ModalEdycjaNaboru\");\n      });\n    });\n  });\n}}",
+  "originalBottomRow": 85,
+  "originalTopRow": 80,
   "parentColumnSpace": 23.53125,
   "parentId": "0",
   "parentRowSpace": 10,

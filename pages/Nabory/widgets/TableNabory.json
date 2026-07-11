@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "animateLoading": true,
+  "animateLoading": false,
   "borderColor": "#e0dede",
   "borderRadius": "0.375rem",
   "borderWidth": "1",
@@ -213,7 +213,7 @@
   "mobileTopRow": 16,
   "needsErrorInfo": false,
   "onRowSelected": "{{\n  storeValue(\"trybNaboru\", \"edycja\").then(() => {\n    storeValue(\"wybranyNaborId\", TableNabory.selectedRow.id).then(() => {\n      storeValue(\"naborZmieniony\", false).then(() => {\n        resetWidget(\"ModalEdycjaNaboru\", true);\n        showModal(\"ModalEdycjaNaboru\");\n      });\n    });\n  });\n}}",
-  "originalBottomRow": 85,
+  "originalBottomRow": 79,
   "originalTopRow": 10,
   "parentColumnSpace": 19.8125,
   "parentId": "0",

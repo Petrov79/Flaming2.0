@@ -1,0 +1,7 @@
+SELECT
+    id,
+    code,
+    value,
+    description
+FROM app_settings
+ORDER BY code;
