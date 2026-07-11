@@ -9,9 +9,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -37,7 +34,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{\n\" CHCESZ USNĄĆ:     \" + appsmith.store.editUser?.name\n}}",
+  "text": "  USUWANIE  UŻYTKOWNIKA",
   "textAlign": "LEFT",
   "textColor": "#f8fafc",
   "topRow": 0,

@@ -34,27 +34,29 @@
     }
   },
   "columnOrder": [
-    "customColumn1",
-    "customColumn2",
-    "customColumn3",
-    "online",
     "name",
     "mail",
     "role",
+    "online",
+    "customColumn4",
+    "customColumn1",
+    "customColumn2",
+    "customColumn3",
     "role_code",
     "role_id",
     "id"
   ],
-  "columnUpdatedAt": 1783624613723,
+  "columnUpdatedAt": 1783805722115,
   "columnWidthMap": {
-    "customColumn1": 60,
-    "customColumn2": 60,
-    "customColumn3": 60,
+    "customColumn1": 92,
+    "customColumn2": 114,
+    "customColumn3": 98,
+    "customColumn4": 109,
     "id": 60,
-    "mail": 325,
-    "name": 282,
+    "mail": 279,
+    "name": 221,
     "online": 96,
-    "role": 211,
+    "role": 178,
     "role_code": 186
   },
   "compactMode": "SHORT",
@@ -104,9 +106,6 @@
       "key": "primaryColumns.customColumn2.boxShadow"
     },
     {
-      "key": "primaryColumns.customColumn3.buttonColor"
-    },
-    {
       "key": "primaryColumns.customColumn3.borderRadius"
     },
     {
@@ -135,6 +134,15 @@
     },
     {
       "key": "primaryColumns.role.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn4.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn4.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn4.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -176,6 +184,12 @@
     },
     {
       "key": "primaryColumns.name.textSize"
+    },
+    {
+      "key": "primaryColumns.customColumn4.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn4.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -187,6 +201,12 @@
     },
     {
       "key": "primaryColumns.customColumn3.onClick"
+    },
+    {
+      "key": "primaryColumns.online.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.customColumn4.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -197,7 +217,7 @@
   "horizontalAlignment": "CENTER",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
-  "isSortable": true,
+  "isSortable": false,
   "isVisible": true,
   "isVisibleDownload": false,
   "isVisibleFilters": false,
@@ -217,7 +237,7 @@
   "parentRowSpace": 10,
   "primaryColumns": {
     "customColumn1": {
-      "alias": "",
+      "alias": "EDYTUJ",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "buttonStyle": "rgb(3, 179, 101)",
@@ -242,7 +262,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "",
+      "label": "EDYTUJ",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalEdytujUzytkownika\");\n})\n}}",
@@ -255,7 +275,7 @@
       "width": 150
     },
     "customColumn2": {
-      "alias": "",
+      "alias": "RESET",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -283,7 +303,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "",
+      "label": "RESET",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalResetHasla\");\n})\n}}",
@@ -296,12 +316,12 @@
       "width": 150
     },
     "customColumn3": {
-      "alias": "",
+      "alias": "USUŃ",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonColor": "#ef4444",
       "buttonStyle": "rgb(3, 179, 101)",
       "buttonVariant": "TERTIARY",
       "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
@@ -324,11 +344,52 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "",
+      "label": "USUŃ",
       "labelColor": "#FFFFFF",
       "notation": "standard",
       "onClick": "{{\nstoreValue(\n  \"editUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalUsunUzytkownika\");\n})\n}}",
       "originalId": "customColumn3",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn4": {
+      "alias": "WYLOGUJ",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "#64748b",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "iconName": "log-out",
+      "id": "customColumn4",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "WYLOGUJ",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\n  \"logoutUser\",\n  TableUsers.triggeredRow\n).then(() => {\n  showModal(\"ModalLogoutUser\");\n})\n}}",
+      "originalId": "customColumn4",
       "sticky": "",
       "textSize": "0.8rem",
       "thousandSeparator": true,
@@ -440,6 +501,7 @@
       "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"online\"])) : online })()}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -457,6 +519,7 @@
       "isVisible": true,
       "label": "ONLINE",
       "notation": "standard",
+      "onCheckChange": "",
       "originalId": "online",
       "sticky": "",
       "textColor": "",
@@ -568,6 +631,7 @@
   "rightColumn": 62,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
+  "showInlineEditingOptionDropdown": true,
   "tableData": "{{getUsers.data}}",
   "textSize": "0.8rem",
   "topRow": 3,

@@ -1,0 +1,50 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "msda07krwy",
+  "leftColumn": 62,
+  "minWidth": 50,
+  "mobileBottomRow": 81,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 77,
+  "needsErrorInfo": false,
+  "onClick": "getUsers.run()",
+  "parentColumnSpace": 30.40625,
+  "parentId": "swk1glk43x",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5fp4hp9lzg",
+  "widgetName": "IconButtonOdswiez"
+}

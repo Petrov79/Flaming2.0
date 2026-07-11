@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ \" ZMIEŃ WARTOŚĆ BAZOWĄ (\" + (SelectRok.selectedOptionValue +\")\" || \"\") }}",
+  "text": "{{ \" ZMIEŃ WARTOŚĆ BAZOWĄ DLA ROKU \" + (SelectRok.selectedOptionValue +\" (\"+ SliderJST.options.find(\n  o => o.value === SliderJST.value\n)?.label+\")\" || \"\") }}",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.backgroundColor}}",
   "topRow": 1,

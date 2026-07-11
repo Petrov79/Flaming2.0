@@ -1,0 +1,9 @@
+UPDATE sessions
+SET
+    active = false
+WHERE
+    user_id = {{ TableUsers.selectedRow.id }}
+    AND active = true
+RETURNING
+    token,
+    user_id;

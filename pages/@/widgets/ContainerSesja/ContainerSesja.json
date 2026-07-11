@@ -59,7 +59,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "ekpdqs4pxt",
-  "leftColumn": 40,
+  "leftColumn": 41,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
   "minWidth": 450,
@@ -81,5 +81,5 @@
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "l795o9cclf",
-  "widgetName": "Container2Copy1"
+  "widgetName": "ContainerSesja"
 }
