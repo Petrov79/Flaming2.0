@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "@",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
