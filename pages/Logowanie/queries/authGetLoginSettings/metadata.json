@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_4e4d9293-bae6-4073-851e-d51effdd3a50",
-  "id": "Admin_getAppSettings",
+  "gitSyncId": "6a52d68992602c370020463b_98812692-2a8b-4947-b006-0453bd5e9be8",
+  "id": "Logowanie_authGetLoginSettings",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    id,\n    code,\n    value,\n    description\nFROM app_settings\nORDER BY code;",
+      "body": "SELECT\n    MAX(\n        CASE\n            WHEN code = 'LOGIN_MAX_ATTEMPTS'\n            THEN value::integer\n        END\n    ) AS max_attempts,\n\n    MAX(\n        CASE\n            WHEN code = 'LOGIN_LOCK_TIME'\n            THEN value::integer\n        END\n    ) AS lock_time\nFROM app_settings;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "getAppSettings",
-    "pageId": "Admin",
-    "runBehaviour": "AUTOMATIC",
+    "name": "authGetLoginSettings",
+    "pageId": "Logowanie",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

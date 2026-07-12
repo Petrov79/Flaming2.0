@@ -3,19 +3,33 @@ SELECT
     u.name,
     u.mail,
     u.role_id,
+    u.failed_login_attempts,
+    u.login_locked_until,
+
+    (
+        u.login_locked_until IS NOT NULL
+        AND u.login_locked_until > CURRENT_TIMESTAMP
+    ) AS is_locked,
+
     r.name AS role,
     r.code AS role_code,
+
     EXISTS (
         SELECT 1
         FROM sessions s
         WHERE
             s.user_id = u.id
+            AND s.active = true
             AND s.expires_at > CURRENT_TIMESTAMP
     ) AS online
+
 FROM users u
+
 JOIN roles r
     ON r.id = u.role_id
+
 WHERE
     u.active = true
+
 ORDER BY
     u.name;

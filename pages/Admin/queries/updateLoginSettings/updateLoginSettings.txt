@@ -1,0 +1,14 @@
+UPDATE app_settings
+SET
+    value = CASE
+        WHEN code = 'LOGIN_MAX_ATTEMPTS'
+            THEN {{ SelectLoginAttempts.selectedOptionValue }}
+        WHEN code = 'LOGIN_LOCK_TIME'
+            THEN {{ SelectBlockadeTime.selectedOptionValue }}
+    END
+WHERE
+    code IN
+    (
+        'LOGIN_MAX_ATTEMPTS',
+        'LOGIN_LOCK_TIME'
+    );

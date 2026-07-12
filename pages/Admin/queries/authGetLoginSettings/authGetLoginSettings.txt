@@ -1,0 +1,15 @@
+SELECT
+    MAX(
+        CASE
+            WHEN code = 'LOGIN_MAX_ATTEMPTS'
+            THEN value::integer
+        END
+    ) AS max_attempts,
+
+    MAX(
+        CASE
+            WHEN code = 'LOGIN_LOCK_TIME'
+            THEN value::integer
+        END
+    ) AS lock_time
+FROM app_settings;

@@ -1,0 +1,26 @@
+UPDATE users
+SET
+    failed_login_attempts =
+        CASE
+            WHEN failed_login_attempts + 1 >= {{ authGetLoginSettings.data[0].max_attempts }}
+                THEN 0
+            ELSE
+                failed_login_attempts + 1
+        END,
+
+    login_locked_until =
+        CASE
+            WHEN failed_login_attempts + 1 >= {{ authGetLoginSettings.data[0].max_attempts }}
+                THEN CURRENT_TIMESTAMP +
+                     make_interval(
+                         mins => {{ authGetLoginSettings.data[0].lock_time }}
+                     )
+            ELSE
+                login_locked_until
+        END
+WHERE
+    mail = {{ mail_input.text }}
+    AND active = true
+RETURNING
+    failed_login_attempts,
+    login_locked_until;

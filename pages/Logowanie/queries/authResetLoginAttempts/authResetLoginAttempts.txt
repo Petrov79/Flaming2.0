@@ -1,0 +1,6 @@
+UPDATE users
+SET
+    failed_login_attempts = 0,
+    login_locked_until = NULL
+WHERE
+    id = {{ authLogin.data[0].id }};

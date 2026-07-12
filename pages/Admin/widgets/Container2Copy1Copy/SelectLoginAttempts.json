@@ -4,7 +4,7 @@
   "borderRadius": "0.375rem",
   "bottomRow": 6,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \ngetSessionTimeout.data?.[0]?.session_timeout\n))(SelectSessionTimeout.options, SelectSessionTimeout.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \ngetAppSettings.data.find(\n  s => s.code === \"LOGIN_MAX_ATTEMPTS\"\n)?.value\n))(SelectLoginAttempts.options, SelectLoginAttempts.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -29,11 +29,11 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Długość sesji użytkownika:",
+  "labelText": "Próby logowania",
   "labelTextColor": "#64748b",
   "labelTextSize": "1rem",
   "labelWidth": 5,
-  "leftColumn": 2,
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -45,17 +45,17 @@
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 10.0859375,
-  "parentId": "j3ytn88abl",
+  "parentId": "gryw1ojvff",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 33,
+  "rightColumn": 26,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"label\": \"2 min\",\n    \"value\": 2\n  },\n  {\n    \"label\": \"5 min\",\n    \"value\": 5\n  },\n  {\n    \"label\": \"10 min\",\n    \"value\": 10\n  },\n\t {\n    \"label\": \"20 min\",\n    \"value\": 20\n  },\n\t {\n    \"label\": \"30 min\",\n    \"value\": 30\n  },\n  {\n    \"label\": \"60 min\",\n    \"value\": 60\n  },\n\t {\n    \"label\": \"90 min\",\n    \"value\": 90\n  }\n]",
+  "sourceData": "[\n  {\n    \"label\": \"2 próby\",\n    \"value\": \"2\"\n  },\n  {\n    \"label\": \"3 próby\",\n    \"value\": \"3\"\n  },\n  {\n    \"label\": \"4 próby\",\n    \"value\": \"4\"\n  },\n\t {\n    \"label\": \"5 prób\",\n    \"value\": \"5\"\n  },\n\t {\n    \"label\": \"6 prób\",\n    \"value\": \"6\"\n  }\n]",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "zoailmug72",
-  "widgetName": "SelectSessionTimeout"
+  "widgetId": "ps7r3o37bz",
+  "widgetName": "SelectLoginAttempts"
 }

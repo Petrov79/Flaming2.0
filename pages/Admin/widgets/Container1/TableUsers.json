@@ -38,25 +38,33 @@
     "mail",
     "role",
     "online",
+    "is_locked",
+    "failed_login_attempts",
+    "login_locked_until",
     "customColumn4",
-    "customColumn1",
+    "customColumn5",
     "customColumn2",
+    "customColumn1",
     "customColumn3",
-    "role_code",
     "role_id",
+    "role_code",
     "id"
   ],
-  "columnUpdatedAt": 1783805722115,
+  "columnUpdatedAt": 1783887408936,
   "columnWidthMap": {
     "customColumn1": 92,
     "customColumn2": 114,
     "customColumn3": 98,
     "customColumn4": 109,
+    "customColumn5": 100,
+    "failed_login_attempts": 105,
     "id": 60,
-    "mail": 279,
-    "name": 221,
+    "is_locked": 96,
+    "login_locked_until": 120,
+    "mail": 221,
+    "name": 182,
     "online": 96,
-    "role": 178,
+    "role": 156,
     "role_code": 186
   },
   "compactMode": "SHORT",
@@ -143,6 +151,36 @@
     },
     {
       "key": "primaryColumns.customColumn4.cellBackground"
+    },
+    {
+      "key": "primaryColumns.failed_login_attempts.computedValue"
+    },
+    {
+      "key": "primaryColumns.login_locked_until.computedValue"
+    },
+    {
+      "key": "primaryColumns.failed_login_attempts.cellBackground"
+    },
+    {
+      "key": "primaryColumns.login_locked_until.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn5.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn5.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn5.buttonColor"
+    },
+    {
+      "key": "primaryColumns.is_locked.computedValue"
+    },
+    {
+      "key": "primaryColumns.is_locked.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn5.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -190,6 +228,21 @@
     },
     {
       "key": "primaryColumns.customColumn4.onClick"
+    },
+    {
+      "key": "primaryColumns.failed_login_attempts.cellBackground"
+    },
+    {
+      "key": "primaryColumns.login_locked_until.cellBackground"
+    },
+    {
+      "key": "primaryColumns.is_locked.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn5.cellBackground"
+    },
+    {
+      "key": "primaryColumns.customColumn5.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -207,6 +260,9 @@
     },
     {
       "key": "primaryColumns.customColumn4.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn5.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -397,6 +453,81 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "customColumn5": {
+      "alias": "ODBLOKUJ",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{TableUsers.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "CENTER",
+      "iconName": "unlock",
+      "id": "customColumn5",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "ODBLOKUJ",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\nstoreValue(\n  \"unlockUser\",\n  TableUsers.triggeredRow\n).then(() => {\n\n  if (!TableUsers.triggeredRow.is_locked) {\n\n    showAlert(\n      \"Użytkownik nie jest zablokowany.\",\n      \"warning\"\n    );\n\n    return;\n\n  }\n\n  showModal(\"ModalUnlockUser\");\n\n})\n}}",
+      "originalId": "customColumn5",
+      "sticky": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "failed_login_attempts": {
+      "alias": "failed_login_attempts",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"failed_login_attempts\"])) : failed_login_attempts })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "failed_login_attempts",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "PRÓBY LOG.",
+      "notation": "standard",
+      "originalId": "failed_login_attempts",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "id": {
       "alias": "id",
       "allowCellWrapping": false,
@@ -429,6 +560,74 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "is_locked": {
+      "alias": "is_locked",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"is_locked\"])) : is_locked })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "is_locked",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "BLOKADA",
+      "notation": "standard",
+      "originalId": "is_locked",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "login_locked_until": {
+      "alias": "login_locked_until",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n)) : \ncurrentRow.online == true ? \"#d9fdd3\" : \"\"\n })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableUsers.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"login_locked_until\"])) : login_locked_until })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "login_locked_until",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "CZAS BLOK.",
+      "notation": "standard",
+      "originalId": "login_locked_until",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.8rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "mail": {
       "alias": "mail",
       "allowCellWrapping": false,
@@ -440,7 +639,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "mail",
       "index": 2,
       "isCellEditable": false,
@@ -472,7 +671,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "name",
       "index": 1,
       "isCellEditable": false,

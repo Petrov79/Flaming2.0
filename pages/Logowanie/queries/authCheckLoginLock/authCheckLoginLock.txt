@@ -1,0 +1,12 @@
+SELECT
+    id,
+    failed_login_attempts,
+    login_locked_until,
+    (
+        login_locked_until IS NOT NULL
+        AND login_locked_until > CURRENT_TIMESTAMP
+    ) AS is_locked
+FROM users
+WHERE
+    mail = {{ mail_input.text }}
+    AND active = true;

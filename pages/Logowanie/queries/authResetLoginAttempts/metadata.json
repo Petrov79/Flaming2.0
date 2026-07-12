@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_4e4d9293-bae6-4073-851e-d51effdd3a50",
-  "id": "Admin_getAppSettings",
+  "gitSyncId": "6a52d68992602c370020463b_7dd1b25c-ff33-4877-bbc9-5a80778d60c7",
+  "id": "Logowanie_authResetLoginAttempts",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    id,\n    code,\n    value,\n    description\nFROM app_settings\nORDER BY code;",
+      "body": "UPDATE users\nSET\n    failed_login_attempts = 0,\n    login_locked_until = NULL\nWHERE\n    id = {{ authLogin.data[0].id }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "Neon_postgres",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "getAppSettings",
-    "pageId": "Admin",
-    "runBehaviour": "AUTOMATIC",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "authResetLoginAttempts",
+    "pageId": "Logowanie",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

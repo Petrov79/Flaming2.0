@@ -33,9 +33,9 @@
   "mobileRightColumn": 44,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "onClick": "{{\nupdateSessionTimeout.run(\n  () => {\n    showAlert(\"Długość sesji została zmieniona.\", \"success\");\n    getSessionTimeout.run();\n  },\n  (e) => {\n    showAlert(\"Błąd: \" + e.message, \"error\");\n  }\n)\n}}",
+  "onClick": "{{\nupdateLoginSettings.run(\n  () => {\n    getAppSettings.run();\n    showAlert(\n      \"Ustawienia zostały zapisane.\",\n      \"success\"\n    );\n  },\n  (e) => {\n    showAlert(\n      \"Błąd zapisu: \" + e.message,\n      \"error\"\n    );\n  }\n)\n}}",
   "parentColumnSpace": 10.0859375,
-  "parentId": "j3ytn88abl",
+  "parentId": "gryw1ojvff",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -47,6 +47,6 @@
   "topRow": 3,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "kw5xip3ylv",
-  "widgetName": "ButtonTimeouChange"
+  "widgetId": "qg96ewviu6",
+  "widgetName": "ButtonLoginSettings"
 }
