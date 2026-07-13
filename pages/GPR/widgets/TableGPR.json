@@ -34,7 +34,6 @@
   },
   "columnOrder": [
     "id",
-    "LP",
     "gmina",
     "powiat",
     "tytul",
@@ -42,11 +41,11 @@
     "data_wykazu",
     "link"
   ],
-  "columnUpdatedAt": 1783276906525,
+  "columnUpdatedAt": 1783930261016,
   "columnWidthMap": {
     "LP": 60,
     "data_wykazu": 175,
-    "data_zatwierdzenia": 184,
+    "data_zatwierdzenia": 206,
     "gmina": 178,
     "tytul": 417
   },
@@ -89,9 +88,6 @@
     },
     {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.LP.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -127,40 +123,6 @@
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "LP": {
-      "alias": "LP",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = TableGPR.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"LP\"])) : LP })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "LP",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "LP",
-      "notation": "standard",
-      "originalId": "LP",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "data_wykazu": {
       "alias": "data_wykazu",
       "allowCellWrapping": false,
@@ -407,7 +369,7 @@
   "rightColumn": 60,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{\n  (getGPR.data || []).map((row, index) => {\n    return {\n      \"LP\": index + 1,\n      ...row\n    };\n  })\n}}",
+  "tableData": "{{ getGPR.data}}",
   "textSize": "0.875rem",
   "topRow": 13,
   "totalRecordsCount": 0,

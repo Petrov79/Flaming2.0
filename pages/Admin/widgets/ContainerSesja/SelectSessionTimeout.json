@@ -50,7 +50,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 33,
+  "rightColumn": 26,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"label\": \"2 min\",\n    \"value\": 2\n  },\n  {\n    \"label\": \"5 min\",\n    \"value\": 5\n  },\n  {\n    \"label\": \"10 min\",\n    \"value\": 10\n  },\n\t {\n    \"label\": \"20 min\",\n    \"value\": 20\n  },\n\t {\n    \"label\": \"30 min\",\n    \"value\": 30\n  },\n  {\n    \"label\": \"60 min\",\n    \"value\": 60\n  },\n\t {\n    \"label\": \"90 min\",\n    \"value\": 90\n  }\n]",
   "topRow": 0,

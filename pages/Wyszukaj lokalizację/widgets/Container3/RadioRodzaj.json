@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 9,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultOptionValue": "0",
   "dynamicBindingPathList": [
@@ -28,7 +28,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "qkaj1f5la5",
-  "label": "Wybierz rodzaj lokalizacji:",
+  "label": "Rodzaj lokalizacji:",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
@@ -58,7 +58,7 @@
       "value": "2"
     }
   ],
-  "originalBottomRow": 9,
+  "originalBottomRow": 14,
   "originalTopRow": 1,
   "parentColumnSpace": 26.484375,
   "parentId": "e1aev98i3i",
