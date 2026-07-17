@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#64748b",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 68,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,43 +14,43 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
+      "key": "textColor"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "htuxvr3sx5",
-  "leftColumn": 42,
+  "key": "9et8nv6pqd",
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 42,
-  "mobileLeftColumn": 44,
-  "mobileRightColumn": 60,
-  "mobileTopRow": 38,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
   "overflow": "NONE",
-  "parentColumnSpace": 30.25,
+  "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{\n\"Użytkownik: \" +\nappsmith.store.session.user.name +\n\" | sesja do godz. \" +\nnew Date(appsmith.store.session.expiresAt).toLocaleTimeString(\"pl-PL\", {\n  hour: \"2-digit\",\n  minute: \"2-digit\"\n})\n}}",
-  "textAlign": "RIGHT",
-  "textColor": "#64748b",
-  "topRow": 0,
+  "text": "  LOGI",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "topRow": 64,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "0ly2zfxpvf",
-  "widgetName": "Text3"
+  "widgetId": "nfxelw7z73",
+  "widgetName": "TextTytulCopy"
 }

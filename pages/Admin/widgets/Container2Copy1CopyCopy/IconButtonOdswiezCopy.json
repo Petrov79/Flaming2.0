@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 33,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "msda07krwy",
+  "leftColumn": 10,
+  "minWidth": 50,
+  "mobileBottomRow": 81,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 77,
+  "needsErrorInfo": false,
+  "onClick": "getLogs.run()",
+  "parentColumnSpace": 30.40625,
+  "parentId": "b52sm179eb",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 13,
+  "tooltip": "Odśwież dane tabeli",
+  "topRow": 29,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "p1owzjuvuh",
+  "widgetName": "IconButtonOdswiezCopy"
+}

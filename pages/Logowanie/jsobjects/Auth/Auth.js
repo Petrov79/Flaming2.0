@@ -112,6 +112,14 @@ export default {
         }
 
       });
+			// 9. Zapis logu
+					await Log.write(
+  				"LOGIN",
+  				"Poprawne logowanie.",
+  				authLogin.data[0].id,
+  				authLogin.data[0].name,
+  				authCreateSession.data[0].token
+);
 
       // 9. Przekierowanie
 
