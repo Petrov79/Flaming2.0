@@ -1,0 +1,27 @@
+SELECT *
+FROM (
+    SELECT DISTINCT ON (e.id)
+        e.id AS ekspert_id,
+        we.dziedziny_id AS dziedzina_id,
+        NULL::integer AS kategoria_id,
+        NULL::integer AS obszar_id,
+        e.nazwisko,
+        e.email,
+        e.telefon1,
+        e.umowa
+    FROM eksperci e
+    JOIN wykaz_ekspertow we
+        ON e.id = we.eksperci_id
+    WHERE
+        we.dziedziny_id = ANY(
+            string_to_array(
+                '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
+                ','
+            )::integer[]
+        )
+    ORDER BY
+        e.id,
+        e.nazwisko
+) wynik
+ORDER BY
+    nazwisko COLLATE "pl-x-icu";
