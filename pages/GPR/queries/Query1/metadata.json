@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_f5f7b611-24ca-4480-825c-7f720f123429",
-  "id": "Eksperci_authCheckSession",
+  "gitSyncId": "6a5a2a4dbb941c3fc539c2c3_df470bff-0d20-4bcc-a71b-bbca2b53b233",
+  "id": "GPR_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "SELECT current_setting('search_path');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,13 +22,9 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "authCheckSession",
-    "pageId": "Eksperci",
+    "dynamicBindingPathList": [],
+    "name": "Query1",
+    "pageId": "GPR",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
