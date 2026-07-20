@@ -71,15 +71,15 @@
       "isDefault": false
     },
     {
-      "id": "Wyloguj",
-      "isDefault": false
-    },
-    {
       "id": "Zmiana hasła",
       "isDefault": false
     },
     {
       "id": "Admin",
+      "isDefault": false
+    },
+    {
+      "id": "Wyloguj ⬇️",
       "isDefault": false
     }
   ],

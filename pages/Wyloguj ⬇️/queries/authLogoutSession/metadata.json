@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a4d033ae3824d264e76aad9_af97d48a-00f7-4fdc-a557-a81122f56b71",
-  "id": "Wyloguj_authLogoutSession",
+  "id": "Wyloguj ⬇️_authLogoutSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "authLogoutSession",
-    "pageId": "Wyloguj",
+    "pageId": "Wyloguj ⬇️",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
