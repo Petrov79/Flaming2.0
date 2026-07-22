@@ -6,6 +6,7 @@ SELECT
   j.gus_kod AS gmina_kod,
   j.nazwa_jst AS gmina,
   gr.rodzaj_gmi_nazwa AS rodzaj_gminy,
+  j.region,
 
   p.gus_kod AS powiat_kod,
   p.nazwa_jst AS powiat
