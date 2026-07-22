@@ -7,6 +7,8 @@ SELECT
   NULL::text AS gmina,
   NULL::text AS rodzaj_gminy,
 
+  p.region,
+
   p.gus_kod AS powiat_kod,
   p.nazwa_jst AS powiat
 
