@@ -40,7 +40,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n  appsmith.store.trybNaboru === \"edycja\"\n    ? editNabory.run(() => {\n        getNabory.run(() => {\n          showAlert(\"Zmiany zostały zapisane\", \"success\");\n        });\n      })\n    : addNabory.run(() => {\n        getNabory.run(() => {\n          showAlert(\"Nowy nabór został dodany\", \"success\");\n        });\n      })\n}}",
+  "onClick": "{{\n  appsmith.store.trybNaboru === \"edycja\"\n    ? editNabory.run(() => {\n        closeModal(\"ModalEdycjaNaboru\");\n        getNabory.run(() => {\n          showAlert(\"Zmiany zostały zapisane\", \"success\");\n        });\n      })\n    : addNabory.run(() => {\n        closeModal(\"ModalEdycjaNaboru\");\n        getNabory.run(() => {\n          showAlert(\"Nowy nabór został dodany\", \"success\");\n        });\n      })\n}}",
   "originalBottomRow": 80,
   "originalTopRow": 76,
   "parentId": "yceu4evemu",
