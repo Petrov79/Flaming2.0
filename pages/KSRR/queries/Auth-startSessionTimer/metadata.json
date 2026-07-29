@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_8d575f22-3d96-4a62-a9ab-2d79fc1dd1ba",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_f17e40b0-82ea-4fbe-8fa1-2bee00c6d998",
   "id": "KSRR_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "KSRR",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

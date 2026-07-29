@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_ac2e396f-2e6b-456b-9ba4-0527536e7014",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_d5d87efc-3d3e-4984-b976-9f8b85bdb584",
   "id": "Eksperci_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "Eksperci",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

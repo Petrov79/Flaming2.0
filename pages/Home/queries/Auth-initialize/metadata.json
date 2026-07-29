@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_eb757b97-3fc5-4034-bdd4-1ab9715c51ee",
-  "id": "Home_Auth.logout",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_abb5506f-d02e-4a55-a7be-1dcf204e8307",
+  "id": "Home_Auth.initialize",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "Auth.logout",
-    "name": "logout",
+    "fullyQualifiedName": "Auth.initialize",
+    "name": "initialize",
     "pageId": "Home",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
