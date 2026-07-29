@@ -1,0 +1,55 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 74,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "unphp8cwqo",
+  "leftColumn": 45,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 74,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 70,
+  "needsErrorInfo": false,
+  "originalBottomRow": 74,
+  "originalTopRow": 70,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 58,
+  "shouldTruncate": false,
+  "text": "{{\n  \"KWOTA: \" + (\n    (\n      Array.isArray(TablePotwierdzenia.filteredTableData)\n        ? TablePotwierdzenia.filteredTableData\n        : (\n            Array.isArray(TablePotwierdzenia.tableData)\n              ? TablePotwierdzenia.tableData\n              : []\n          )\n    ).reduce((sum, row) => sum + (Number(row.kwota) || 0), 0)\n      .toLocaleString(\"pl-PL\", {\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2\n      })\n  ) + \" zł\"\n}}",
+  "textAlign": "RIGHT",
+  "textColor": "#4a5768",
+  "topRow": 70,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "ojxrdxo5un",
+  "widgetName": "Text1CopyCopyCopy3CopyCopy"
+}

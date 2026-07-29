@@ -1,0 +1,43 @@
+SELECT
+    p.id,
+    n.nr_naboru,
+    e.nazwisko AS ekspert,
+    pr.imie AS pracownik,
+    p.nr_wniosku,
+    p.data_oceny,
+    p.rodzaj_oceny,
+    p.kwota
+FROM potwierdzenia p
+LEFT JOIN eksperci e
+    ON e.id = p.ekspert_id
+LEFT JOIN nabory n
+    ON n.id = p.nabor_id
+LEFT JOIN pracownicy pr
+    ON pr.id = p.pracownik_id
+WHERE
+    EXTRACT(YEAR FROM p.data_oceny)::int IN ({{ SelectRok.selectedOptionValues.join(",") }})
+
+{{ SelectKwartal.selectedOptionValues.length > 0
+    ? `AND EXTRACT(QUARTER FROM p.data_oceny)::int IN (${SelectKwartal.selectedOptionValues.join(",")})`
+    : "" }}
+
+{{ SelectEkspert.selectedOptionValues.length > 0
+    ? `AND p.ekspert_id IN (${SelectEkspert.selectedOptionValues.join(",")})`
+    : "" }}
+
+{{ SelectNabor.selectedOptionValues.length > 0
+    ? `AND p.nabor_id IN (${SelectNabor.selectedOptionValues.join(",")})`
+    : "" }}
+
+{{ SelectRodzajOceny.selectedOptionValues.length > 0
+    ? `AND p.rodzaj_oceny IN ('${SelectRodzajOceny.selectedOptionValues.join("','")}')`
+    : "" }}
+
+{{ InputWniosek.text.trim().length > 0
+    ? `AND p.nr_wniosku ILIKE '%${InputWniosek.text.trim().replace(/'/g, "''")}%'`
+    : "" }}
+
+ORDER BY
+    p.data_oceny,
+    e.nazwisko,
+    p.nr_wniosku;

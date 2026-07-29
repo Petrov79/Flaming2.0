@@ -1,0 +1,58 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 70,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "unphp8cwqo",
+  "leftColumn": 28,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 74,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 70,
+  "needsErrorInfo": false,
+  "originalBottomRow": 70,
+  "originalTopRow": 66,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 35,
+  "shouldTruncate": false,
+  "text": "{{\n  \"OM:  \" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.filter(\n          row => row.rodzaj_oceny === \"OM\"\n        ).length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.filter(\n                row => row.rodzaj_oceny === \"OM\"\n              ).length\n            : 0\n        )\n  )\n}}",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 66,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "y9dvn6htef",
+  "widgetName": "Text1CopyCopyCopyCopy"
+}

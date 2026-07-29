@@ -1,0 +1,7 @@
+SELECT DISTINCT
+    rodzaj_oceny AS value,
+    rodzaj_oceny AS label
+FROM potwierdzenia
+WHERE rodzaj_oceny IS NOT NULL
+  AND trim(rodzaj_oceny) <> ''
+ORDER BY rodzaj_oceny;
