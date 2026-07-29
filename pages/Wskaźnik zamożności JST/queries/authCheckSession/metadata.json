@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Wskaźnik zamożności JST",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

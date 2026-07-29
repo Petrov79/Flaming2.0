@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Zdrowie ( AOS )",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
