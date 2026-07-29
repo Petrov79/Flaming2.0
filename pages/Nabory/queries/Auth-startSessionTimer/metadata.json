@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_6128a40e-028a-49cb-8252-49feb8ee2323",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_dafe7d26-4c58-4a82-b737-6f00ec94cec4",
   "id": "Nabory_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "Nabory",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

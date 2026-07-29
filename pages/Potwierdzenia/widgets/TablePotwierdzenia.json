@@ -103,9 +103,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "onRowSelected"
-    },
-    {
       "key": "tableData"
     }
   ],
@@ -137,7 +134,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"modalLoading\", true);\n\n  showModal(modalEkspert.name);\n\n  Promise.all([\n    eksperciSzczegolyKontakt.run(),\n    eksperciSzczegolyDziedziny.run(),\n    eksperciSzczegolyObszar.run()\n  ]).then(() => {\n    storeValue(\"modalLoading\", false);\n  });\n}}",
+  "onRowSelected": "",
   "originalBottomRow": 66,
   "originalTopRow": 22,
   "parentColumnSpace": 19.8125,

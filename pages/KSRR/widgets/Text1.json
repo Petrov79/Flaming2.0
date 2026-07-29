@@ -39,7 +39,7 @@
   "parentId": "0",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
+  "rightColumn": 40,
   "shouldTruncate": false,
   "text": "{{\n  Number(SliderJST.value) === 0\n    ? \"LISTA GMIN ZAGROŻONYCH TRWAŁĄ MARGINALIZACJĄ (WOJ. MAZOWIECKIE)\"\n    : Number(SliderJST.value) === 1\n      ? \"IMIENNA LISTA MIAST ŚREDNICH TRACĄCYCH FUNKCJE SPOŁECZNO-GOSPODARCZE (WOJ. MAZOWIECKIE)\"\n      : \"\"\n}}",
   "textAlign": "LEFT",

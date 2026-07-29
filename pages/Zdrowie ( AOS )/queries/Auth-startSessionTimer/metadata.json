@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_97ff0259-3444-4532-ad75-4c18728a0265",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_8bb3680a-c719-499d-8052-4e2f6d3b92e6",
   "id": "Zdrowie ( AOS )_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "Zdrowie ( AOS )",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

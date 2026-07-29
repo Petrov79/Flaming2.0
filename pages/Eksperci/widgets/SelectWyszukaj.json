@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 17,
+  "bottomRow": 18,
   "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -70,7 +70,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{\n  RadioGroupWyszukaj.selectedOptionValue == 1\n    ? (getDziedziny.data || []).map(row => ({\n        label: row.nazwa,\n        value: String(row.id)\n      }))\n    : RadioGroupWyszukaj.selectedOptionValue == 2\n      ? (getKategorie.data || []).map(row => ({\n          label: row.id + \" - \" + row.nazwa_kategorie,\n          value: String(row.id)\n        }))\n      : RadioGroupWyszukaj.selectedOptionValue == 3\n        ? (getObszary.data || []).map(row => ({\n            label: row.symbol_ob + \" - \" + row.nazwa_ob,\n            value: String(row.id)\n          }))\n        : []\n}}",
-  "topRow": 13,
+  "topRow": 14,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "03r48qp92j",

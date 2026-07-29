@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_ddab4ed7-3329-44aa-b042-1f98e3f4f929",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_2dcaf1b6-1095-412b-bce0-bc9563f1a2e8",
   "id": "Home_Auth.startLogoutTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -26,6 +26,6 @@
     "name": "startLogoutTimer",
     "pageId": "Home",
     "runBehaviour": "MANUAL",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_e059489f-2feb-4a77-bd2b-b72d1c989075",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_fff0b603-93af-4b18-9e6b-708d930a6c1f",
   "id": "GPR_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "GPR",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

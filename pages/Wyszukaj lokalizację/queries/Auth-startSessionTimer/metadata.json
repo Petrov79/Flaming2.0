@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_03049625-f6c1-4ac0-8797-82de6ae49315",
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_c55d36d1-7830-4d4a-a034-82a89cdf3820",
   "id": "Wyszukaj lokalizację_Auth.startSessionTimer",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.startSessionTimer",
     "name": "startSessionTimer",
     "pageId": "Wyszukaj lokalizację",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

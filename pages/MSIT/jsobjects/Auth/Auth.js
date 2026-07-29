@@ -3,6 +3,31 @@ export default {
   sessionTimer: null,
   logoutTimer: null,
 
+  async initialize() {
+
+    const session = appsmith.store.session;
+
+    if (!session || !session.token) {
+
+      await clearStore();
+      await navigateTo("Logowanie");
+
+      return false;
+
+    }
+
+    const ok = await this.checkSession();
+
+    if (!ok) {
+      return false;
+    }
+
+    this.startSessionTimer();
+
+    return true;
+
+  },
+
   async logout() {
     try {
 
@@ -147,7 +172,7 @@ export default {
   },
 
   startSessionTimer() {
-	
+
     if (this.sessionTimer) {
       clearTimeout(this.sessionTimer);
       this.sessionTimer = null;
