@@ -1,0 +1,6 @@
+SELECT DISTINCT
+    EXTRACT(YEAR FROM data_oceny)::int AS value,
+    EXTRACT(YEAR FROM data_oceny)::text AS label
+FROM potwierdzenia
+WHERE data_oceny IS NOT NULL
+ORDER BY value DESC;

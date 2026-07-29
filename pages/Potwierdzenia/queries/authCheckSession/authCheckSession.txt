@@ -1,0 +1,7 @@
+SELECT
+    expires_at
+FROM sessions
+WHERE
+    token = {{ appsmith.store.session.token }}
+    AND active = true
+    AND expires_at > CURRENT_TIMESTAMP;

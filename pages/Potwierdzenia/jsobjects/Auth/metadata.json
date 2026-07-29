@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a5e211dd68b24bcec9072a5_f5150fdf-d97f-4f9f-80d9-891b92e75e91",
+  "id": "Potwierdzenia_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Potwierdzenia",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

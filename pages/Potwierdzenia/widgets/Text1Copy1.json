@@ -1,0 +1,55 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 70,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "unphp8cwqo",
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 74,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 70,
+  "needsErrorInfo": false,
+  "originalBottomRow": 70,
+  "originalTopRow": 66,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 58,
+  "shouldTruncate": false,
+  "text": "{{\n  \"LICZBA POTWIERDZEŃ: \" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.length\n            : 0\n        )\n  )\n}}",
+  "textAlign": "RIGHT",
+  "textColor": "#4a5768",
+  "topRow": 66,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "wxub0tr1a2",
+  "widgetName": "Text1Copy1"
+}
