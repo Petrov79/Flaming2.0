@@ -42,7 +42,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 37,
   "shouldTruncate": false,
   "text": "{{\n  SliderAOS.value == 0 ? \"AMBULATORYJNA OPIEKA SPECJALISTYCZNA - LICZBA PORADNI\" : \"AMBULATORYJNA OPIEKA SPECJALISTYCZNA - LICZBA PORAD\"\n}}",
   "textAlign": "LEFT",
