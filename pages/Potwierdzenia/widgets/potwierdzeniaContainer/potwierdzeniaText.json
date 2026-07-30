@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "unphp8cwqo",
-  "leftColumn": 44,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,23 +33,23 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 70,
   "needsErrorInfo": false,
-  "originalBottomRow": 70,
-  "originalTopRow": 66,
+  "originalBottomRow": 8,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "parentId": "kgp9ahpupo",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 58,
+  "rightColumn": 64,
   "shouldTruncate": false,
   "text": "{{\n  \"LICZBA POTWIERDZEŃ: \" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "RIGHT",
   "textColor": "#4a5768",
-  "topRow": 66,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "wxub0tr1a2",
-  "widgetName": "Text1Copy1"
+  "widgetName": "potwierdzeniaText"
 }

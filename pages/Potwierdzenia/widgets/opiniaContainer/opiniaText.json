@@ -1,7 +1,8 @@
 {
   "animateLoading": false,
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -17,9 +18,12 @@
     },
     {
       "key": "textColor"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
@@ -27,7 +31,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "unphp8cwqo",
-  "leftColumn": 21,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -36,23 +40,22 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 70,
   "needsErrorInfo": false,
-  "originalBottomRow": 70,
-  "originalTopRow": 66,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "parentId": "jrl3yxj800",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 64,
+  "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "{{\n  \"OMW:  \" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.filter(\n          row => row.rodzaj_oceny === \"OMW\"\n        ).length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.filter(\n                row => row.rodzaj_oceny === \"OMW\"\n              ).length\n            : 0\n        )\n  )\n}}",
+  "text": "{{\n  \"OPINIA:\t\t\t\" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.filter(\n          row => row.rodzaj_oceny === \"Opinia\"\n        ).length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.filter(\n                row => row.rodzaj_oceny === \"Opinia\"\n              ).length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.primaryColor}}",
-  "topRow": 66,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "z6h0fqekxy",
-  "widgetName": "Text1CopyCopyCopy4"
+  "widgetId": "wizjzi7v15",
+  "widgetName": "opiniaText"
 }
