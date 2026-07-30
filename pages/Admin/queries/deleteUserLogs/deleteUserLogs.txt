@@ -1,0 +1,7 @@
+DELETE FROM app_logs
+WHERE user_id = ANY(
+  string_to_array(
+    {{ SelectUser.selectedOptionValues.join(",") }},
+    ','
+  )::int[]
+);
