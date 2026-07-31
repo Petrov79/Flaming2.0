@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_e4a5ffb9-93df-4032-aa66-8513bab5f739",
-  "id": "Wyszukaj lokalizację_authCheckSession",
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_b60a5a31-7ea0-47c0-8bc0-2fa10bb1728b",
+  "id": "Kursy EURO_authLogoutSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "DELETE\nFROM sessions\nWHERE token = {{ appsmith.store.session.token }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "authCheckSession",
-    "pageId": "Wyszukaj lokalizację",
-    "runBehaviour": "AUTOMATIC",
+    "name": "authLogoutSession",
+    "pageId": "Kursy EURO",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

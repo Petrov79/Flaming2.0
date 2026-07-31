@@ -1,0 +1,6 @@
+SELECT
+    data_kursu,
+    TO_CHAR(data_kursu, 'DD-MM-YYYY') AS data_kursu_txt,
+    kurs_eur_pln
+FROM kursy_walut
+ORDER BY data_kursu DESC;

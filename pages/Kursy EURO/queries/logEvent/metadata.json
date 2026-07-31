@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_e4a5ffb9-93df-4032-aa66-8513bab5f739",
-  "id": "Wyszukaj lokalizację_authCheckSession",
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_06f8faf6-0905-404f-bee3-96a3517a550d",
+  "id": "Kursy EURO_logEvent",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "INSERT INTO app_logs\n(\n    event_type,\n    user_id,\n    user_name,\n    description,\n    session_token,\n    details\n)\nVALUES\n(\n    {{this.params.eventType}},\n    {{this.params.userId}},\n    {{this.params.userName}},\n    {{this.params.description}},\n    {{this.params.sessionToken}},\n    {{this.params.details}}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "authCheckSession",
-    "pageId": "Wyszukaj lokalizację",
-    "runBehaviour": "AUTOMATIC",
+    "name": "logEvent",
+    "pageId": "Kursy EURO",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

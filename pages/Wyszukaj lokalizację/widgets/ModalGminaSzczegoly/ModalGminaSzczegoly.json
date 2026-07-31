@@ -1,6 +1,6 @@
 {
   "animateLoading": "{{\n  getBazowaG.isLoading ||\n  getWskaznikG.isLoading ||\n  getCzyGPR.isLoading ||\n  getPopulacja.isLoading\n}}",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "0.375rem",
   "bottomRow": 512,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
@@ -52,9 +52,6 @@
   ],
   "detachFromLayout": true,
   "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    },
     {
       "key": "animateLoading"
     }

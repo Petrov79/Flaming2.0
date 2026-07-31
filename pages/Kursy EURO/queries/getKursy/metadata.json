@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_e4a5ffb9-93df-4032-aa66-8513bab5f739",
-  "id": "Wyszukaj lokalizację_authCheckSession",
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_1236d39f-fc50-49c2-9ff6-1e637859b2eb",
+  "id": "Kursy EURO_getKursy",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "SELECT\n    data_kursu,\n    TO_CHAR(data_kursu, 'DD-MM-YYYY') AS data_kursu_txt,\n    kurs_eur_pln\nFROM kursy_walut\nORDER BY data_kursu DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,13 +22,9 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "authCheckSession",
-    "pageId": "Wyszukaj lokalizację",
+    "dynamicBindingPathList": [],
+    "name": "getKursy",
+    "pageId": "Kursy EURO",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

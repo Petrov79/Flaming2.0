@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_505ef591-7dcf-4005-ab4b-1e70c0206193",
+  "id": "Kursy EURO_ImportKursy",
+  "unpublishedCollection": {
+    "name": "ImportKursy",
+    "pageId": "Kursy EURO",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "xml",
+        "value": "\"\""
+      }
+    ]
+  }
+}

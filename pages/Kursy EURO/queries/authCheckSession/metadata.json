@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_e4a5ffb9-93df-4032-aa66-8513bab5f739",
-  "id": "Wyszukaj lokalizację_authCheckSession",
+  "gitSyncId": "6a4cc5104ac43d2e7de42d86_56d2d9f5-0a1f-45f9-90dd-145a3203a6bb",
+  "id": "Kursy EURO_authCheckSession",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,8 +28,8 @@
       }
     ],
     "name": "authCheckSession",
-    "pageId": "Wyszukaj lokalizację",
-    "runBehaviour": "AUTOMATIC",
+    "pageId": "Kursy EURO",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

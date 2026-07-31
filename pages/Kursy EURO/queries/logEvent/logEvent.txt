@@ -1,0 +1,18 @@
+INSERT INTO app_logs
+(
+    event_type,
+    user_id,
+    user_name,
+    description,
+    session_token,
+    details
+)
+VALUES
+(
+    {{this.params.eventType}},
+    {{this.params.userId}},
+    {{this.params.userName}},
+    {{this.params.description}},
+    {{this.params.sessionToken}},
+    {{this.params.details}}
+);
