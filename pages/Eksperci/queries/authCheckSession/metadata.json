@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Eksperci",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
