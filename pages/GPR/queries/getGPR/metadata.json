@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    g.id,\n    gm.nazwa_jst AS gmina,\n    pw.nazwa_jst AS powiat,\n    g.tytul,\n    g.data_zatwierdzenia,\n    g.data_wykazu,\n    g.link\nFROM gpr g\nLEFT JOIN jst gm\n    ON gm.gus_kod = g.kod_gminy\nLEFT JOIN jst pw\n    ON pw.gus_kod = g.kod_powiatu\nORDER BY\n    gm.nazwa_jst,\n    pw.nazwa_jst,\n    g.tytul;",
+      "body": "SELECT\n    g.id,\n    gm.nazwa_jst AS gmina,\n    pw.nazwa_jst AS powiat,\n    g.tytul,\n    g.data_zatwierdzenia,\n    g.data_wykazu,\n    g.link,\n    g.uchwala\nFROM gpr g\nLEFT JOIN jst gm\n    ON gm.gus_kod = g.kod_gminy\nLEFT JOIN jst pw\n    ON pw.gus_kod = g.kod_powiatu\nORDER BY\n    gm.nazwa_jst,\n    pw.nazwa_jst,\n    g.tytul;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

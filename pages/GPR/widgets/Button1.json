@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 82,
-  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "bottomRow": 92,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
@@ -12,11 +12,17 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -27,7 +33,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ appsmith.store.session?.user?.id === 12 }}",
   "key": "df8a2g8bc5",
   "labelStyle": "BOLD",
   "leftColumn": 53,
@@ -38,8 +44,8 @@
   "mobileTopRow": 81,
   "needsErrorInfo": false,
   "onClick": "{{showModal(ModalDodajGPR.name);}}",
-  "originalBottomRow": 82,
-  "originalTopRow": 78,
+  "originalBottomRow": 92,
+  "originalTopRow": 88,
   "parentColumnSpace": 19.140625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -50,7 +56,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 60,
   "text": "{{\"DODAJ GPR\"}}",
-  "topRow": 78,
+  "topRow": 88,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "22flgm7cjz",

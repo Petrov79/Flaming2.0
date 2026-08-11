@@ -1,0 +1,30 @@
+TRUNCATE TABLE gpr RESTART IDENTITY;
+
+INSERT INTO gpr
+(
+    kod_gminy,
+    kod_powiatu,
+    tytul,
+    data_zatwierdzenia,
+    data_wykazu,
+    link,
+    uchwala
+)
+SELECT
+    x.kod_gminy,
+    LEFT(x.kod_gminy, 4) AS kod_powiatu,
+    x.tytul,
+    NULLIF(x.data_zatwierdzenia, '')::date,
+    NULLIF(x.data_wykazu, '')::date,
+    NULLIF(x.link, ''),
+    NULLIF(x.uchwala, '')
+FROM jsonb_to_recordset(
+    '{{ JSON.stringify(ImportGPR.data) }}'::jsonb
+) AS x(
+    kod_gminy text,
+    tytul text,
+    data_zatwierdzenia text,
+    data_wykazu text,
+    link text,
+    uchwala text
+);
