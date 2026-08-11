@@ -5,7 +5,8 @@ SELECT
     g.tytul,
     g.data_zatwierdzenia,
     g.data_wykazu,
-    g.link
+    g.link,
+    g.uchwala
 FROM gpr g
 LEFT JOIN jst gm
     ON gm.gus_kod = g.kod_gminy

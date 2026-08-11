@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 82,
+  "bottomRow": 85,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -34,8 +34,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
-  "originalBottomRow": 82,
-  "originalTopRow": 78,
+  "originalBottomRow": 85,
+  "originalTopRow": 81,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
@@ -47,7 +47,7 @@
   "text": "{{\n  \"  LICZBA GMINNY PROGRAMÓW REWITALIZACYJNYCH: \" + (\n    Array.isArray(TableGPR.filteredTableData)\n      ? TableGPR.filteredTableData.length\n      : (\n          Array.isArray(TableGPR.tableData)\n            ? TableGPR.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
   "textColor": "#4a5768",
-  "topRow": 78,
+  "topRow": 81,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

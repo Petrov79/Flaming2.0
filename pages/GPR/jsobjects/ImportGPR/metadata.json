@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_999963e2-32cf-465b-a264-927eabc3b01c",
+  "id": "GPR_ImportGPR",
+  "unpublishedCollection": {
+    "name": "ImportGPR",
+    "pageId": "GPR",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "data",
+        "value": "[]"
+      },
+      {
+        "name": "dataWykazuTekst",
+        "value": "\"\""
+      }
+    ]
+  }
+}
