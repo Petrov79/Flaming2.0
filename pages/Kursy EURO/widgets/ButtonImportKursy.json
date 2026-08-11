@@ -41,7 +41,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
-  "onClick": "{{\n(async () => {\n\n    await ImportKursy.readFile();\n\n    await importKursy.run();\n\n})();\n}}",
+  "onClick": "{{\n(async () => {\n\n    await ImportKursy.readFile();\n\n    await importKursy.run();\n    await getKursy.run();\n})();\n}}",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,
