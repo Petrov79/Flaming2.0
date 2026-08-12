@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 94,
+  "bottomRow": 96,
   "bottomRowBeforeCollapse": 94,
   "dynamicBindingPathList": [
     {
@@ -58,7 +58,7 @@
   "text": "{{\n  Number(RadioGroupWyszukaj.selectedOptionValue) === 1\n    ? \"  LICZBA KATEGORII: \" + (dziedzinyKatTable.tableData?.length || 0)\n    : Number(RadioGroupWyszukaj.selectedOptionValue) === 2\n      ? \"  LICZBA DZIEDZIN: \" + (dziedzinyKatTable.tableData?.length || 0)\n      : \"\"\n}}",
   "textAlign": "LEFT",
   "textColor": "#4a5768",
-  "topRow": 90,
+  "topRow": 92,
   "topRowBeforeCollapse": 90,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

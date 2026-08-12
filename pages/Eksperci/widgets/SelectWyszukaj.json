@@ -43,7 +43,7 @@
   "labelPosition": "Top",
   "labelStyle": "BOLD",
   "labelText": "Wybierz dziedzinę, kategorię lub obszar",
-  "labelTextColor": "#64748b",
+  "labelTextColor": "#ef4444",
   "labelTextSize": "0.875rem",
   "labelTooltip": "",
   "labelWidth": 5,

@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 68,
+  "bottomRow": 70,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -52,7 +52,7 @@
   "text": "{{\n  \"  LICZBA EKSPERTÓW: \" + (\n    Array.isArray(eksperciTable.filteredTableData)\n      ? eksperciTable.filteredTableData.length\n      : (\n          Array.isArray(eksperciTable.tableData)\n            ? eksperciTable.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
   "textColor": "#4a5768",
-  "topRow": 64,
+  "topRow": 66,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
