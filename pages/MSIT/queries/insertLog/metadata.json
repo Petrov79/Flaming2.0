@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_607c4f52-80b7-4991-91d1-fdf8e0f24358",
-  "id": "Zmiana hasła_authCheckSession",
+  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_9057d787-7545-4634-9ca7-175f29d42458",
+  "id": "MSIT_insertLog",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE sessions\nSET active = FALSE\nWHERE active = TRUE\n  AND expires_at <= CURRENT_TIMESTAMP;\n\nSELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = TRUE\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "INSERT INTO app_logs\n(\n    event_type,\n    user_id,\n    user_name,\n    description,\n    session_token\n)\nVALUES\n(\n    'MSIT_SEARCH',\n    {{ appsmith.store.session.user.id }},\n    {{ appsmith.store.session.user.name }},\n    'Wyszukano gminy/miasta z listy KSRR.',\n    {{ appsmith.store.session.token }}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "authCheckSession",
-    "pageId": "Zmiana hasła",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "name": "insertLog",
+    "pageId": "MSIT",
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

@@ -20,9 +20,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -43,6 +50,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
+  "onOptionChange": "{{\nLog.write(\n  \"HARMONOGRAM_SEARCH\",\n  \"Wyszukano harmonogram pracy.\",\n  appsmith.store.session.user.id,\n  appsmith.store.session.user.name,\n  appsmith.store.session.token\n)\n}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 19.8125,

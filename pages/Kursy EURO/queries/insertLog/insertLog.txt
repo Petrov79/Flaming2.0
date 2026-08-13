@@ -1,0 +1,16 @@
+INSERT INTO app_logs
+(
+    event_type,
+    user_id,
+    user_name,
+    description,
+    session_token
+)
+VALUES
+(
+    'KURS_EURO_SEARCH',
+    {{ appsmith.store.session.user.id }},
+    {{ appsmith.store.session.user.name }},
+    'Wyszukano kurs EURO.',
+    {{ appsmith.store.session.token }}
+);

@@ -28,6 +28,30 @@ export default {
 
     }
 
+  },
+
+
+  getLogChartData() {
+
+    const logs = getLogs.data || [];
+
+    const counts = {};
+
+    logs.forEach(log => {
+
+      const type = log.event_type || "INNE";
+
+      counts[type] = (counts[type] || 0) + 1;
+
+    });
+
+    return Object.entries(counts).map(
+      ([event_type, count]) => ({
+        event_type,
+        count
+      })
+    );
+
   }
 
 }

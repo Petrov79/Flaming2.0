@@ -53,7 +53,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onOptionChange": "{{\n  Number(SliderJST.value) === 0\n    ? getWskaznikG.run()\n    : getWskaznikP.run()\n}}",
+  "onOptionChange": "{{\n(async () => {\n\n  if (Number(SliderJST.value) === 0) {\n\n    await getWskaznikG.run();\n\n    await Log.write(\n      \"WSKAZNIK_G_SEARCH\",\n      \"Wyszukano wskaźnik dla gminy.\",\n      appsmith.store.session.user.id,\n      appsmith.store.session.user.name,\n      appsmith.store.session.token\n    );\n\n  } else {\n\n    await getWskaznikP.run();\n\n    await Log.write(\n      \"WSKAZNIK_P_SEARCH\",\n      \"Wyszukano wskaźnik dla powiatu.\",\n      appsmith.store.session.user.id,\n      appsmith.store.session.user.name,\n      appsmith.store.session.token\n    );\n\n  }\n\n})();\n}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 20.21875,

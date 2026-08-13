@@ -1,7 +1,12 @@
+UPDATE sessions
+SET active = FALSE
+WHERE active = TRUE
+  AND expires_at <= CURRENT_TIMESTAMP;
+
 SELECT
     expires_at
 FROM sessions
 WHERE
     token = {{ appsmith.store.session.token }}
-    AND active = true
+    AND active = TRUE
     AND expires_at > CURRENT_TIMESTAMP;
