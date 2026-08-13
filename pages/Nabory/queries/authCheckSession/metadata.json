@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "UPDATE sessions\nSET active = FALSE\nWHERE active = TRUE\n  AND expires_at <= CURRENT_TIMESTAMP;\n\nSELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = TRUE\n    AND expires_at > CURRENT_TIMESTAMP;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
