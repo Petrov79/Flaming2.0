@@ -1,0 +1,16 @@
+INSERT INTO app_logs
+(
+    event_type,
+    user_id,
+    user_name,
+    description,
+    session_token
+)
+VALUES
+(
+    'MSIT_SEARCH',
+    {{ appsmith.store.session.user.id }},
+    {{ appsmith.store.session.user.name }},
+    'Wyszukano gminy/miasta z listy KSRR.',
+    {{ appsmith.store.session.token }}
+);

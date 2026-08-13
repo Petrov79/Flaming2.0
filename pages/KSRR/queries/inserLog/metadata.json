@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a4d033ae3824d264e76aad9_60dfc875-2d75-496f-bc1d-f64960ea008f",
-  "id": "MSIT_authCheckSession",
+  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_cb96cf91-fa8b-404d-b790-e25011d73729",
+  "id": "KSRR_inserLog",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    expires_at\nFROM sessions\nWHERE\n    token = {{ appsmith.store.session.token }}\n    AND active = true\n    AND expires_at > CURRENT_TIMESTAMP;",
+      "body": "INSERT INTO app_logs\n(\n    event_type,\n    user_id,\n    user_name,\n    description,\n    session_token\n)\nVALUES\n(\n    'KSRR_SEARCH',\n    {{ appsmith.store.session.user.id }},\n    {{ appsmith.store.session.user.name }},\n    'Wyszukano gminy/miasta z listy KSRR.',\n    {{ appsmith.store.session.token }}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "authCheckSession",
-    "pageId": "MSIT",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "name": "inserLog",
+    "pageId": "KSRR",
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
