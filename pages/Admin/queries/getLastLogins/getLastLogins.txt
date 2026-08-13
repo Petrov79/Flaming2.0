@@ -1,0 +1,11 @@
+SELECT
+    user_id,
+    user_name,
+    MAX(event_time) AS ostatnie_logowanie
+FROM app_logs
+WHERE event_type = 'LOGIN'
+GROUP BY
+    user_id,
+    user_name
+ORDER BY
+    ostatnie_logowanie DESC;
