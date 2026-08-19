@@ -26,6 +26,6 @@
     "name": "getGmina",
     "pageId": "Wskaźnik zamożności JST",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

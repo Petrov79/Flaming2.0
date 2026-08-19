@@ -2,4 +2,4 @@ SELECT
  rok, wartosc
 FROM bazowa_p
 WHERE
- rok = {{ Number(SelectRok.selectedOptionValue || 2025) }};
+rok = {{ Number(SelectRok.selectedOptionValue) }};

@@ -1,5 +1,5 @@
 SELECT
- rok, wartosc
+    rok,
+    wartosc
 FROM bazowa_g
-WHERE
- rok = {{ Number(SelectRok.selectedOptionValue || 2025) }};
+WHERE rok = {{ Number(SelectRok.selectedOptionValue) }};

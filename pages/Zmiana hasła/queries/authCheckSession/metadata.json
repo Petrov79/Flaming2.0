@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Zmiana hasła",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
