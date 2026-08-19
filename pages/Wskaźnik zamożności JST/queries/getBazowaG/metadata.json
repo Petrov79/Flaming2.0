@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n rok, wartosc\nFROM bazowa_g\nWHERE\n rok = {{ Number(SelectRok.selectedOptionValue || 2025) }};",
+      "body": "SELECT\n    rok,\n    wartosc\nFROM bazowa_g\nWHERE rok = {{ Number(SelectRok.selectedOptionValue) }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
