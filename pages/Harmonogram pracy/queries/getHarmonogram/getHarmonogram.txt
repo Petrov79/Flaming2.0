@@ -43,6 +43,7 @@ wynik AS (
   SELECT
     0 AS sort_order,
     id AS "ID",
+    pracownik_id,
     pracownik AS "PRACOWNIK",
     dzien_1::text AS "01",
     dzien_2::text AS "02",
@@ -72,9 +73,21 @@ wynik AS (
     dzien_26::text AS "26",
     dzien_27::text AS "27",
     dzien_28::text AS "28",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 29 THEN dzien_29::text ELSE NULL END AS "29",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 30 THEN dzien_30::text ELSE NULL END AS "30",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 31 THEN dzien_31::text ELSE NULL END AS "31",
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 29 
+      THEN dzien_29::text 
+      ELSE NULL 
+    END AS "29",
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 30 
+      THEN dzien_30::text 
+      ELSE NULL 
+    END AS "30",
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 31 
+      THEN dzien_31::text 
+      ELSE NULL 
+    END AS "31",
     uwagi AS "UWAGI"
   FROM dane
 
@@ -83,53 +96,144 @@ wynik AS (
   SELECT
     1 AS sort_order,
     NULL AS "ID",
+    NULL AS pracownik_id,
     'W BIURZE' AS "PRACOWNIK",
-    COUNT(*) FILTER (WHERE dzien_1 = 'B')::text AS "01",
-    COUNT(*) FILTER (WHERE dzien_2 = 'B')::text AS "02",
-    COUNT(*) FILTER (WHERE dzien_3 = 'B')::text AS "03",
-    COUNT(*) FILTER (WHERE dzien_4 = 'B')::text AS "04",
-    COUNT(*) FILTER (WHERE dzien_5 = 'B')::text AS "05",
-    COUNT(*) FILTER (WHERE dzien_6 = 'B')::text AS "06",
-    COUNT(*) FILTER (WHERE dzien_7 = 'B')::text AS "07",
-    COUNT(*) FILTER (WHERE dzien_8 = 'B')::text AS "08",
-    COUNT(*) FILTER (WHERE dzien_9 = 'B')::text AS "09",
-    COUNT(*) FILTER (WHERE dzien_10 = 'B')::text AS "10",
-    COUNT(*) FILTER (WHERE dzien_11 = 'B')::text AS "11",
-    COUNT(*) FILTER (WHERE dzien_12 = 'B')::text AS "12",
-    COUNT(*) FILTER (WHERE dzien_13 = 'B')::text AS "13",
-    COUNT(*) FILTER (WHERE dzien_14 = 'B')::text AS "14",
-    COUNT(*) FILTER (WHERE dzien_15 = 'B')::text AS "15",
-    COUNT(*) FILTER (WHERE dzien_16 = 'B')::text AS "16",
-    COUNT(*) FILTER (WHERE dzien_17 = 'B')::text AS "17",
-    COUNT(*) FILTER (WHERE dzien_18 = 'B')::text AS "18",
-    COUNT(*) FILTER (WHERE dzien_19 = 'B')::text AS "19",
-    COUNT(*) FILTER (WHERE dzien_20 = 'B')::text AS "20",
-    COUNT(*) FILTER (WHERE dzien_21 = 'B')::text AS "21",
-    COUNT(*) FILTER (WHERE dzien_22 = 'B')::text AS "22",
-    COUNT(*) FILTER (WHERE dzien_23 = 'B')::text AS "23",
-    COUNT(*) FILTER (WHERE dzien_24 = 'B')::text AS "24",
-    COUNT(*) FILTER (WHERE dzien_25 = 'B')::text AS "25",
-    COUNT(*) FILTER (WHERE dzien_26 = 'B')::text AS "26",
-    COUNT(*) FILTER (WHERE dzien_27 = 'B')::text AS "27",
-    COUNT(*) FILTER (WHERE dzien_28 = 'B')::text AS "28",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 29 
-      THEN COUNT(*) FILTER (WHERE dzien_29 = 'B')::text 
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_1 = 'B'
+    )::text AS "01",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_2 = 'B'
+    )::text AS "02",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_3 = 'B'
+    )::text AS "03",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_4 = 'B'
+    )::text AS "04",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_5 = 'B'
+    )::text AS "05",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_6 = 'B'
+    )::text AS "06",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_7 = 'B'
+    )::text AS "07",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_8 = 'B'
+    )::text AS "08",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_9 = 'B'
+    )::text AS "09",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_10 = 'B'
+    )::text AS "10",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_11 = 'B'
+    )::text AS "11",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_12 = 'B'
+    )::text AS "12",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_13 = 'B'
+    )::text AS "13",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_14 = 'B'
+    )::text AS "14",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_15 = 'B'
+    )::text AS "15",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_16 = 'B'
+    )::text AS "16",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_17 = 'B'
+    )::text AS "17",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_18 = 'B'
+    )::text AS "18",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_19 = 'B'
+    )::text AS "19",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_20 = 'B'
+    )::text AS "20",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_21 = 'B'
+    )::text AS "21",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_22 = 'B'
+    )::text AS "22",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_23 = 'B'
+    )::text AS "23",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_24 = 'B'
+    )::text AS "24",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_25 = 'B'
+    )::text AS "25",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_26 = 'B'
+    )::text AS "26",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_27 = 'B'
+    )::text AS "27",
+    COUNT(*) FILTER (
+      WHERE pracownik_id NOT IN (9,10) AND dzien_28 = 'B'
+    )::text AS "28",
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 29 
+      THEN COUNT(*) FILTER (
+        WHERE pracownik_id NOT IN (9,10) AND dzien_29 = 'B'
+      )::text 
       ELSE NULL 
     END AS "29",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 30 
-      THEN COUNT(*) FILTER (WHERE dzien_30 = 'B')::text 
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 30 
+      THEN COUNT(*) FILTER (
+        WHERE pracownik_id NOT IN (9,10) AND dzien_30 = 'B'
+      )::text 
       ELSE NULL 
     END AS "30",
-    CASE WHEN (SELECT dni_w_miesiacu FROM params) >= 31 
-      THEN COUNT(*) FILTER (WHERE dzien_31 = 'B')::text 
+    CASE 
+      WHEN (SELECT dni_w_miesiacu FROM params) >= 31 
+      THEN COUNT(*) FILTER (
+        WHERE pracownik_id NOT IN (9,10) AND dzien_31 = 'B'
+      )::text 
       ELSE NULL 
     END AS "31",
     NULL AS "UWAGI"
   FROM dane
 )
 
-SELECT *
+SELECT
+  "ID",
+  "PRACOWNIK",
+  "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+  "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+  "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",
+  "UWAGI"
 FROM wynik
 ORDER BY
-  sort_order,
-  "PRACOWNIK" COLLATE "pl-x-icu";
+  CASE
+    WHEN "ID" IS NULL THEN 2
+    WHEN "ID" IN (
+      SELECT id
+      FROM dane
+      WHERE pracownik_id IN (9,10)
+    ) THEN 0
+    ELSE 1
+  END,
+  CASE
+    WHEN "ID" IN (
+      SELECT id
+      FROM dane
+      WHERE pracownik_id IN (9,10)
+    ) THEN "ID"
+    ELSE NULL
+  END,
+  CASE
+    WHEN "ID" IS NOT NULL THEN "PRACOWNIK" COLLATE "pl-x-icu"
+    ELSE NULL
+  END;
