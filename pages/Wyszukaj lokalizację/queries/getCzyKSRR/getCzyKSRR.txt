@@ -3,7 +3,7 @@ SELECT
     WHEN EXISTS (
       SELECT 1
       FROM ksrr_gminy g
-      WHERE g.gus_kod::text = {{ this.params.gmina_kod }}
+      WHERE g.gus_kod = '{{ TableLokalizacje.selectedRow.gmina_kod }}'
     )
     THEN 'Tak'
     ELSE 'Nie'

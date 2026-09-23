@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 49,
+  "bottomRow": 41,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": false,
@@ -33,16 +33,17 @@
   },
   "columnOrder": [
     "lp",
+    "nazwa",
+    "rodzaj_jst",
     "id",
     "msit_id",
     "gus_kod",
-    "rodzaj_jst",
-    "nazwa",
     "typ_jst"
   ],
-  "columnUpdatedAt": 1782815066731,
+  "columnUpdatedAt": 1790156989389,
   "columnWidthMap": {
     "lp": 60,
+    "nazwa": 197,
     "rodzaj_jst": 198
   },
   "customIsLoading": false,
