@@ -3,7 +3,7 @@
   "backgroundColor": "",
   "borderColor": "#64748b",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -36,9 +36,9 @@
   "parentId": "0",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 36,
+  "rightColumn": 30,
   "shouldTruncate": false,
-  "text": "MAZOWIECKIE STRUKTURALNE INWESTYCJE TERYTORIALNE",
+  "text": "MAZOWIECKIE STRUKTURALNE INWESTYCJE TERYTORIALNE oraz ZIT",
   "textAlign": "LEFT",
   "textColor": "#64748b",
   "topRow": 0,

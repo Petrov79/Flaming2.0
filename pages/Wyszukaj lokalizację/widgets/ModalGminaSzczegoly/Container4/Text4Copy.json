@@ -42,7 +42,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{\n  getCzyMSIT.data &&\n  getCzyMSIT.data.length > 0\n    ? getCzyMSIT.data[0].czy_msit\n    : \"\"\n}}",
+  "text": "{{\n  getCzyKSRR.data &&\n  getCzyKSRR.data.length > 0\n    ? getCzyKSRR.data[0].czy_ksrr\n    : \"\"\n}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 14,

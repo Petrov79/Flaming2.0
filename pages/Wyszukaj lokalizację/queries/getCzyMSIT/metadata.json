@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  CASE\n    WHEN EXISTS (\n      SELECT 1\n      FROM msit_partnerzy g\n      WHERE g.gus_kod::text = {{ this.params.gmina_kod }}\n    )\n    THEN 'Tak'\n    ELSE 'Nie'\n  END AS czy_msit;",
+      "body": "SELECT\n  CASE\n    WHEN EXISTS (\n      SELECT 1\n      FROM msit_partnerzy g\n \t\t\tWHERE g.gus_kod = '{{ TableLokalizacje.selectedRow.gmina_kod }}'\n    )\n    THEN 'Tak'\n    ELSE 'Nie'\n  END AS czy_msit;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

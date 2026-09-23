@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 84,
+  "bottomRow": 27,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -17,15 +17,19 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "0.7rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "7tot1j4whr",
-  "leftColumn": 16,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,19 +42,19 @@
   "originalTopRow": 80,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
-  "parentId": "0",
+  "parentId": "b204rq1hum",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 45,
+  "rightColumn": 52,
   "shouldTruncate": false,
-  "text": "{{\n  \"  LICZBA PARTNERÓW: \" + (\n    Array.isArray(TableMSITpartnerzy.filteredTableData)\n      ? TableMSITpartnerzy.filteredTableData.length\n      : (\n          Array.isArray(TableMSITpartnerzy.tableData)\n            ? TableMSITpartnerzy.tableData.length\n            : 0\n        )\n  )\n}}",
+  "text": "{{\n  \"  LICZBA WYNIKÓW: \" + (\n    Array.isArray(TableMSITbyGmina.filteredTableData)\n      ? TableMSITbyGmina.filteredTableData.length\n      : (\n          Array.isArray(TableMSITbyGmina.tableData)\n            ? TableMSITbyGmina.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
-  "textColor": "#4a5768",
-  "topRow": 80,
+  "textColor": "#64748b",
+  "topRow": 23,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "2vy7f038dt",
-  "widgetName": "Text2Copy"
+  "widgetId": "xxf1yjkcbt",
+  "widgetName": "Text2CopyCopy"
 }

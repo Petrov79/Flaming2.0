@@ -1,0 +1,4 @@
+SELECT
+  '{{ this.params.gmina_kod }}' AS gmina_kod,
+  LENGTH('{{ this.params.gmina_kod }}') AS dlugosc,
+  '[' || '{{ this.params.gmina_kod }}' || ']' AS kontrola;

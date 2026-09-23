@@ -1,0 +1,43 @@
+WITH wyniki AS (
+    SELECT
+        j.nazwa_jst AS gmina,
+        gr.rodzaj_gmi_nazwa AS rodzaj_gminy,
+        m.strategia_msit AS msit
+
+    FROM jst j
+
+    INNER JOIN msit_partnerzy mp
+        ON mp.gus_kod = j.gus_kod
+
+    INNER JOIN msit_spis m
+        ON m.id_msit::text = mp.msit_id::text
+
+    LEFT JOIN gminy_rodzaje gr
+        ON gr.rodzaj_gmi_kod::text = j.rodzaj_gmi_kod::text
+
+    WHERE
+        '{{ InputGmina.text }}' <> ''
+        AND j.typ_jst = 'gmina'
+        AND j.nazwa_jst ILIKE '%' || '{{ InputGmina.text }}' || '%'
+)
+
+SELECT
+    gmina,
+    rodzaj_gminy,
+    msit
+FROM wyniki
+
+UNION ALL
+
+SELECT
+    'Brak wyników' AS gmina,
+    NULL AS rodzaj_gminy,
+    NULL AS msit
+WHERE
+    '{{ InputGmina.text }}' <> ''
+    AND NOT EXISTS (
+        SELECT 1
+        FROM wyniki
+    )
+
+ORDER BY gmina;

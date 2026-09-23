@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a2fb7abb910071184e58185_09872474-1aa4-4d9a-a034-52a73173adc1",
-  "id": "Wyszukaj lokalizację_getCzyKSRR",
+  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_dd3fedd4-6fc9-4839-9260-195988d26410",
+  "id": "Wyszukaj lokalizację_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  CASE\n    WHEN EXISTS (\n      SELECT 1\n      FROM ksrr_gminy g\n      WHERE g.gus_kod = '{{ TableLokalizacje.selectedRow.gmina_kod }}'\n    )\n    THEN 'Tak'\n    ELSE 'Nie'\n  END AS czy_ksrr;",
+      "body": "SELECT\n  '{{ this.params.gmina_kod }}' AS gmina_kod,\n  LENGTH('{{ this.params.gmina_kod }}') AS dlugosc,\n  '[' || '{{ this.params.gmina_kod }}' || ']' AS kontrola;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "getCzyKSRR",
+    "name": "Query1",
     "pageId": "Wyszukaj lokalizację",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

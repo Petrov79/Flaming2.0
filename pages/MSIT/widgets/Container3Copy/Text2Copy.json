@@ -1,0 +1,60 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.7rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7tot1j4whr",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 105,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 101,
+  "needsErrorInfo": false,
+  "originalBottomRow": 84,
+  "originalTopRow": 80,
+  "overflow": "NONE",
+  "parentColumnSpace": 19.8125,
+  "parentId": "rokl92nntm",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "shouldTruncate": false,
+  "text": "{{\n  \"  LICZBA PARTNERÓW: \" + (\n    Array.isArray(TableMSITpartnerzy.filteredTableData)\n      ? TableMSITpartnerzy.filteredTableData.length\n      : (\n          Array.isArray(TableMSITpartnerzy.tableData)\n            ? TableMSITpartnerzy.tableData.length\n            : 0\n        )\n  )\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#64748b",
+  "topRow": 41,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "2vy7f038dt",
+  "widgetName": "Text2Copy"
+}
