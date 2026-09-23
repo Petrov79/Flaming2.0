@@ -40,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 44,
   "shouldTruncate": false,
-  "text": "Czy gmina jest partnerem MSIT:",
+  "text": "Czy gmina jest partnerem MSIT lub ZIT:",
   "textAlign": "LEFT",
   "textColor": "#64748b",
   "topRow": 10,
