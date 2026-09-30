@@ -357,7 +357,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Rozmiar",
+      "label": "Rozmiar (kB)",
       "notation": "standard",
       "originalId": "size",
       "sticky": "",
