@@ -1,0 +1,3 @@
+{
+  "path": "{{ appsmith.store.wybranyNaborId }}/{{ TabPliki.selectedRow.name }}"
+}

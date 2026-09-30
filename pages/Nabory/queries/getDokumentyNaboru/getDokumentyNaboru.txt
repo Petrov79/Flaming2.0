@@ -1,0 +1,11 @@
+SELECT
+    id,
+    split_part(name, '/', 2) AS name,
+    created_at,
+    metadata->>'size' AS size,
+    metadata->>'mimetype' AS mimetype
+FROM storage.objects
+WHERE bucket_id = 'dokumentacja'
+  AND name LIKE CONCAT({{ appsmith.store.wybranyNaborId }}, '/%')
+  AND split_part(name, '/', 2) <> '.keep'
+ORDER BY name;

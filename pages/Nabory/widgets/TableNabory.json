@@ -212,7 +212,7 @@
   "mobileRightColumn": 48,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "onRowSelected": "{{\n  storeValue(\"trybNaboru\", \"edycja\").then(() => {\n    storeValue(\"wybranyNaborId\", TableNabory.selectedRow.id).then(() => {\n      storeValue(\"naborZmieniony\", false).then(() => {\n        resetWidget(\"ModalEdycjaNaboru\", true);\n        showModal(\"ModalEdycjaNaboru\");\n      });\n    });\n  });\n}}",
+  "onRowSelected": "{{\n  storeValue(\"trybNaboru\", \"edycja\").then(() => {\n    storeValue(\"wybranyNaborId\", TableNabory.selectedRow.id).then(() => {\n      storeValue(\"naborZmieniony\", false).then(() => {\n        resetWidget(\"ModalEdycjaNaboru\", true);\n        getDokumentyNaboru.run();\n        showModal(\"ModalEdycjaNaboru\");\n      });\n    });\n  });\n}}",
   "originalBottomRow": 79,
   "originalTopRow": 10,
   "parentColumnSpace": 19.8125,

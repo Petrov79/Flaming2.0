@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "#64748b",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 62,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -34,23 +34,23 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 49,
   "needsErrorInfo": false,
-  "originalBottomRow": 52,
-  "originalTopRow": 48,
+  "originalBottomRow": 62,
+  "originalTopRow": 58,
   "overflow": "NONE",
   "parentColumnSpace": 14.78125,
   "parentId": "yceu4evemu",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 53,
   "shouldTruncate": false,
-  "text": " STAWKI ZA OCENĘ",
+  "text": " PLIKI\t",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.backgroundColor}}",
-  "topRow": 48,
+  "topRow": 58,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "ljsp5uqdrd",
-  "widgetName": "TextStawki"
+  "widgetId": "7wbs4bvg6h",
+  "widgetName": "TextUwagiCopy"
 }
