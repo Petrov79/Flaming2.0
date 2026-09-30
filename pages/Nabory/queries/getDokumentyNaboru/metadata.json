@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    id,\n    split_part(name, '/', 2) AS name,\n    created_at,\n    metadata->>'size' AS size,\n    metadata->>'mimetype' AS mimetype\nFROM storage.objects\nWHERE bucket_id = 'dokumentacja'\n  AND name LIKE CONCAT({{ appsmith.store.wybranyNaborId }}, '/%')\n  AND split_part(name, '/', 2) <> '.keep'\nORDER BY name;",
+      "body": "SELECT\n    id,\n    split_part(name, '/', 2) AS name,\n    created_at,\n    ROUND((metadata->>'size')::numeric / 1024, 1) AS size,\n    metadata->>'mimetype' AS mimetype\nFROM storage.objects\nWHERE bucket_id = 'dokumentacja'\n  AND name LIKE CONCAT({{ appsmith.store.wybranyNaborId }}, '/%')\n  AND split_part(name, '/', 2) <> '.keep'\nORDER BY name;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
