@@ -1,0 +1,6 @@
+{
+  "naborId": "{{ appsmith.store.wybranyNaborId }}",
+  "fileName": "{{ FilePickerPlik.files[0].name }}",
+  "mimeType": "{{ FilePickerPlik.files[0].meta.type }}",
+  "fileData": "{{ FilePickerPlik.files[0].data }}"
+}

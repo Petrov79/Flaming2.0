@@ -4,7 +4,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "0.375rem",
-  "bottomRow": 6,
+  "bottomRow": 4,
   "boxShadow": "none",
   "decimals": 0,
   "defaultCurrencyCode": "PLN",

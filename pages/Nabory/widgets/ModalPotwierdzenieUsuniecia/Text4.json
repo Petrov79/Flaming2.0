@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 12,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +11,40 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "htuxvr3sx5",
-  "leftColumn": 44,
+  "key": "xt4i6mosar",
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 42,
-  "mobileLeftColumn": 44,
-  "mobileRightColumn": 60,
-  "mobileTopRow": 38,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
+  "originalBottomRow": 7,
+  "originalTopRow": 1,
   "overflow": "NONE",
-  "parentColumnSpace": 30.25,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "parentId": "3vp0h8s635",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "{{\n\"Użytkownik: \" +\nappsmith.store.session.user.name +\n\" | sesja do godz. \" +\nnew Date(appsmith.store.session.expiresAt).toLocaleTimeString(\"pl-PL\", {\n  hour: \"2-digit\",\n  minute: \"2-digit\"\n})\n}}",
-  "textAlign": "RIGHT",
-  "textColor": "#64748b",
-  "topRow": 0,
+  "text": "Czy na pewno chcesz usunąć plik?",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "6ic0kx02v1",
-  "widgetName": "Text3Copy"
+  "widgetId": "jt70fzimga",
+  "widgetName": "Text4"
 }

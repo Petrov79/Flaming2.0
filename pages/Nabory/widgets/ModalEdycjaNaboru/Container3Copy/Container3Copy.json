@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
   "borderWidth": "1",
-  "bottomRow": 58,
+  "bottomRow": 87,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "children": [
     {
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "6uty6gonqi",
+      "parentId": "1spvwpt9t3",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "q5xwvdigvf",
-      "widgetName": "Canvas4"
+      "widgetId": "lzdfxnjd38",
+      "widgetName": "Canvas4Copy"
     }
   ],
   "containerStyle": "card",
@@ -59,7 +59,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "slzudkpl3n",
-  "leftColumn": 0,
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
   "minWidth": 450,
@@ -68,8 +68,8 @@
   "mobileRightColumn": 7,
   "mobileTopRow": 55,
   "needsErrorInfo": false,
-  "originalBottomRow": 58,
-  "originalTopRow": 48,
+  "originalBottomRow": 87,
+  "originalTopRow": 77,
   "parentColumnSpace": 14.78125,
   "parentId": "yceu4evemu",
   "parentRowSpace": 10,
@@ -77,9 +77,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldScrollContents": true,
-  "topRow": 48,
+  "topRow": 77,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "6uty6gonqi",
-  "widgetName": "Container3"
+  "widgetId": "1spvwpt9t3",
+  "widgetName": "Container3Copy"
 }
