@@ -475,7 +475,7 @@
       "label": "DATA UCHWAŁY",
       "notation": "standard",
       "originalId": "data_uchwaly",
-      "outputFormat": "MM-DD-YYYY",
+      "outputFormat": "DD-MM-YYYY",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
