@@ -1,0 +1,30 @@
+SELECT
+    u.*,
+    n.nr_naboru
+FROM uchwaly u
+LEFT JOIN nabory n
+    ON u.nabory_id = n.id
+WHERE
+(
+    {{ !SelectNabor.selectedOptionValues?.length }}
+    OR u.nabory_id = ANY(
+        {{ SelectNabor.selectedOptionValues?.map(Number) || [] }}::integer[]
+    )
+)
+AND
+(
+    {{ !SelectTyp.selectedOptionValues?.length }}
+    OR u.typ_uchwaly = ANY(
+        string_to_array(
+            {{ (SelectTyp.selectedOptionValues || []).join(",") }},
+            ','
+        )
+    )
+)
+AND
+    u.data_zatwierdzenia >=
+    {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+AND
+    u.data_zatwierdzenia <=
+    {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+ORDER BY u.id;

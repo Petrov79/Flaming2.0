@@ -1,0 +1,66 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowCurrencyChange": false,
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "0.375rem",
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "decimals": 2,
+  "defaultCurrencyCode": "PLN",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "39ipx1fxxg",
+  "label": "Kwota BP",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 16,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 29,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 22,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{ storeValue(\"naborZmieniony\", true) }}",
+  "originalBottomRow": 76,
+  "originalTopRow": 70,
+  "parentColumnSpace": 14.23779296875,
+  "parentId": "z7t58arabo",
+  "parentRowSpace": 10,
+  "placeholderText": "Podaj kwotę",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "showStepArrows": false,
+  "topRow": 10,
+  "type": "CURRENCY_INPUT_WIDGET",
+  "version": 1,
+  "widgetId": "ji7y65l4xq",
+  "widgetName": "CurrencyBP"
+}

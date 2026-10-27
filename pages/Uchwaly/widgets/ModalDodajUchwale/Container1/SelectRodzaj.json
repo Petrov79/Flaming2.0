@@ -1,0 +1,58 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0.375rem",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "sagx93sjx7",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Rodzaj uchwały",
+  "labelTextColor": "#4a5768",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 17,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 14.9453125,
+  "parentId": "53x2hk64mg",
+  "parentRowSpace": 10,
+  "placeholderText": "Wybierz rodzaj\n",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 33,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"zatwierdzająca\",\n    \"value\": \"zatwierdzająca\"\n  },\n  {\n    \"label\": \"zmieniająca\",\n    \"value\": \"zmieniająca\"\n  },\n\t  {\n    \"label\": \"inna\",\n    \"value\": \"inna\"\n  }\n]",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "6cowln7yth",
+  "widgetName": "SelectRodzaj"
+}
