@@ -2,7 +2,7 @@
   "allowedFileTypes": [],
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 78,
+  "bottomRow": 81,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "buttonColor": "#d4d4d8",
   "dynamicBindingPathList": [
@@ -44,7 +44,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 31,
   "selectedFiles": [],
-  "topRow": 74,
+  "topRow": 77,
   "type": "FILE_PICKER_WIDGET_V2",
   "version": 1,
   "widgetId": "ihlssfs97b",
