@@ -1,3 +1,4 @@
+
 INSERT INTO nabory (
     nr_naboru,
     typ_naboru,
@@ -9,9 +10,6 @@ INSERT INTO nabory (
     ile_przekazanych,
     data_oceny,
     data_protokolu,
-    nr_uchwaly,
-    data_uchwaly,
-    rezerwa,
     uwagi,
     typ_projektu,
     status,
@@ -50,12 +48,6 @@ VALUES (
     NULLIF('{{DatePickerOcena.value || ""}}', '')::date,
 
     NULLIF('{{DatePickerProtokol.value || ""}}', '')::date,
-
-    NULLIF('{{InputNrUchwaly.value || ""}}', ''),
-
-    NULLIF('{{DatePickerUchwala.value || ""}}', '')::date,
-
-    NULLIF('{{SelectRezerwa.value || ""}}', ''),
 
     NULLIF('{{(InputUwagi.value !== undefined && InputUwagi.value !== null ? InputUwagi.value : "").replaceAll("'", "''")}}', ''),
 

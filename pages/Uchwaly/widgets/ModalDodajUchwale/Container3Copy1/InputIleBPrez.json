@@ -5,10 +5,13 @@
   "borderRadius": "0.375rem",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.proj_z_bp_rez ?? 0) : 0 }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

@@ -8,10 +8,13 @@
   "boxShadow": "none",
   "decimals": 2,
   "defaultCurrencyCode": "PLN",
-  "defaultText": "",
+  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.kwota_bp ?? 0) : 0 }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -20,11 +23,7 @@
       "key": "onTextChanged"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onTextChanged"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "isDisabled": false,
   "isLoading": false,
@@ -46,7 +45,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 22,
   "needsErrorInfo": false,
-  "onTextChanged": "{{ storeValue(\"naborZmieniony\", true) }}",
+  "onTextChanged": "",
   "originalBottomRow": 76,
   "originalTopRow": 70,
   "parentColumnSpace": 14.23779296875,

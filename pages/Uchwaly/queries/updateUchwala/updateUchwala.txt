@@ -1,0 +1,27 @@
+UPDATE uchwaly
+SET
+    nabory_id = {{ SelectNrNaboru.selectedOptionValue }}::integer,
+    typ_uchwaly = {{ SelectRodzaj.selectedOptionValue }},
+    data_zatwierdzenia = {{ DateZatwierdzenie.selectedDate.slice(0,10) }}::date,
+    nr_uchwaly = {{ InputNrUchwaly.text || "" }},
+
+    proj_rmr = {{ InputIleRMR.text }}::integer,
+    kwota_rmr = {{ CurrencyRMR.value }}::numeric,
+
+    proj_rws = {{ InputIleRWS.text }}::integer,
+    kwota_rws = {{ CurrencyRWS.value }}::numeric,
+
+    proj_z_bp = {{ InputIleBP.text }}::integer,
+    kwota_bp = {{ CurrencyBP.value }}::numeric,
+
+    proj_rmr_rez = {{ InputIleRMRrez.text }}::integer,
+    kwota_rmr_rez = {{ CurrencyRMRrez.value }}::numeric,
+
+    proj_rws_rez = {{ InputIleRWSrez.text }}::integer,
+    kwota_rws_rez = {{ CurrencyRWSrez.value }}::numeric,
+
+    proj_z_bp_rez = {{ InputIleBPrez.text }}::integer,
+    kwota_bp_rez = {{ CurrencyBPrez.value }}::numeric
+
+WHERE id = {{ appsmith.store.edycjaUchwalyId }}::integer
+RETURNING *;

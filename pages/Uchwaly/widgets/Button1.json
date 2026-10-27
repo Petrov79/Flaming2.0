@@ -11,7 +11,11 @@
       "key": "buttonColor"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -30,9 +34,9 @@
   "mobileRightColumn": 58,
   "mobileTopRow": 90,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(ModalDodajUchwale.name);}}",
-  "originalBottomRow": 87,
-  "originalTopRow": 82,
+  "onClick": "{{\n  (async () => {\n    await storeValue(\"edycjaUchwalyId\", null);\n    showModal(\"ModalDodajUchwale\");\n  })()\n}}",
+  "originalBottomRow": 80,
+  "originalTopRow": 75,
   "parentColumnSpace": 23.53125,
   "parentId": "0",
   "parentRowSpace": 10,

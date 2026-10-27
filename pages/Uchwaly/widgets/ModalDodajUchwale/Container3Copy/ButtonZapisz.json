@@ -7,15 +7,26 @@
   "buttonStyle": "PRIMARY_BUTTON",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [],
-  "dynamicPropertyPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{\n  !SelectNrNaboru.selectedOptionValue ||\n  !SelectRodzaj.selectedOptionValue ||\n  !DateZatwierdzenie.selectedDate ||\n\n  [\n    InputIleRMR.text,\n    InputIleRWS.text,\n    InputIleBP.text,\n    InputIleRMRrez.text,\n    InputIleRWSrez.text,\n    InputIleBPrez.text,\n\n    CurrencyRMR.value,\n    CurrencyRWS.value,\n    CurrencyBP.value,\n    CurrencyRMRrez.value,\n    CurrencyRWSrez.value,\n    CurrencyBPrez.value\n  ].some(v =>\n    v === null ||\n    v === undefined ||\n    String(v).trim() === \"\"\n  )\n}}\t",
   "isLoading": false,
   "isVisible": true,
   "key": "ev51tus2kf",
@@ -27,7 +38,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{addUchwala.run()}}",
+  "onClick": "{{\n(async () => {\n\n  const edycja = appsmith.store.edycjaUchwalyId != null;\n  const nrUchwaly = String(InputNrUchwaly.text ?? \"\").trim();\n\n  if (\n    !SelectNrNaboru.selectedOptionValue ||\n    !SelectRodzaj.selectedOptionValue ||\n    !DateZatwierdzenie.selectedDate\n  ) {\n    showAlert(\n      \"Uzupełnij wymagane dane uchwały.\",\n      \"warning\"\n    );\n    return;\n  }\n\n  try {\n\n    // Dodawanie lub edycja uchwały\n    const wynik = edycja\n      ? await updateUchwala.run()\n      : await addUchwala.run();\n\n    // Sprawdzenie, czy zapis zwrócił rekord\n    if (!wynik || (Array.isArray(wynik) && wynik.length === 0)) {\n      throw new Error(\"Nie zapisano żadnego rekordu.\");\n    }\n\n    // Logowanie zdarzenia\n    await Log.write(\n      edycja ? \"UCHWALY_EDIT\" : \"UCHWALY_ADD\",\n      (edycja ? \"Zmodyfikowano\" : \"Dodano\") +\n        \" uchwałę\" +\n        (nrUchwaly ? \" nr \" + nrUchwaly : \"\") +\n        \" (nabór: \" + SelectNrNaboru.selectedOptionLabel + \").\",\n      appsmith.store.session.user.id,\n      appsmith.store.session.user.name,\n      appsmith.store.session.token\n    );\n\n    // Odświeżenie tabeli\n    await getUchwaly.run();\n\n    // Zamknięcie formularza\n    closeModal(\"ModalDodajUchwale\");\n\n    // Wyczyszczenie trybu edycji\n    await storeValue(\"edycjaUchwalyId\", null);\n\n    showAlert(\n      edycja\n        ? \"Dane uchwały zostały zaktualizowane.\"\n        : \"Nowa uchwała została dodana.\",\n      \"success\"\n    );\n\n  } catch (e) {\n\n    console.error(\"Błąd zapisu uchwały:\", e);\n\n    showAlert(\n      \"Nie udało się zapisać uchwały: \" + e.message,\n      \"error\"\n    );\n\n  }\n\n})();\n}}",
   "originalBottomRow": 99,
   "originalTopRow": 95,
   "parentId": "7zhp2mejyl",

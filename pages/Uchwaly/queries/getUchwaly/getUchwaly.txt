@@ -27,4 +27,4 @@ AND
 AND
     u.data_zatwierdzenia <=
     {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
-ORDER BY u.id;
+ORDER BY n.nr_naboru;

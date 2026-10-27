@@ -4,10 +4,13 @@
   "borderRadius": "0.375rem",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.edycjaUchwalyId ? TableUchwaly.selectedRow.typ_uchwaly : null ))(SelectRodzaj.options, SelectRodzaj.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

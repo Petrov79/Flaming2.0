@@ -5,10 +5,13 @@
   "borderRadius": "0.375rem",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.nr_uchwaly ?? \"\") : \"\" }}\t",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -38,7 +41,7 @@
   "parentColumnSpace": 14.9453125,
   "parentId": "53x2hk64mg",
   "parentRowSpace": 10,
-  "placeholderText": "Wprowadz nr uchwały",
+  "placeholderText": "Wprowadź nr uchwały",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",

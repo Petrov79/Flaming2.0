@@ -143,9 +143,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -169,8 +176,9 @@
   "mobileRightColumn": 49,
   "mobileTopRow": 27,
   "needsErrorInfo": false,
-  "originalBottomRow": 82,
-  "originalTopRow": 28,
+  "onRowSelected": "{{\n  (async () => {\n    await storeValue(\n      \"edycjaUchwalyId\",\n      TableUchwaly.selectedRow.id\n    );\n\n    showModal(\"ModalDodajUchwale\");\n  })()\n}}",
+  "originalBottomRow": 74,
+  "originalTopRow": 20,
   "parentColumnSpace": 27.671875,
   "parentId": "0",
   "parentRowSpace": 10,
