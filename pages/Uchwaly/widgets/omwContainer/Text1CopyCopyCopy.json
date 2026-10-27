@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 17,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "73bsfm4ezq",
-  "leftColumn": 27,
+  "leftColumn": 29,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,8 +33,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 79,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 9,
+  "originalBottomRow": 14,
+  "originalTopRow": 10,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
   "parentId": "ux7wn0k4qb",
@@ -43,10 +43,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "{{\n  \"Kwota BP zatwierdzonych projektów :   \" +\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_bp ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
+  "text": "{{\n  \"Kwota BP projektów :   \" +\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_bp ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
   "textAlign": "LEFT",
   "textColor": "#71717a",
-  "topRow": 9,
+  "topRow": 13,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
