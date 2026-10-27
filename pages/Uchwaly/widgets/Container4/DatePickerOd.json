@@ -2,25 +2,18 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 21,
-  "boxShadow": "none",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "closeOnSelection": true,
   "dateFormat": "DD-MM-YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\n  appsmith.store.trybNaboru === \"edycja\"\n    ? (\n        (getNabory.data || []).find(row => row.id === appsmith.store.wybranyNaborId)?.data_uchwaly || \"\"\n      )\n    : \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
-    },
-    {
-      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {
-      "key": "defaultDate"
-    },
     {
       "key": "onDateSelected"
     }
@@ -35,38 +28,38 @@
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "iuhegqghod",
-  "label": "Data zatwierdzenia uchwały",
+  "key": "w7oflz98wh",
+  "label": "Data początkowa",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
+  "labelTextColor": "#64748b",
   "labelTextSize": "0.875rem",
+  "labelTooltip": "",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 36,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 29,
-  "mobileLeftColumn": 37,
-  "mobileRightColumn": 57,
-  "mobileTopRow": 22,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onDateSelected": "{{ storeValue(\"naborZmieniony\", true) }}",
-  "originalBottomRow": 38,
-  "originalTopRow": 31,
-  "parentColumnSpace": 13.34375,
-  "parentId": "2tolh2p0hz",
+  "onDateSelected": "{{ getUchwaly.run() }}",
+  "parentColumnSpace": 20.25,
+  "parentId": "dd79vid6hp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 49,
   "shortcuts": false,
-  "timePrecision": "None",
-  "topRow": 14,
+  "timePrecision": "minute",
+  "topRow": 0,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "jiqfnn8pv7",
-  "widgetName": "DatePickerUchwala"
+  "widgetId": "29jjols1s9",
+  "widgetName": "DatePickerOd"
 }

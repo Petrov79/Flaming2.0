@@ -1,0 +1,46 @@
+
+INSERT INTO uchwaly
+(
+    nabory_id,
+    typ_uchwaly,
+    data_zatwierdzenia,
+    nr_uchwaly,
+    proj_rmr,
+    kwota_rmr,
+    proj_rws,
+    kwota_rws,
+    proj_z_bp,
+    kwota_bp,
+    proj_rmr_rez,
+    kwota_rmr_rez,
+    proj_rws_rez,
+    kwota_rws_rez,
+    proj_z_bp_rez,
+    kwota_bp_rez
+)
+VALUES
+(
+    NULLIF({{ String(SelectNrNaboru.selectedOptionValue ?? "") }}, '')::integer,
+    NULLIF({{ String(SelectRodzaj.selectedOptionValue ?? "") }}, ''),
+    NULLIF({{ DateZatwierdzenie.selectedDate?.slice(0, 10) || "" }}, '')::date,
+    NULLIF({{ InputNrUchwaly.text || "" }}, ''),
+
+    NULLIF({{ String(InputIleRMR.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyRMR.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ String(InputIleRWS.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyRWS.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ String(InputIleBP.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyBP.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ String(InputIleRMRrez.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyRMRrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ String(InputIleRWSrez.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyRWSrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ String(InputIleBPrez.text ?? "") }}, '')::integer,
+    NULLIF({{ String(CurrencyBPrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric
+)
+RETURNING *;

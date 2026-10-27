@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_952064b0-4f8f-4776-a8cd-cf2cf2139597",
+  "id": "Uchwaly_Auth",
+  "unpublishedCollection": {
+    "name": "Auth",
+    "pageId": "Uchwaly",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "sessionTimer",
+        "value": "null"
+      },
+      {
+        "name": "logoutTimer",
+        "value": "null"
+      }
+    ]
+  }
+}

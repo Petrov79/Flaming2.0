@@ -1,0 +1,65 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowCurrencyChange": false,
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "0.375rem",
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "decimals": 2,
+  "defaultCurrencyCode": "PLN",
+  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.kwota_bp_rez ?? 0) : 0 }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "39ipx1fxxg",
+  "label": "Kwota BP",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 48,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 29,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 22,
+  "needsErrorInfo": false,
+  "onTextChanged": "",
+  "originalBottomRow": 76,
+  "originalTopRow": 70,
+  "parentColumnSpace": 14.23779296875,
+  "parentId": "z7t58arabo",
+  "parentRowSpace": 10,
+  "placeholderText": "Podaj kwotę",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "showStepArrows": false,
+  "topRow": 10,
+  "type": "CURRENCY_INPUT_WIDGET",
+  "version": 1,
+  "widgetId": "bxvxt1resl",
+  "widgetName": "CurrencyBPrez"
+}

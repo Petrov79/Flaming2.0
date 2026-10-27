@@ -1,3 +1,4 @@
+
 UPDATE nabory
 SET
   nr_naboru = COALESCE(
@@ -60,21 +61,6 @@ SET
   data_protokolu = COALESCE(
     NULLIF('{{ DatePickerProtokol.selectedDate ? moment(DatePickerProtokol.selectedDate).format("YYYY-MM-DD") : "" }}', '')::date,
     data_protokolu
-  ),
-
-  nr_uchwaly = COALESCE(
-    NULLIF('{{ InputNrUchwaly.value || "" }}', ''),
-    nr_uchwaly
-  ),
-
-  data_uchwaly = COALESCE(
-    NULLIF('{{ DatePickerUchwala.selectedDate ? moment(DatePickerUchwala.selectedDate).format("YYYY-MM-DD") : "" }}', '')::date,
-    data_uchwaly
-  ),
-
-  rezerwa = COALESCE(
-    NULLIF('{{ SelectRezerwa.value || "" }}', ''),
-    rezerwa
   ),
 
   uwagi = COALESCE(
@@ -156,5 +142,4 @@ RETURNING
   data_naboru,
   data_przekazania,
   data_oceny,
-  data_protokolu,
-  data_uchwaly;
+  data_protokolu;

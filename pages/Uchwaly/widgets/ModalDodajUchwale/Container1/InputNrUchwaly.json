@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "0.375rem",
-  "bottomRow": 21,
+  "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{\n  appsmith.store.trybNaboru === \"edycja\"\n    ? ((getNabory.data || []).find(row => row.id === appsmith.store.wybranyNaborId)?.nr_uchwaly || \"\")\n    : \"\"\n}}",
+  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.nr_uchwaly ?? \"\") : \"\" }}\t",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,53 +15,41 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "onTextChanged"
-    }
-  ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onTextChanged"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "voc1b9c6pr",
-  "label": "Nr uchwały",
+  "key": "7pn0a7seri",
+  "label": "Nr uchwały\t",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelTextSize": "",
+  "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 16,
+  "leftColumn": 48,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 13,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 32,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onTextChanged": "{{ storeValue(\"naborZmieniony\", true) }}",
-  "originalBottomRow": 38,
-  "originalTopRow": 31,
-  "parentColumnSpace": 6.9375,
-  "parentId": "2tolh2p0hz",
+  "parentColumnSpace": 14.9453125,
+  "parentId": "53x2hk64mg",
   "parentRowSpace": 10,
-  "placeholderText": "Wpisz numer uchwały",
+  "placeholderText": "Wprowadź nr uchwały",
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 64,
   "showStepArrows": false,
-  "topRow": 14,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "um3ylsq7rm",
+  "widgetId": "vn6cod6cxo",
   "widgetName": "InputNrUchwaly"
 }
