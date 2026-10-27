@@ -166,7 +166,7 @@
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": false,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "e5gc44ekou",
   "label": "Data",
   "leftColumn": 1,
