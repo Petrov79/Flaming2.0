@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 17,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -51,7 +51,7 @@
   "text": "{{\n  \"LICZBA UCHWAŁ : \" + (\n    Array.isArray(TableUchwaly.filteredTableData)\n      ? TableUchwaly.filteredTableData.length\n      : (\n          Array.isArray(TableUchwaly.tableData)\n            ? TableUchwaly.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
   "textColor": "#71717a",
-  "topRow": 16,
+  "topRow": 13,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
