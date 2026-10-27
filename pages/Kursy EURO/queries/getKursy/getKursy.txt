@@ -3,4 +3,8 @@ SELECT
     TO_CHAR(data_kursu, 'DD-MM-YYYY') AS data_kursu_txt,
     kurs_eur_pln
 FROM kursy_walut
+WHERE (
+    NULLIF('{{ DatePicker1.selectedDate ? moment(DatePicker1.selectedDate).format("YYYY-MM-DD") : "" }}', '') IS NULL
+    OR data_kursu = NULLIF('{{ DatePicker1.selectedDate ? moment(DatePicker1.selectedDate).format("YYYY-MM-DD") : "" }}', '')::date
+)
 ORDER BY data_kursu DESC;
