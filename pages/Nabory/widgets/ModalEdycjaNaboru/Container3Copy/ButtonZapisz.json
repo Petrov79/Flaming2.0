@@ -25,6 +25,8 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
   "isDisabled": "{{\n  (() => {\n    const nrNaboruPoprawny =\n      /^FEMA\\.\\d{2}\\.\\d{2}-IP\\.01-\\d{3}\\/\\d{2}$/.test(InputNrNaboru.text || \"\");\n\n    const wymaganePolaUzupelnione =\n      nrNaboruPoprawny &&\n      !!SelectTypNaboru.selectedOptionValue &&\n      !!SelectStatus.selectedOptionValue;\n\n    if (!wymaganePolaUzupelnione) {\n      return true;\n    }\n\n    if (appsmith.store.trybNaboru === \"dodawanie\") {\n      return false;\n    }\n\n    return !appsmith.store.naborZmieniony;\n  })()\n}}",
   "isLoading": false,
