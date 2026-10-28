@@ -1,7 +1,7 @@
 {
-  "animateLoading": false,
+  "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -17,44 +17,39 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "fontSize"
-    }
-  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.8\nrem",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "unphp8cwqo",
-  "leftColumn": 1,
+  "key": "73bsfm4ezq",
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 74,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 70,
+  "mobileBottomRow": 83,
+  "mobileLeftColumn": 18,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 79,
   "needsErrorInfo": false,
-  "originalBottomRow": 20,
-  "originalTopRow": 16,
+  "originalBottomRow": 14,
+  "originalTopRow": 10,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "parentId": "q3nc333n4y",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 11,
+  "rightColumn": 26,
   "shouldTruncate": false,
-  "text": "{{\n  \"LICZBA UCHWAŁ : \" + (\n    Array.isArray(TableUchwaly.filteredTableData)\n      ? TableUchwaly.filteredTableData.length\n      : (\n          Array.isArray(TableUchwaly.tableData)\n            ? TableUchwaly.tableData.length\n            : 0\n        )\n  )\n}}",
-  "textAlign": "LEFT",
+  "text": "{{  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) =>\n      suma + (Number(wiersz.proj_rws_rez) || 0), 0)\n}}",
+  "textAlign": "RIGHT",
   "textColor": "#71717a",
-  "topRow": 13,
+  "topRow": 9,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "vd3ux21h66",
-  "widgetName": "potwierdzeniaTextCopy1"
+  "widgetId": "2e4lwxcwv8",
+  "widgetName": "TextLiczbaRWSCopy"
 }

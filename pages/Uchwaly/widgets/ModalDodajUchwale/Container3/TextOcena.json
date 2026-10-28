@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#f4f4f5",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +12,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "73bsfm4ezq",
+  "key": "rc499d4338",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 83,
-  "mobileLeftColumn": 18,
-  "mobileRightColumn": 34,
-  "mobileTopRow": 79,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 49,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 9,
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
   "overflow": "NONE",
-  "parentColumnSpace": 20.25,
-  "parentId": "ux7wn0k4qb",
+  "parentColumnSpace": 14.78125,
+  "parentId": "j2eq8ezpyu",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 30,
   "shouldTruncate": false,
-  "text": "{{ \n  \"Liczba projektów RWS :  \" +\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) =>\n      suma + (Number(wiersz.proj_rws) || 0), 0)\n}}",
+  "text": "Projekty do dofinansowania\t",
   "textAlign": "LEFT",
-  "textColor": "#71717a",
-  "topRow": 9,
+  "textColor": "#15803d",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "vbcqdssb92",
-  "widgetName": "Text1Copy1"
+  "widgetId": "a6glu8yoxd",
+  "widgetName": "TextOcena"
 }

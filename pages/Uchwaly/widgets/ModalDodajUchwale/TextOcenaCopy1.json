@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#64748b",
+  "backgroundColor": "#ffffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 19,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -12,20 +12,22 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.3rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "rc499d4338",
-  "leftColumn": 0,
+  "leftColumn": 3,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -42,12 +44,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 14,
   "shouldTruncate": false,
-  "text": "PROJEKTY RMR",
-  "textAlign": "CENTER",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
-  "topRow": 14,
+  "text": "Projekty RMR",
+  "textAlign": "LEFT",
+  "textColor": "#1e3a8a",
+  "topRow": 15,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

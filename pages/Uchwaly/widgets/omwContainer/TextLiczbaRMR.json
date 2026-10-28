@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "73bsfm4ezq",
-  "leftColumn": 29,
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,23 +33,23 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 79,
   "needsErrorInfo": false,
-  "originalBottomRow": 10,
-  "originalTopRow": 6,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "btoo6i6wr8",
+  "parentId": "ux7wn0k4qb",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 26,
   "shouldTruncate": false,
-  "text": "{{\n  \"Kwota projektów RWS:   \" +\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_rws_rez ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
-  "textAlign": "LEFT",
+  "text": "{{ \n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) =>\n      suma + (Number(wiersz.proj_rmr) || 0), 0)\n}}",
+  "textAlign": "RIGHT",
   "textColor": "#71717a",
-  "topRow": 9,
+  "topRow": 5,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "2xows5uqyp",
-  "widgetName": "Text1CopyCopyCopy1"
+  "widgetId": "xvf8z9nyxz",
+  "widgetName": "TextLiczbaRMR"
 }

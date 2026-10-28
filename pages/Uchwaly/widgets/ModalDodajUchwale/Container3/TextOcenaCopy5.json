@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "backgroundColor": "#f4f4f5",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 42,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -12,9 +12,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,7 +22,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "rc499d4338",
-  "leftColumn": 33,
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -34,23 +31,23 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 49,
   "needsErrorInfo": false,
-  "originalBottomRow": 42,
-  "originalTopRow": 38,
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
   "overflow": "NONE",
   "parentColumnSpace": 14.78125,
-  "parentId": "va7x9y561d",
+  "parentId": "j2eq8ezpyu",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "LISTA REZERWOWA\t",
-  "textAlign": "CENTER",
-  "textColor": "#71717a",
-  "topRow": 38,
+  "text": "Lista rezerwowa\t",
+  "textAlign": "LEFT",
+  "textColor": "#3b82f6",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "vfvq3nasce",
-  "widgetName": "TextOcenaCopy2Copy"
+  "widgetId": "g49gwtzz07",
+  "widgetName": "TextOcenaCopy5"
 }

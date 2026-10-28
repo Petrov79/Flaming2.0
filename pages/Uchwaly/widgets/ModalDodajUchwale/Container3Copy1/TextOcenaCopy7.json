@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#f4f4f5",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,45 +12,42 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "73bsfm4ezq",
-  "leftColumn": 1,
+  "key": "rc499d4338",
+  "leftColumn": 34,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 83,
-  "mobileLeftColumn": 18,
-  "mobileRightColumn": 34,
-  "mobileTopRow": 79,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 49,
   "needsErrorInfo": false,
-  "originalBottomRow": 18,
-  "originalTopRow": 13,
+  "originalBottomRow": 23,
+  "originalTopRow": 19,
   "overflow": "NONE",
-  "parentColumnSpace": 20.25,
-  "parentId": "ux7wn0k4qb",
+  "parentColumnSpace": 14.78125,
+  "parentId": "z7t58arabo",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ \n  \"        w tym projekty z BP :  \" +\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) =>\n      suma + (Number(wiersz.proj_z_bp) || 0), 0)\n}}",
+  "text": "Lista rezerwowa\t",
   "textAlign": "LEFT",
-  "textColor": "#71717a",
-  "topRow": 13,
+  "textColor": "#3b82f6",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "6cgjeoq4j4",
-  "widgetName": "Text1Copy1Copy"
+  "widgetId": "thuwhgcpg7",
+  "widgetName": "TextOcenaCopy7"
 }
