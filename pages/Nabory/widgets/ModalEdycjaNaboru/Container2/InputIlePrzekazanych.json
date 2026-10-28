@@ -35,7 +35,7 @@
   "label": "Liczba przekazanych wniosków",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "BOLD",
+  "labelStyle": "",
   "labelTextSize": "",
   "labelWidth": 5,
   "leftColumn": 16,

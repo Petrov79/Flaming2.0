@@ -1,10 +1,10 @@
 {
   "animateLoading": true,
-  "backgroundColor": "",
+  "backgroundColor": "#ffffff",
   "borderColor": "#64748b",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "",
-  "bottomRow": 5,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -20,9 +20,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.875rem",
+  "fontSize": "1.6rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -36,7 +41,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
   "parentId": "k4m4ftg0sy",
@@ -46,7 +51,7 @@
   "shouldTruncate": false,
   "text": "{{ TableHarmonogramPracy.selectedRow.PRACOWNIK\n}}",
   "textAlign": "LEFT",
-  "textColor": "#3f3f46",
+  "textColor": "#1e3a8a",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

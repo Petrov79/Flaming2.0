@@ -1,0 +1,39 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "boxShadow": "none",
+  "buttonColor": "#1e3a8a",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "timeline-bar-chart",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "amj2xlbn8q",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 4,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "originalBottomRow": 26,
+  "originalTopRow": 22,
+  "parentColumnSpace": 15.5,
+  "parentId": "yceu4evemu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 4,
+  "topRow": 22,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "q50d922a5u",
+  "widgetName": "IconButton1Copy2"
+}

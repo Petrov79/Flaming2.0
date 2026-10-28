@@ -18,6 +18,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "onTextChanged"
+    },
+    {
+      "key": "labelTextSize"
     }
   ],
   "dynamicTriggerPathList": [
@@ -35,8 +38,8 @@
   "label": "Liczba złożonych wniosków",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "BOLD",
-  "labelTextSize": "",
+  "labelStyle": "",
+  "labelTextSize": "{{}}",
   "labelWidth": 5,
   "leftColumn": 33,
   "maxDynamicHeight": 9000,
