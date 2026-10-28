@@ -1,7 +1,9 @@
 {
   "animateLoading": false,
+  "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "borderWidth": "",
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,20 +13,17 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
-  "fontStyle": "BOLD",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "unphp8cwqo",
-  "leftColumn": 0,
+  "leftColumn": 44,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,23 +32,22 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 70,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "kgp9ahpupo",
+  "parentId": "vu56d2xudy",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 57,
+  "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "{{\n  \"LICZBA POTWIERDZEŃ: \" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.length\n            : 0\n        )\n  )\n}}",
-  "textAlign": "RIGHT",
-  "textColor": "#4a5768",
-  "topRow": 0,
+  "text": "Liczba ocen finansowych:",
+  "textAlign": "LEFT",
+  "textColor": "#18181b",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "wxub0tr1a2",
-  "widgetName": "potwierdzeniaText"
+  "widgetId": "bbeex9i7ks",
+  "widgetName": "niekonkurTextCopyCopyCopy1CopyCopy"
 }

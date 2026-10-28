@@ -1,9 +1,7 @@
 {
   "animateLoading": false,
-  "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "borderWidth": "",
-  "bottomRow": 4,
+  "bottomRow": 5,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -16,9 +14,6 @@
     },
     {
       "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -29,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "unphp8cwqo",
-  "leftColumn": 0,
+  "leftColumn": 57,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -40,20 +35,19 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
-  "parentId": "y0ks8mwmzb",
+  "parentId": "vu56d2xudy",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
-  "shouldScrollContents": true,
+  "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "{{\n  \"NIEKONKUR:\t\" + (\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.filter(\n          row => row.rodzaj_oceny === \"Niekonkur.\"\n        ).length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.filter(\n                row => row.rodzaj_oceny === \"Niekonkur\"\n              ).length\n            : 0\n        )\n  )\n}}",
+  "text": "{{\n(\n    Array.isArray(TablePotwierdzenia.filteredTableData)\n      ? TablePotwierdzenia.filteredTableData.filter(\n          row => row.rodzaj_oceny === \"Finans.\"\n        ).length\n      : (\n          Array.isArray(TablePotwierdzenia.tableData)\n            ? TablePotwierdzenia.tableData.filter(\n                row => row.rodzaj_oceny === \"Finans.\"\n              ).length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.primaryColor}}",
-  "topRow": 0,
+  "textColor": "#18181b",
+  "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "ig25533kc7",
-  "widgetName": "niekonkurText"
+  "widgetId": "tjmgdxi68c",
+  "widgetName": "finansText"
 }
