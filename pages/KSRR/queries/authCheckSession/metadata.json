@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "KSRR",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
