@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 70,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -17,19 +17,15 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "fontSize"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.8\nrem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "7tot1j4whr",
-  "leftColumn": 0,
+  "leftColumn": 8,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,24 +34,23 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
-  "originalBottomRow": 68,
-  "originalTopRow": 64,
+  "originalBottomRow": 84,
+  "originalTopRow": 80,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
-  "parentId": "0",
+  "parentId": "b70o8htgrv",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
-  "shouldScrollContents": true,
+  "rightColumn": 11,
   "shouldTruncate": false,
-  "text": "{{\n  \"  LICZBA EKSPERTÓW: \" + (\n    Array.isArray(eksperciTable.filteredTableData)\n      ? eksperciTable.filteredTableData.length\n      : (\n          Array.isArray(eksperciTable.tableData)\n            ? eksperciTable.tableData.length\n            : 0\n        )\n  )\n}}",
+  "text": "{{\n(\n    Array.isArray(TableNabory.filteredTableData)\n      ? TableNabory.filteredTableData.length\n      : (\n          Array.isArray(TableNabory.tableData)\n            ? TableNabory.tableData.length\n            : 0\n        )\n  )\n}}",
   "textAlign": "LEFT",
-  "textColor": "#4a5768",
-  "topRow": 66,
+  "textColor": "#18181b",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "zohua7tnbv",
-  "widgetName": "Text2"
+  "widgetId": "680j0lr0hn",
+  "widgetName": "Text2Copy"
 }

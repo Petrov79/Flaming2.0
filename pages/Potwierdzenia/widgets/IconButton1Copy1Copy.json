@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "endorsed",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "6w2u2o97ls",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 30,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 73,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 2,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "1vcwg35pxg",
+  "widgetName": "IconButton1Copy1Copy"
+}
