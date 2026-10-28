@@ -185,7 +185,7 @@
   "mobileTopRow": 27,
   "needsErrorInfo": false,
   "onRowSelected": "{{\n  (async () => {\n    await storeValue(\n      \"edycjaUchwalyId\",\n      TableUchwaly.selectedRow.id\n    );\n\n    showModal(\"ModalDodajUchwale\");\n  })()\n}}",
-  "originalBottomRow": 67,
+  "originalBottomRow": 60,
   "originalTopRow": 16,
   "parentColumnSpace": 27.671875,
   "parentId": "0",
