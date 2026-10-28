@@ -1,0 +1,63 @@
+{
+  "animateLoading": false,
+  "backgroundColor": "#ffffffff",
+  "borderColor": "#ffffffff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "0",
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.8\nrem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "unphp8cwqo",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 74,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 70,
+  "needsErrorInfo": false,
+  "originalBottomRow": 77,
+  "originalTopRow": 73,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.25,
+  "parentId": "kgjnxj8tic",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "\n{{\n  (() => {\n    const dane = Array.isArray(TableUchwaly.filteredTableData)\n      ? TableUchwaly.filteredTableData\n      : (Array.isArray(TableUchwaly.tableData)\n          ? TableUchwaly.tableData\n          : []);\n\n    const zatwierdzajace = dane.filter(\n      r => r.typ_uchwaly?.toLowerCase().trim() === \"zatwierdzająca\"\n    ).length;\n\n    const zmieniajace = dane.filter(\n      r => r.typ_uchwaly?.toLowerCase().trim() === \"zmieniająca\"\n    ).length;\n\n    return ` Liczba wszystkich uchwał: ${dane.length} | Zatwierdzające: ${zatwierdzajace} | Zmieniające: ${zmieniajace} `;\n  })()\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#3f3f46",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "vd3ux21h66",
+  "widgetName": "potwierdzeniaTextCopy1"
+}

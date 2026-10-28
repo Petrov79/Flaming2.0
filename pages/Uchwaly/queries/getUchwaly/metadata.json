@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n    u.*,\n    n.nr_naboru\nFROM uchwaly u\nLEFT JOIN nabory n\n    ON u.nabory_id = n.id\nWHERE\n(\n    {{ !SelectNabor.selectedOptionValues?.length }}\n    OR u.nabory_id = ANY(\n        {{ SelectNabor.selectedOptionValues?.map(Number) || [] }}::integer[]\n    )\n)\nAND\n(\n    {{ !SelectTyp.selectedOptionValues?.length }}\n    OR u.typ_uchwaly = ANY(\n        string_to_array(\n            {{ (SelectTyp.selectedOptionValues || []).join(\",\") }},\n            ','\n        )\n    )\n)\nAND\n    u.data_zatwierdzenia >=\n    {{ DatePickerOd.selectedDate?.slice(0, 10) || \"0001-01-01\" }}::date\nAND\n    u.data_zatwierdzenia <=\n    {{ DatePickerDo.selectedDate?.slice(0, 10) || \"9999-12-31\" }}::date\nORDER BY n.nr_naboru;",
+      "body": "SELECT\n    u.*,\n    n.nr_naboru\nFROM uchwaly u\nLEFT JOIN nabory n\n    ON u.nabory_id = n.id\nWHERE\n(\n    {{ !SelectNabor.selectedOptionValues?.length }}\n    OR u.nabory_id = ANY(\n        {{ SelectNabor.selectedOptionValues?.map(Number) || [] }}::integer[]\n    )\n)\nAND\n(\n    {{ !SelectTyp.selectedOptionValues?.length }}\n    OR u.typ_uchwaly = ANY(\n        string_to_array(\n            {{ (SelectTyp.selectedOptionValues || []).join(\",\") }},\n            ','\n        )\n    )\n)\nAND\n    u.data_zatwierdzenia >=\n    {{ DatePickerOd.selectedDate?.slice(0, 10) || \"0001-01-01\" }}::date\nAND\n    u.data_zatwierdzenia <=\n    {{ DatePickerDo.selectedDate?.slice(0, 10) || \"9999-12-31\" }}::date\nORDER BY u.data_zatwierdzenia;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -3,12 +3,8 @@
   "bottomRow": 20,
   "capSide": 0,
   "capType": "nc",
-  "dividerColor": "{{appsmith.theme.colors.primaryColor}}",
-  "dynamicBindingPathList": [
-    {
-      "key": "dividerColor"
-    }
-  ],
+  "dividerColor": "#d4d4d8",
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [],
   "isLoading": false,
   "isVisible": true,
@@ -27,7 +23,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 34,
-  "strokeStyle": "dashed",
+  "strokeStyle": "solid",
   "thickness": "1\n",
   "topRow": 0,
   "type": "DIVIDER_WIDGET",
