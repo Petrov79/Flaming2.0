@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,20 +33,20 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 79,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 9,
+  "originalBottomRow": 14,
+  "originalTopRow": 10,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
   "parentId": "ux7wn0k4qb",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 62,
+  "rightColumn": 61,
   "shouldTruncate": false,
   "text": "{{\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_rws ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
   "textAlign": "RIGHT",
   "textColor": "#71717a",
-  "topRow": 10,
+  "topRow": 9,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

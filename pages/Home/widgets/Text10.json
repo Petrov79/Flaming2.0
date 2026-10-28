@@ -1,13 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 66,
+  "bottomRow": 67,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
-    },
-    {
-      "key": "fontFamily"
     },
     {
       "key": "borderRadius"
@@ -15,8 +12,8 @@
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontFamily": "Nunito Sans",
+  "fontSize": "1.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -30,8 +27,8 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 52,
   "needsErrorInfo": false,
-  "originalBottomRow": 70,
-  "originalTopRow": 66,
+  "originalBottomRow": 66,
+  "originalTopRow": 62,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
@@ -40,7 +37,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 43,
   "shouldTruncate": false,
-  "text": "WITAJ W SYSTEMIE FLAMING 2.0",
+  "text": "WITAJ  W  SYSTEMIE  FLAMING 2.0",
   "textAlign": "CENTER",
   "textColor": "#3f3f46",
   "topRow": 62,

@@ -39,7 +39,7 @@
   "label": "Data zatwierdzenia protokołu",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "BOLD",
+  "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 48,

@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#64748b",
+  "backgroundColor": "#ffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 77,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -12,20 +12,22 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.6rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "rc499d4338",
-  "leftColumn": 0,
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -34,21 +36,23 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 53,
   "needsErrorInfo": false,
+  "originalBottomRow": 77,
+  "originalTopRow": 73,
   "overflow": "NONE",
   "parentColumnSpace": 14.78125,
   "parentId": "yceu4evemu",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 11,
   "shouldTruncate": false,
-  "text": " DANE OGÓLNE",
+  "text": "Uwagi",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
-  "topRow": 0,
+  "textColor": "#1e3a8a",
+  "topRow": 73,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "jpnvw7lzzp",
-  "widgetName": "TextDane"
+  "widgetId": "s8dwq1v88v",
+  "widgetName": "TextDaneCopyCopyCopyCopy"
 }
