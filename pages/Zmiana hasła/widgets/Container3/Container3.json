@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
-  "backgroundColor": "#f4f4f5",
-  "borderColor": "#E0DEDE",
+  "backgroundColor": "#ffffffff",
+  "borderColor": "#f4f4f5",
   "borderRadius": "0.375rem",
   "borderWidth": "1",
   "bottomRow": 55,

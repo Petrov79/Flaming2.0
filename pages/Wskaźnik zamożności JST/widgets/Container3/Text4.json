@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "fm2cxnqcb4",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
+  "overflow": "NONE",
+  "parentColumnSpace": 13.6591796875,
+  "parentId": "qrhw6zlx4b",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 16,
+  "shouldTruncate": false,
+  "text": "Wybierz poziom danych",
+  "textAlign": "LEFT",
+  "textColor": "#64748b",
+  "topRow": 1,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "y8wmeislom",
+  "widgetName": "Text4"
+}

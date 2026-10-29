@@ -3,11 +3,11 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "0.375rem",
-  "bottomRow": 119,
+  "bottomRow": 155,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "chartData": {
     "0uklcbhmlw": {
-      "data": "{{ Log.getLogChartData().map(item => ({\n  x: item.event_type,\n  y: item.count\n})) }}",
+      "data": "\n{{\n  Log.getLogChartData()\n    .sort((a, b) => Number(a.count) - Number(b.count))\n    .map(item => ({\n      x: item.event_type,\n      y: Number(item.count)\n    }))\n}}\n",
       "seriesName": "Zdarzenia"
     }
   },
@@ -82,7 +82,7 @@
   "isVisible": true,
   "key": "vvj48m9cti",
   "labelOrientation": "auto",
-  "leftColumn": 47,
+  "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 154,
   "mobileLeftColumn": 32,
@@ -96,7 +96,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": true,
-  "topRow": 80,
+  "topRow": 110,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "rajom0mnul",

@@ -1,6 +1,7 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#64748b",
+  "backgroundColor": "",
+  "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 68,
   "dynamicBindingPathList": [
@@ -12,9 +13,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -25,7 +23,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "9et8nv6pqd",
-  "leftColumn": 1,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -34,23 +32,23 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 68,
-  "originalTopRow": 64,
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 5,
   "shouldTruncate": false,
-  "text": "  LOGI",
+  "text": "Logi",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
-  "topRow": 64,
+  "textColor": "#1e3a8a",
+  "topRow": 63,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "nfxelw7z73",
+  "widgetId": "0pkgw8v4bg",
   "widgetName": "TextTytulCopy"
 }

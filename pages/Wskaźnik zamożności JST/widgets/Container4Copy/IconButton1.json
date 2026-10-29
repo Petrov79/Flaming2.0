@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "#eab308",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "changes",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "6jdlk9cdt4",
+  "leftColumn": 56,
+  "minWidth": 50,
+  "mobileBottomRow": 29,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 49,
+  "mobileTopRow": 25,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(ModalZmienBazowa.name);}}",
+  "parentColumnSpace": 26.625,
+  "parentId": "jct4dpiozt",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "tooltip": "Zmień wartość bazową dla wybranego roku i rodzaju JST",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "4gs32q9wrl",
+  "widgetName": "IconButton1"
+}

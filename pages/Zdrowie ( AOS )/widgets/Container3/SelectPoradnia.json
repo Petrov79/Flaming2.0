@@ -62,7 +62,7 @@
   "placeholderText": "{{\n  SliderAOS.value == 0 ? \"Wybierz poradnię\" : \"Wybierz porady\"\n}}",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 62,
   "serverSideFiltering": false,
   "sourceData": "{{getPoradnie.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.value } })}}",
   "topRow": 0,

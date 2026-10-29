@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "bottomRow": 10,
+  "defaultOptionValue": "0",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "46o3elvniy",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 2,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "GMINY",
+      "value": "0"
+    },
+    {
+      "label": "POWIATY",
+      "value": "1"
+    }
+  ],
+  "originalBottomRow": 11,
+  "originalTopRow": 5,
+  "parentColumnSpace": 30.25,
+  "parentId": "qrhw6zlx4b",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 15,
+  "shouldScroll": false,
+  "shouldTruncate": false,
+  "showMarksLabel": true,
+  "sliderSize": "m",
+  "topRow": 5,
+  "type": "CATEGORY_SLIDER_WIDGET",
+  "version": 1,
+  "widgetId": "9outia02pm",
+  "widgetName": "SliderJST"
+}

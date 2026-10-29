@@ -1,0 +1,44 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "people",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "6w2u2o97ls",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 30,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 73,
+  "needsErrorInfo": false,
+  "originalBottomRow": 110,
+  "originalTopRow": 106,
+  "parentColumnSpace": 20.25,
+  "parentId": "alcvpnqu31",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 12,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tzymjjw6fr",
+  "widgetName": "IconButton1Copy1Copy"
+}

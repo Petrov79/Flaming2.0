@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#ffffff",
+  "borderColor": "#ffffff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.8rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "wd4z5mt3ud",
+  "leftColumn": 12,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.21875,
+  "parentId": "alcvpnqu31",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldTruncate": false,
+  "text": "{{\n  SliderAOS.value == 0 ? \"LICZBA PORADNI NA 10 TYS. MIESZKAŃCÓW POW.\" : \"LICZBA PORAD NA 1 TYS. MIESZKAŃCÓW POW.\"\n}}",
+  "textAlign": "LEFT",
+  "textColor": "#64748b",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "2ct9cxafc5",
+  "widgetName": "Text2Copy"
+}

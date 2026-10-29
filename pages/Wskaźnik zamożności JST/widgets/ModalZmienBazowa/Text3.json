@@ -1,6 +1,7 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#64748b",
+  "backgroundColor": "#ffffff",
+  "borderColor": "#ffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "dynamicBindingPathList": [
@@ -14,9 +15,6 @@
       "key": "borderRadius"
     },
     {
-      "key": "textColor"
-    },
-    {
       "key": "text"
     }
   ],
@@ -24,7 +22,7 @@
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "vqu7srcfmx",
@@ -43,9 +41,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "{{ \" ZMIEŃ WARTOŚĆ BAZOWĄ DLA ROKU \" + (SelectRok.selectedOptionValue +\" (\"+ SliderJST.options.find(\n  o => o.value === SliderJST.value\n)?.label+\")\" || \"\") }}",
+  "text": "{{ \" Zmień wartość bazową dla roku \" + (SelectRok.selectedOptionValue +\" (\"+ SliderJST.options.find(\n  o => o.value === SliderJST.value\n)?.label+\")\" || \"\") }}",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "textColor": "#1e3a8a",
   "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

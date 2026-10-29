@@ -1,0 +1,55 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "bottomRow": 11,
+  "defaultOptionValue": "0",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "46o3elvniy",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "PORADNIE",
+      "value": "0"
+    },
+    {
+      "label": "PORADY",
+      "value": "1"
+    }
+  ],
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 30.25,
+  "parentId": "58h4lt3elp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 16,
+  "shouldScroll": false,
+  "shouldTruncate": false,
+  "showMarksLabel": true,
+  "sliderSize": "m",
+  "topRow": 7,
+  "type": "CATEGORY_SLIDER_WIDGET",
+  "version": 1,
+  "widgetId": "9l0j4jaeo9",
+  "widgetName": "SliderAOS"
+}

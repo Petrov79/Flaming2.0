@@ -1,0 +1,218 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": false,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "0.375rem",
+  "borderWidth": "1",
+  "bottomRow": 52,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "cachedTableData": {},
+  "canFreezeColumn": false,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "nazwa",
+    "priorytet",
+    "priorytet_id"
+  ],
+  "columnUpdatedAt": 1781781440167,
+  "columnWidthMap": {
+    "nazwa": 644
+  },
+  "compactMode": "SHORT",
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.nazwa.computedValue"
+    },
+    {
+      "key": "primaryColumns.priorytet.computedValue"
+    },
+    {
+      "key": "headerTextColor"
+    },
+    {
+      "key": "primaryColumns.priorytet_id.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableClientSideSearch": true,
+  "endOfData": false,
+  "flexVerticalAlignment": "start",
+  "headerRowColor": "#64748b",
+  "headerTextColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "horizontalAlignment": "LEFT",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": false,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "x607wkqoum",
+  "label": "Data",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 61,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 33,
+  "needsErrorInfo": false,
+  "originalBottomRow": 52,
+  "originalTopRow": 31,
+  "parentColumnSpace": 14.3125,
+  "parentId": "263wl917is",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "nazwa": {
+      "alias": "nazwa",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nazwa\"])) : nazwa })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "nazwa",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Nazwa dziedziny",
+      "notation": "standard",
+      "originalId": "nazwa",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "priorytet": {
+      "alias": "priorytet",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"priorytet\"])) : priorytet })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "priorytet",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Priorytet",
+      "notation": "standard",
+      "originalId": "priorytet",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "priorytet_id": {
+      "alias": "priorytet_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"priorytet_id\"])) : priorytet_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "priorytet_id",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "priorytet_id",
+      "notation": "standard",
+      "originalId": "priorytet_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{ eksperciSzczegolyDziedziny.data}}",
+  "textSize": "0.875rem",
+  "topRow": 31,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "knbjswbfvk",
+  "widgetName": "Table1"
+}

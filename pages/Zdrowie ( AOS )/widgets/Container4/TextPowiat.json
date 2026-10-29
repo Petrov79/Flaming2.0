@@ -1,0 +1,64 @@
+{
+  "animateLoading": false,
+  "backgroundColor": "#ffffff",
+  "borderColor": "#ffffff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 8,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "wd4z5mt3ud",
+  "leftColumn": 12,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 17,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.21875,
+  "parentId": "alcvpnqu31",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "shouldTruncate": false,
+  "text": "{{\n  Number(SliderAOS.value) === 0\n    ? (getLiczbaPoradni10tys.data?.[0]?.liczba_poradni_10tys ?? 0)\n    : (getLiczbaPorad1tys.data?.[0]?.liczba_porad_1tys ?? 0)\n}}",
+  "textAlign": "LEFT",
+  "textColor": "{{\n  (() => {\n    const pow = parseFloat((TextPowiat.text || \"0\").replace(\",\", \".\"));\n    const woj = parseFloat((TextWoj.text || \"0\").replace(\",\", \".\"));\n\n    if (pow > woj) return \"#DC2626\";   // czerwony\n    if (pow < woj) return \"#16A34A\";   // zielony\n    return \"#18181b\";                  // kolor domyślny, gdy równe\n  })()\n}}",
+  "topRow": 4,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "rj95dkvu1y",
+  "widgetName": "TextPowiat"
+}

@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#ffffff",
+  "borderColor": "#ffffff",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.8rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "wd4z5mt3ud",
+  "leftColumn": 13,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 19,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 20.21875,
+  "parentId": "926t316390",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 60,
+  "shouldTruncate": false,
+  "text": "WARTOŚĆ DLA WOJ. MAZOWIECKIEGO\n",
+  "textAlign": "LEFT",
+  "textColor": "#64748b",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "x46wt347wu",
+  "widgetName": "Text2"
+}

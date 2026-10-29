@@ -14,14 +14,19 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1.4rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "9et8nv6pqd",
-  "leftColumn": 0,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,7 +43,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
+  "rightColumn": 23,
   "shouldTruncate": false,
   "text": "WYSZUKAJ LOKALIZACJĘ",
   "textAlign": "LEFT",
