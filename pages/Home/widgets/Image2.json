@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 61,
+  "bottomRow": 65,
   "boxShadow": "none",
   "defaultImage": "https://i.imgur.com/SiQqm1d.png",
   "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 43,
-  "topRow": 15,
+  "topRow": 19,
   "type": "IMAGE_WIDGET",
   "version": 1,
   "widgetId": "uc61ppggrd",

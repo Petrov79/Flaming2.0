@@ -43,7 +43,7 @@
   "shouldTruncate": false,
   "text": "Projekty na listach rezerwowych",
   "textAlign": "LEFT",
-  "textColor": "#1d4ed8",
+  "textColor": "#3b82f6",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
