@@ -16,14 +16,19 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1.4rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "wd4z5mt3ud",
-  "leftColumn": 0,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -36,7 +41,7 @@
   "parentId": "0",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 29,
   "shouldTruncate": false,
   "text": "INDYWIDUALNY WSKAŹNIK ZAMOŻNOŚCI JST",
   "textAlign": "LEFT",

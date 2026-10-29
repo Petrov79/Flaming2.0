@@ -1,0 +1,68 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 95,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{{\n  {\n    gmina: Number(TextWskaznikG.text || 0),\n    bazowa: Number(TextBazowa.text || 0),\n    rok: SelectRok.selectedOptionValue || \"2025\",\n    gminaLabel: SelectGmina.selectedOptionLabel || \"Gmina\"\n  }\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "yc0wya12l3",
+  "leftColumn": 9,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 94,
+  "mobileLeftColumn": 7,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 64,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 10.125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 49,
+  "shouldScrollContents": true,
+  "srcDoc": {
+    "css": "html,\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  background: #ffffff;\n  font-family: Arial, sans-serif;\n}\n\n#chart {\n  width: 100%;\n  height: 100%;\n}",
+    "html": "<script src=\"https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js\"></script>\n\n<div id=\"chart\"></div>",
+    "js": "let chart;\nfunction renderChart() {\n  const gmina = Number(appsmith.model.gmina || 0);\n  const bazowa = Number(appsmith.model.bazowa || 0);\n  const rok = appsmith.model.rok || \"\";\n  const colors = [gmina > bazowa ? \"#fca5a5\" : gmina < bazowa ? \"#bbf7d0\" : \"#6B778E\", \"#6B778E\"];\n  const el = document.getElementById(\"chart\");\n  if (!chart) {\n    chart = echarts.init(el);\n  }\n  chart.setOption({\n    title: {\n      text: \"Stosunek wskaźnika do wartości bazowej\",\n      subtext: \"Rok: \" + rok,\n      left: \"center\",\n      top: 15,\n      textStyle: {\n        fontSize: 18,\n        fontWeight: \"bold\",\n        color: \"#64748b\"\n      },\n      subtextStyle: {\n        fontSize: 12,\n        fontWeight: \"normal\",\n        color: \"#374151\"\n      }\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      }\n    },\n    grid: {\n      left: 70,\n      right: 40,\n      top: 110,\n      bottom: 70\n    },\n    xAxis: {\n      type: \"category\",\n      data: [appsmith.model.gminaLabel || \"Gmina\", \"Wartość bazowa\"],\n      axisTick: {\n        alignWithLabel: true\n      },\n      axisLabel: {\n        color: \"#6B7280\",\n        fontSize: 13\n      },\n      axisLine: {\n        lineStyle: {\n          color: \"#9CA3AF\"\n        }\n      }\n    },\n    yAxis: {\n      type: \"value\",\n      name: \"Przychód\",\n      nameLocation: \"middle\",\n      nameGap: 50,\n      axisLabel: {\n        color: \"#6B7280\"\n      },\n      splitLine: {\n        lineStyle: {\n          color: \"#E5E7EB\"\n        }\n      }\n    },\n    series: [{\n      name: rok,\n      type: \"bar\",\n      barWidth: \"55%\",\n      data: [{\n        value: gmina,\n        itemStyle: {\n          color: colors[0]\n        }\n      }, {\n        value: bazowa,\n        itemStyle: {\n          color: colors[1]\n        }\n      }],\n      label: {\n        show: true,\n        position: \"top\",\n        fontSize: 13,\n        fontWeight: \"normal\",\n        color: \"#374151\",\n        formatter: function (params) {\n          return params.value.toLocaleString(\"pl-PL\", {\n            minimumFractionDigits: 2,\n            maximumFractionDigits: 2\n          });\n        }\n      }\n    }]\n  });\n  chart.resize();\n}\nappsmith.onReady(() => {\n  renderChart();\n  appsmith.onModelChange(() => {\n    renderChart();\n  });\n  window.addEventListener(\"resize\", () => {\n    if (chart) {\n      chart.resize();\n    }\n  });\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 36,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "html,\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  background: #ffffff;\n  font-family: Arial, sans-serif;\n}\n\n#chart {\n  width: 100%;\n  height: 100%;\n}",
+    "html": "<script src=\"https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js\"></script>\n\n<div id=\"chart\"></div>",
+    "js": "let chart;\n\nfunction renderChart() {\n  const gmina = Number(appsmith.model.gmina || 0);\n  const bazowa = Number(appsmith.model.bazowa || 0);\n  const rok = appsmith.model.rok || \"\";\n\nconst colors = [\n  gmina > bazowa ? \"#fca5a5\" : gmina < bazowa ? \"#bbf7d0\" : \"#6B778E\",\n  \"#6B778E\"\n];\n\n  const el = document.getElementById(\"chart\");\n\n  if (!chart) {\n    chart = echarts.init(el);\n  }\n\n  chart.setOption({\n   title: {\n  text: \"Stosunek wskaźnika do wartości bazowej\",\n  subtext: \"Rok: \" + rok,\n  left: \"center\",\n  top: 15,\n  textStyle: {\n    fontSize: 18,\n    fontWeight: \"bold\",\n    color: \"#64748b\"\n  },\n\t\t  subtextStyle: {\n    fontSize: 12,\n    fontWeight: \"normal\",\n    color: \"#374151\"\n  }\n    },\n    tooltip: {\n      trigger: \"axis\",\n      axisPointer: {\n        type: \"shadow\"\n      }\n    },\n\n    grid: {\n      left: 70,\n      right: 40,\n      top: 110,\n      bottom: 70\n    },\n    xAxis: {\n      type: \"category\",\n      data: [appsmith.model.gminaLabel || \"Gmina\", \"Wartość bazowa\"],\n      axisTick: {\n        alignWithLabel: true\n      },\n      axisLabel: {\n        color: \"#6B7280\",\n        fontSize: 13\n      },\n      axisLine: {\n        lineStyle: {\n          color: \"#9CA3AF\"\n        }\n      }\n    },\n    yAxis: {\n      type: \"value\",\n      name: \"Przychód\",\n      nameLocation: \"middle\",\n      nameGap: 50,\n      axisLabel: {\n        color: \"#6B7280\"\n      },\n      splitLine: {\n        lineStyle: {\n          color: \"#E5E7EB\"\n        }\n      }\n    },\n    series: [\n      {\n        name: rok,\n        type: \"bar\",\n        barWidth: \"55%\",\n        data: [\n          {\n            value: gmina,\n            itemStyle: {\n              color: colors[0]\n            }\n          },\n          {\n            value: bazowa,\n            itemStyle: {\n              color: colors[1]\n            }\n          }\n        ],\n        label: {\n  show: true,\n  position: \"top\",\n  fontSize: 13,\n  fontWeight: \"normal\",\n  color: \"#374151\",\n  formatter: function(params) {\n    return params.value.toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    });\n  }\n}\n      }\n    ]\n  });\n\n  chart.resize();\n}\n\nappsmith.onReady(() => {\n  renderChart();\n\n  appsmith.onModelChange(() => {\n    renderChart();\n  });\n\n  window.addEventListener(\"resize\", () => {\n    if (chart) {\n      chart.resize();\n    }\n  });\n});"
+  },
+  "version": 1,
+  "widgetId": "eimhhnxpmg",
+  "widgetName": "CustomChart1"
+}

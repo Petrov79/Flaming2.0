@@ -1,7 +1,7 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "bottomRow": 8,
+  "bottomRow": 5,
   "defaultOptionValue": "0",
   "dynamicBindingPathList": [
     {
@@ -40,12 +40,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 58,
+  "rightColumn": 26,
   "shouldScroll": false,
   "shouldTruncate": false,
   "showMarksLabel": true,
   "sliderSize": "m",
-  "topRow": 3,
+  "topRow": 0,
   "type": "CATEGORY_SLIDER_WIDGET",
   "version": 1,
   "widgetId": "tmecy5ooj4",

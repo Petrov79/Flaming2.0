@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 4,
+  "bottomRow": 5,
   "boxShadow": "none",
   "defaultOptionValue": "0",
   "dynamicBindingPathList": [
@@ -69,7 +69,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 63,
-  "topRow": 0,
+  "topRow": 1,
   "type": "RADIO_GROUP_WIDGET",
   "version": 1,
   "widgetId": "n9uibc6y3s",

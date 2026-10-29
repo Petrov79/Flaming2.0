@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 28,
   "bottomRowBeforeCollapse": 96,
   "dynamicBindingPathList": [
     {
@@ -36,7 +36,7 @@
   "isLoading": false,
   "isVisible": "{{ RadioGroupWyszukaj.selectedOptionValue == 2 }}\t",
   "key": "7tot1j4whr",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -53,12 +53,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 22,
+  "rightColumn": 15,
   "shouldTruncate": false,
   "text": "{{\n  Number(RadioGroupWyszukaj.selectedOptionValue) === 1\n    ? \"  Liczba kategorii: \" + (dziedzinyKatTable.tableData?.length || 0)\n    : Number(RadioGroupWyszukaj.selectedOptionValue) === 2\n      ? \"  Liczba dziedzin: \" + (dziedzinyKatTable.tableData?.length || 0)\n      : \"\"\n}}",
   "textAlign": "LEFT",
   "textColor": "#4a5768",
-  "topRow": 0,
+  "topRow": 24,
   "topRowBeforeCollapse": 92,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

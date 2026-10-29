@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "#ffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 77,
+  "bottomRow": 56,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -36,8 +36,8 @@
   "mobileRightColumn": 22,
   "mobileTopRow": 53,
   "needsErrorInfo": false,
-  "originalBottomRow": 77,
-  "originalTopRow": 73,
+  "originalBottomRow": 56,
+  "originalTopRow": 52,
   "overflow": "NONE",
   "parentColumnSpace": 14.78125,
   "parentId": "yceu4evemu",
@@ -49,7 +49,7 @@
   "text": "Uwagi",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 73,
+  "topRow": 52,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
