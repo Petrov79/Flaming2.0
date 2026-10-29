@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 42,
+  "bottomRow": 43,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "defaultText": "{{\n`Liczba rekordów: ${(getLogs.data || []).length}`\n}}",
   "dynamicBindingPathList": [
@@ -50,7 +50,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 59,
   "showStepArrows": false,
-  "topRow": 35,
+  "topRow": 36,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vl1y0h3ibg",
