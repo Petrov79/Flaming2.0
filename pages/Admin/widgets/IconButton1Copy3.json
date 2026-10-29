@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 13,
   "boxShadow": "none",
   "buttonColor": "#1e3a8a",
   "buttonVariant": "TERTIARY",
@@ -11,7 +11,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "iconName": "build",
+  "iconName": "numbered-list",
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
@@ -29,7 +29,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 52,
-  "topRow": 7,
+  "topRow": 9,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "dok7eyxf37",

@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 58,
+  "bottomRow": 63,
   "capSide": 0,
   "capType": "nc",
   "dividerColor": "#d4d4d8",
@@ -25,7 +25,7 @@
   "rightColumn": 50,
   "strokeStyle": "solid",
   "thickness": "1",
-  "topRow": 4,
+  "topRow": 8,
   "type": "DIVIDER_WIDGET",
   "version": 1,
   "widgetId": "oc512vydre",
