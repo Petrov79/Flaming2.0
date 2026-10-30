@@ -17,9 +17,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "0.8rem",
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
@@ -33,7 +38,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 9,
+  "originalBottomRow": 10,
   "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 9.49609375,
@@ -41,7 +46,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 49,
+  "rightColumn": 48,
   "shouldTruncate": false,
   "text": "Kwota projektów RMR:",
   "textAlign": "RIGHT",

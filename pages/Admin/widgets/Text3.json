@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -46,7 +46,7 @@
   "text": "{{\n\"Użytkownik: \" +\nappsmith.store.session.user.name +\n\" | sesja do godz. \" +\nnew Date(appsmith.store.session.expiresAt).toLocaleTimeString(\"pl-PL\", {\n  hour: \"2-digit\",\n  minute: \"2-digit\"\n})\n}}",
   "textAlign": "RIGHT",
   "textColor": "#64748b",
-  "topRow": 4,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

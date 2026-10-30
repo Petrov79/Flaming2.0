@@ -17,9 +17,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "0.8rem",
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
@@ -33,8 +38,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 9,
+  "originalBottomRow": 15,
+  "originalTopRow": 10,
   "overflow": "NONE",
   "parentColumnSpace": 9.49609375,
   "parentId": "ux7wn0k4qb",

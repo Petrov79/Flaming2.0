@@ -17,9 +17,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "0.8rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -34,14 +39,14 @@
   "mobileTopRow": 79,
   "needsErrorInfo": false,
   "originalBottomRow": 14,
-  "originalTopRow": 10,
+  "originalTopRow": 9,
   "overflow": "NONE",
   "parentColumnSpace": 20.25,
   "parentId": "ux7wn0k4qb",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 62,
   "shouldTruncate": false,
   "text": "{{\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_rws ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
   "textAlign": "RIGHT",
