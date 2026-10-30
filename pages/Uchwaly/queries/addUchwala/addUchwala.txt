@@ -1,4 +1,3 @@
-
 INSERT INTO uchwaly
 (
     nabory_id,
@@ -22,7 +21,13 @@ VALUES
 (
     NULLIF({{ String(SelectNrNaboru.selectedOptionValue ?? "") }}, '')::integer,
     NULLIF({{ String(SelectRodzaj.selectedOptionValue ?? "") }}, ''),
-    NULLIF({{ DateZatwierdzenie.selectedDate?.slice(0, 10) || "" }}, '')::date,
+
+    NULLIF({{
+        DateZatwierdzenie.selectedDate
+            ? moment(DateZatwierdzenie.selectedDate).format("YYYY-MM-DD")
+            : ""
+    }}, '')::date,
+
     NULLIF({{ InputNrUchwaly.text || "" }}, ''),
 
     NULLIF({{ String(InputIleRMR.text ?? "") }}, '')::integer,

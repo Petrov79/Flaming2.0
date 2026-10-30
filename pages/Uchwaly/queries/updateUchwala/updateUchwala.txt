@@ -2,7 +2,7 @@ UPDATE uchwaly
 SET
     nabory_id = {{ SelectNrNaboru.selectedOptionValue }}::integer,
     typ_uchwaly = {{ SelectRodzaj.selectedOptionValue }},
-    data_zatwierdzenia = {{ DateZatwierdzenie.selectedDate.slice(0,10) }}::date,
+    data_zatwierdzenia = {{moment(DateZatwierdzenie.selectedDate).format("YYYY-MM-DD")}}::date,
     nr_uchwaly = {{ InputNrUchwaly.text || "" }},
 
     proj_rmr = {{ InputIleRMR.text }}::integer,
