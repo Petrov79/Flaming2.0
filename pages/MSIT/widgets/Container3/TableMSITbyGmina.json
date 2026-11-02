@@ -35,9 +35,10 @@
     "lp",
     "gmina",
     "rodzaj_gminy",
-    "msit"
+    "msit",
+    "id_msit"
   ],
-  "columnUpdatedAt": 1790154308179,
+  "columnUpdatedAt": 1793627026380,
   "columnWidthMap": {
     "gmina": 176,
     "lp": 60,
@@ -73,6 +74,9 @@
     },
     {
       "key": "primaryColumns.msit.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_msit.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -135,6 +139,41 @@
       "notation": "standard",
       "originalId": "gmina",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id_msit": {
+      "alias": "id_msit",
+      "allowCellWrapping": false,
+      "allowHeaderWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableMSITbyGmina.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_msit\"])) : id_msit })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id_msit",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id_msit",
+      "notation": "standard",
+      "originalId": "id_msit",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

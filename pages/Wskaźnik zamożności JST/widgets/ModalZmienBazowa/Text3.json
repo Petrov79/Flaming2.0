@@ -39,7 +39,7 @@
   "parentId": "5w1opvobfj",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 54,
   "shouldTruncate": false,
   "text": "{{ \" Zmień wartość bazową dla roku \" + (SelectRok.selectedOptionValue +\" (\"+ SliderJST.options.find(\n  o => o.value === SliderJST.value\n)?.label+\")\" || \"\") }}",
   "textAlign": "LEFT",

@@ -315,6 +315,6 @@ export default {
 
     return true;
 
-  }
+  },	
 
 };
