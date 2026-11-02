@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_a3e93abc-de93-4e6e-8fe2-f9c30e0a898a",
+  "gitSyncId": "6ae483863142d7a127861996_ad1d388e-b5b9-447c-b6ae-e2ba94207a23",
   "id": "Potwierdzenia_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

@@ -39,6 +39,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onClick": "{{\n  getLogs.run(\n    () => {\n      showAlert(\"Logi zostały odświeżone.\", \"success\");\n    },\n    (e) => {\n      showAlert(\"Błąd: \" + e.message, \"error\");\n    }\n  )\n}}",
+  "originalBottomRow": 42,
+  "originalTopRow": 38,
   "parentColumnSpace": 10.0859375,
   "parentId": "0",
   "parentRowSpace": 10,

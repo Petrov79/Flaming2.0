@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_3d4bb81c-04d3-4581-944f-3f588668cc33",
+  "gitSyncId": "6ae483863142d7a127861996_aa3b6841-2799-456c-81e8-b47f6d9e0017",
   "id": "Uchwaly_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

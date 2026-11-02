@@ -36,6 +36,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onClick": "{{\nupdateSessionTimeout.run(\n  () => {\n    showAlert(\"Długość sesji została zmieniona.\", \"success\");\n    getSessionTimeout.run();\n  },\n  (e) => {\n    showAlert(\"Błąd: \" + e.message, \"error\");\n  }\n)\n}}",
+  "originalBottomRow": 35,
+  "originalTopRow": 31,
   "parentColumnSpace": 10.0859375,
   "parentId": "0",
   "parentRowSpace": 10,

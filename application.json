@@ -93,6 +93,10 @@
     {
       "id": "Wyloguj ⬇️",
       "isDefault": false
+    },
+    {
+      "id": "Wylogowanie",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

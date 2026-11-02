@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_1f674a22-f2ee-4382-bffc-d1ee1efe4279",
+  "gitSyncId": "6ae483863142d7a127861996_e4492a16-9764-48c1-b560-6bfc8d1a1caf",
   "id": "Nabory_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

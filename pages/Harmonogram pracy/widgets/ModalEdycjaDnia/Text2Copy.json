@@ -20,14 +20,19 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.4rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "nsspx8wdmc",
-  "leftColumn": 38,
+  "leftColumn": 44,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -42,7 +47,7 @@
   "parentId": "k4m4ftg0sy",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 59,
   "shouldTruncate": false,
   "text": "{{ SelectMiesiac.selectedOptionLabel+\" \"+ SelectRok.selectedOptionValue\n}}",
   "textAlign": "RIGHT",

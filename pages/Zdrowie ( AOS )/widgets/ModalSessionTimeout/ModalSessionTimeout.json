@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#f8fafc",
+  "backgroundColor": "#ffffff",
   "borderRadius": "0.375rem",
-  "bottomRow": 327,
+  "bottomRow": 337,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": false,
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "cqd8u7dhkm",
+      "parentId": "9eyg3n7dxy",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -47,8 +47,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "wspz1cvyxm",
-      "widgetName": "Canvas1"
+      "widgetId": "vdvcw1aah4",
+      "widgetName": "Canvas1Copy"
     }
   ],
   "detachFromLayout": true,
@@ -74,10 +74,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 43,
   "shouldScrollContents": true,
-  "topRow": 87,
+  "topRow": 97,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "cqd8u7dhkm",
+  "widgetId": "9eyg3n7dxy",
   "widgetName": "ModalSessionTimeout",
   "width": 498
 }

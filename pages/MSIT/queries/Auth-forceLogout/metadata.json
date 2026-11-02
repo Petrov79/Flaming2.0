@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_8328f63c-a155-414d-a6fa-bfabc1754b7e",
+  "gitSyncId": "6ae483863142d7a127861996_0dc1a32e-fd40-4c82-978a-71ddfe6219ad",
   "id": "MSIT_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_1edf5267-cd57-47d1-a687-1f8c64f9b2b0",
+  "gitSyncId": "6ae483863142d7a127861996_ba494dfc-1fbd-4923-98f2-72ecd9bede21",
   "id": "Admin_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

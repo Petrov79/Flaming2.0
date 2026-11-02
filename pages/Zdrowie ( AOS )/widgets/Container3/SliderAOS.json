@@ -8,6 +8,7 @@
       "key": "accentColor"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,
@@ -19,12 +20,13 @@
   "labelText": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 3,
+  "leftColumn": 4,
   "mobileBottomRow": 18,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 13,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
+  "onChange": "",
   "options": [
     {
       "label": "PORADNIE",
@@ -35,14 +37,14 @@
       "value": "1"
     }
   ],
-  "originalBottomRow": 10,
-  "originalTopRow": 6,
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
   "parentColumnSpace": 30.25,
   "parentId": "58h4lt3elp",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 17,
   "shouldScroll": false,
   "shouldTruncate": false,
   "showMarksLabel": true,

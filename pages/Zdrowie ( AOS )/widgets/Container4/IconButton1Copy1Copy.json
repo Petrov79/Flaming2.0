@@ -8,15 +8,21 @@
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "iconName"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "iconName"
     }
   ],
   "dynamicTriggerPathList": [],
-  "iconName": "people",
+  "iconName": "{{\n  SliderAOS.value == 0 ? \"office\" : \"people\"\n}}",
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,

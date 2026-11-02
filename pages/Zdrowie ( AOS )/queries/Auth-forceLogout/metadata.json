@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_07d99c5f-6ae8-4670-8450-d018a42e595a",
+  "gitSyncId": "6ae483863142d7a127861996_fe2356d7-8a30-4a70-84ca-87e9b60a2df0",
   "id": "Zdrowie ( AOS )_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

@@ -36,6 +36,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onClick": "{{\nupdateLoginSettings.run(\n  () => {\n    getAppSettings.run();\n    showAlert(\n      \"Ustawienia zostały zapisane.\",\n      \"success\"\n    );\n  },\n  (e) => {\n    showAlert(\n      \"Błąd zapisu: \" + e.message,\n      \"error\"\n    );\n  }\n)\n}}",
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
   "parentColumnSpace": 10.0859375,
   "parentId": "0",
   "parentRowSpace": 10,

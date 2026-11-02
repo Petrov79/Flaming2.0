@@ -47,7 +47,7 @@
   "parentId": "k4m4ftg0sy",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28,
+  "rightColumn": 23,
   "shouldTruncate": false,
   "text": "{{ TableHarmonogramPracy.selectedRow.PRACOWNIK\n}}",
   "textAlign": "LEFT",

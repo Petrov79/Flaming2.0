@@ -37,7 +37,7 @@
   "onClick": "{{\nAuth.logout()\n}}",
   "originalBottomRow": 20,
   "originalTopRow": 16,
-  "parentId": "tnlj9kbw1m",
+  "parentId": "w8efgar3kg",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
@@ -48,6 +48,6 @@
   "topRow": 16,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "3jp2xqzs42",
+  "widgetId": "t2ph09h2i8",
   "widgetName": "ButtonSessionLogout"
 }

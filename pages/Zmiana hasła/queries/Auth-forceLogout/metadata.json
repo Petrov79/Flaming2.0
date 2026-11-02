@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a5e211dd68b24bcec9072a5_280260a5-467c-4e2a-a122-2a717f0305ad",
+  "gitSyncId": "6ae483863142d7a127861996_d6dc39f1-4e5b-4a83-b28f-516bd4c4acd3",
   "id": "Zmiana hasła_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

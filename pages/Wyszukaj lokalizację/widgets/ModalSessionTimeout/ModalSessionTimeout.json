@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#f8fafc",
+  "backgroundColor": "#ffffff",
   "borderRadius": "0.375rem",
   "bottomRow": 326,
   "boxShadow": "none",
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "5bkutbdct5",
+      "parentId": "ba5yqgq7g9",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -47,8 +47,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "nbuahjbvvd",
-      "widgetName": "Canvas1"
+      "widgetId": "ec2fc9my8q",
+      "widgetName": "Canvas1Copy"
     }
   ],
   "detachFromLayout": true,
@@ -77,7 +77,7 @@
   "topRow": 86,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "5bkutbdct5",
+  "widgetId": "ba5yqgq7g9",
   "widgetName": "ModalSessionTimeout",
   "width": 498
 }

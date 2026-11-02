@@ -1,6 +1,7 @@
 {
   "animateLoading": false,
-  "backgroundColor": "#64748b",
+  "backgroundColor": "#ffffffff",
+  "borderColor": "#ffffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "",
   "bottomRow": 6,
@@ -14,9 +15,6 @@
     },
     {
       "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -45,11 +43,11 @@
   "parentId": "ihntqk164h",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 46,
   "shouldTruncate": false,
   "text": "{{\n  appsmith.store.wybranaGmina && appsmith.store.wybranaGmina.gmina\n    ? \"  \" + appsmith.store.wybranaGmina.gmina +\n      (\n        appsmith.store.wybranaGmina.rodzaj_gminy\n          ? \" (\" + appsmith.store.wybranaGmina.rodzaj_gminy + \")\"\n          : \"\"\n      )\n    : \"\"\n}}",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "textColor": "#1e3a8a",
   "topRow": 1,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",

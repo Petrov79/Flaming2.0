@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6a72e4ae78a3d1b3b91349e9_de9a400a-22ee-4b56-9fd3-a62881bcbba5",
+  "gitSyncId": "6ae483863142d7a127861996_55369ad7-e412-46d1-ae88-c453ddc98c66",
   "id": "Uchwaly_Auth.initialize",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.initialize",
     "name": "initialize",
     "pageId": "Uchwaly",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

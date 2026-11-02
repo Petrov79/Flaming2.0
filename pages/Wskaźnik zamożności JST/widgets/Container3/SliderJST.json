@@ -20,7 +20,7 @@
   "labelText": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 2,
+  "leftColumn": 3,
   "mobileBottomRow": 18,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 13,
@@ -37,7 +37,7 @@
     }
   ],
   "originalBottomRow": 11,
-  "originalTopRow": 5,
+  "originalTopRow": 6,
   "parentColumnSpace": 30.25,
   "parentId": "qrhw6zlx4b",
   "parentRowSpace": 10,

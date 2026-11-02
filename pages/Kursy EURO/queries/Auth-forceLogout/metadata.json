@@ -1,12 +1,17 @@
 {
-  "gitSyncId": "6a4cc5104ac43d2e7de42d86_ef02bd8f-37d2-47c5-84a7-0be7f6d7ab7c",
+  "gitSyncId": "6ae483863142d7a127861996_18a82fdc-ef4a-41d7-ba0a-64d758405064",
   "id": "Kursy EURO_Auth.forceLogout",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "destination",
+          "value": "Logowanie"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },

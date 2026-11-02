@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 11,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -37,19 +37,19 @@
   "originalTopRow": 6,
   "overflow": "NONE",
   "parentColumnSpace": 6.9375,
-  "parentId": "wspz1cvyxm",
+  "parentId": "vdvcw1aah4",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 49,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "{{\"Za minutę nastąpi automatyczne wylogowanie.\" + \"     Czy chcesz przedłyżyć sesję?\"}}",
+  "text": "{{\"Za minutę nastąpi automatyczne wylogowanie.\" + \"                         Czy chcesz przedłyżyć sesję?\"}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "4w7aqynrow",
+  "widgetId": "bwxdupkglc",
   "widgetName": "TextInfo1"
 }
