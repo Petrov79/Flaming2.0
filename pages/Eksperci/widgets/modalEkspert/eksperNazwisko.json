@@ -39,7 +39,7 @@
   "parentId": "263wl917is",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 53,
   "shouldScrollContents": true,
   "shouldTruncate": false,
   "text": "{{ eksperciTable.selectedRow?.nazwisko || \"\" }}",

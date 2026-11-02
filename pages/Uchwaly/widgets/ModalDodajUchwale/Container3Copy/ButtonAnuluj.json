@@ -39,7 +39,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 63,
-  "text": "ZAMKNIJ",
+  "text": "ANULUJ",
   "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,

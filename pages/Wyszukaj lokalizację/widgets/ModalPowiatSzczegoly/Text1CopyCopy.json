@@ -1,7 +1,7 @@
 {
   "animateLoading": false,
-  "backgroundColor": "#64748b",
-  "borderColor": "#3f3f46",
+  "backgroundColor": "#ffffffff",
+  "borderColor": "#ffffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "disableLink": true,
@@ -14,9 +14,6 @@
     },
     {
       "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -45,11 +42,11 @@
   "parentId": "ttd1aalc7f",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 39,
   "shouldTruncate": false,
   "text": "{{\n  appsmith.store.wybranyPowiat&& \"  Powiat  \" +appsmith.store.wybranyPowiat.powiat\n}}",
   "textAlign": "LEFT",
-  "textColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "textColor": "#1e3a8a",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
