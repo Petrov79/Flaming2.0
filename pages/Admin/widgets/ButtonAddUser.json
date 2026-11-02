@@ -32,6 +32,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onClick": "{{showModal(ModalDodajUzytkownika.name);}}",
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
   "parentColumnSpace": 10.0859375,
   "parentId": "0",
   "parentRowSpace": 10,

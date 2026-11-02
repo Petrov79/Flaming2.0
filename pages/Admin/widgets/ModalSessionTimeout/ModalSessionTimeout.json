@@ -1,8 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "#f8fafc",
+  "backgroundColor": "#ffffff",
   "borderRadius": "0.375rem",
-  "bottomRow": 310,
+  "bottomRow": 24,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": false,
@@ -38,7 +38,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "oics6yyyvi",
+      "parentId": "67s83vw591",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -47,7 +47,7 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "l4ktwp5woj",
+      "widgetId": "2jldkzfx5i",
       "widgetName": "Canvas1Copy"
     }
   ],
@@ -74,10 +74,10 @@
   "renderMode": "CANVAS",
   "rightColumn": 43,
   "shouldScrollContents": true,
-  "topRow": 70,
+  "topRow": 156,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "oics6yyyvi",
+  "widgetId": "67s83vw591",
   "widgetName": "ModalSessionTimeout",
   "width": 498
 }

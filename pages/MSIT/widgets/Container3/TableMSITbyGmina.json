@@ -104,6 +104,8 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "originalBottomRow": 36,
+  "originalTopRow": 11,
   "parentColumnSpace": 8.23046875,
   "parentId": "tyvvlp2cev",
   "parentRowSpace": 10,

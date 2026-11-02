@@ -3,17 +3,15 @@ export default {
   sessionTimer: null,
   logoutTimer: null,
 
+  // Inicjalizacja sesji
   async initialize() {
 
     const session = appsmith.store.session;
 
     if (!session || !session.token) {
-
       await clearStore();
       await navigateTo("Logowanie");
-
       return false;
-
     }
 
     const ok = await this.checkSession();
@@ -25,27 +23,28 @@ export default {
     this.startSessionTimer();
 
     return true;
-
   },
 
+  // Ręczne wylogowanie
   async logout() {
+
+    if (this.logoutTimer) {
+      clearTimeout(this.logoutTimer);
+      this.logoutTimer = null;
+    }
+
+    if (this.sessionTimer) {
+      clearTimeout(this.sessionTimer);
+      this.sessionTimer = null;
+    }
+
     try {
-
-      if (this.logoutTimer) {
-        clearTimeout(this.logoutTimer);
-        this.logoutTimer = null;
-      }
-
-      if (this.sessionTimer) {
-        clearTimeout(this.sessionTimer);
-        this.sessionTimer = null;
-      }
 
       await authLogoutSession.run();
 
     } catch (e) {
 
-      console.error(e);
+      console.error("Błąd wylogowania:", e);
 
       showAlert(
         "Błąd podczas wylogowania: " + e.message,
@@ -64,7 +63,8 @@ export default {
     }
   },
 
-  async forceLogout() {
+  // Wymuszone wylogowanie
+  async forceLogout(destination = "Logowanie") {
 
     if (this.logoutTimer) {
       clearTimeout(this.logoutTimer);
@@ -76,15 +76,46 @@ export default {
       this.sessionTimer = null;
     }
 
+    // Zachowujemy dane przed wyczyszczeniem sesji
+    const session = appsmith.store.session;
+
+    // Zapis logu automatycznego wylogowania
+    if (destination === "Wylogowanie") {
+
+      await Log.write(
+        "AUTO_LOGOUT",
+        "Automatyczne wylogowanie",
+        session?.user?.id ?? null,
+        session?.user?.name ?? null,
+        session?.token ?? null
+      );
+
+    }
+
+    // Unieważnienie sesji w bazie danych
+    try {
+
+      await authLogoutSession.run();
+
+    } catch (e) {
+
+      console.error(
+        "Błąd unieważnienia sesji:",
+        e
+      );
+
+    }
+
     try {
       closeModal("ModalSessionTimeout");
     } catch (e) {}
 
     await clearStore();
-    await navigateTo("Logowanie");
+    await navigateTo(destination);
 
   },
 
+  // Sprawdzenie ważności sesji
   async checkSession() {
 
     try {
@@ -101,7 +132,6 @@ export default {
         await this.forceLogout();
 
         return false;
-
       }
 
       return true;
@@ -116,11 +146,10 @@ export default {
       );
 
       return false;
-
     }
-
   },
 
+  // Przedłużenie sesji w bazie danych
   async refreshSession() {
 
     try {
@@ -137,7 +166,6 @@ export default {
         await this.forceLogout();
 
         return false;
-
       }
 
       const session = appsmith.store.session;
@@ -166,11 +194,10 @@ export default {
       );
 
       return false;
-
     }
-
   },
 
+  // Uruchomienie licznika sesji
   startSessionTimer() {
 
     if (this.sessionTimer) {
@@ -189,11 +216,12 @@ export default {
 
     const now = Date.now();
 
-    const timeout =
-      Math.max(
-        0,
-        expiresAt - now - 60000
-      );
+    // Modal pojawia się 60 sekund
+    // przed wygaśnięciem sesji
+    const timeout = Math.max(
+      0,
+      expiresAt - now - 60000
+    );
 
     this.sessionTimer = setTimeout(() => {
 
@@ -205,6 +233,7 @@ export default {
 
   },
 
+  // Automatyczne wylogowanie po 60 sekundach
   startLogoutTimer() {
 
     if (this.logoutTimer) {
@@ -212,14 +241,15 @@ export default {
       this.logoutTimer = null;
     }
 
-    this.logoutTimer = setTimeout(() => {
+    this.logoutTimer = setTimeout(async () => {
 
-      this.logout();
+      await this.forceLogout("Wylogowanie");
 
     }, 60000);
 
   },
 
+  // Przedłużenie sesji przez użytkownika
   async extendSession() {
 
     if (this.logoutTimer) {
@@ -227,8 +257,7 @@ export default {
       this.logoutTimer = null;
     }
 
-    const ok =
-      await this.refreshSession();
+    const ok = await this.refreshSession();
 
     if (!ok) {
       return;
@@ -242,6 +271,7 @@ export default {
 
   },
 
+  // Sprawdzenie roli administratora
   isAdmin() {
 
     return (
@@ -251,6 +281,7 @@ export default {
 
   },
 
+  // Sprawdzenie roli użytkownika
   isUser() {
 
     return (
@@ -260,6 +291,7 @@ export default {
 
   },
 
+  // Ochrona stron administracyjnych
   async requireAdmin() {
 
     const sessionOk =
@@ -279,11 +311,10 @@ export default {
       await navigateTo("Home");
 
       return false;
-
     }
 
     return true;
 
   }
 
-}
+};

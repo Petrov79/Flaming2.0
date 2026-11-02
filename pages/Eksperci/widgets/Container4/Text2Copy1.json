@@ -35,6 +35,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 101,
   "needsErrorInfo": false,
+  "originalBottomRow": 62,
+  "originalTopRow": 58,
   "overflow": "NONE",
   "parentColumnSpace": 19.8125,
   "parentId": "l6jzz5dyna",

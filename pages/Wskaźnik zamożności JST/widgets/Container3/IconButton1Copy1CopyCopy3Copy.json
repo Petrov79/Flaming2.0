@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0",
+  "bottomRow": 9,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "iconName"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "office",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "6w2u2o97ls",
+  "leftColumn": 15,
+  "minWidth": 50,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 30,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 73,
+  "needsErrorInfo": false,
+  "onClick": "{{ SliderJST.setValue(\"1\") }}",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 20.25,
+  "parentId": "qrhw6zlx4b",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 17,
+  "topRow": 5,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "rlvk1st42o",
+  "widgetName": "IconButton1Copy1CopyCopy3Copy"
+}

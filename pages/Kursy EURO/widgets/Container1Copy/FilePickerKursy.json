@@ -26,7 +26,7 @@
   "isVisible": "{{ appsmith.store.session?.user?.id === 12 }}",
   "key": "9vbknadnwk",
   "label": "Wybierz plik z kursami waluty",
-  "leftColumn": 34,
+  "leftColumn": 27,
   "maxFileSize": "10",
   "maxNumFiles": 1,
   "minWidth": 120,

@@ -43,6 +43,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onClick": "{{\ndeleteUserLogs.run(\n  () => {\n    showAlert(\"Logi zostały usunięte.\", \"success\");\n    getLogs.run();\n  },\n  (e) => {\n    showAlert(\"Błąd: \" + e.message, \"error\");\n  }\n)\n}}",
+  "originalBottomRow": 49,
+  "originalTopRow": 45,
   "parentColumnSpace": 10.0859375,
   "parentId": "0",
   "parentRowSpace": 10,
