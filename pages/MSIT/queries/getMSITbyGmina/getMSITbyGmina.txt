@@ -1,8 +1,10 @@
+
 WITH wyniki AS (
     SELECT
         j.nazwa_jst AS gmina,
         gr.rodzaj_gmi_nazwa AS rodzaj_gminy,
-        m.strategia_msit AS msit
+        m.strategia_msit AS msit,
+        m.id_msit AS id_msit
 
     FROM jst j
 
@@ -24,7 +26,8 @@ WITH wyniki AS (
 SELECT
     gmina,
     rodzaj_gminy,
-    msit
+    msit,
+    id_msit
 FROM wyniki
 
 UNION ALL
@@ -32,7 +35,8 @@ UNION ALL
 SELECT
     'Brak wyników' AS gmina,
     NULL AS rodzaj_gminy,
-    NULL AS msit
+    NULL AS msit,
+    NULL AS id_msit
 WHERE
     '{{ InputGmina.text }}' <> ''
     AND NOT EXISTS (
