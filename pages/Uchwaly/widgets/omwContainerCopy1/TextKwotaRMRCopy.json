@@ -48,7 +48,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "{{\n  (TableUchwaly.filteredTableData || [])\n    .reduce((suma, wiersz) => {\n      const kwota = Number(\n        String(wiersz.kwota_rmr_rez ?? \"0\")\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      );\n\n      return suma + (Number.isFinite(kwota) ? kwota : 0);\n    }, 0)\n    .toLocaleString(\"pl-PL\", {\n      minimumFractionDigits: 2,\n      maximumFractionDigits: 2\n    })\n}}",
+  "text": "{{\n  (() => {\n    const suma = (TableUchwaly.filteredTableData || [])\n      .reduce((suma, wiersz) => {\n        const kwota = Number(\n          String(wiersz.kwota_rmr_rez ?? \"0\")\n            .replace(/\\s/g, \"\")\n            .replace(\",\", \".\")\n        );\n\n        return suma + (Number.isFinite(kwota) ? kwota : 0);\n      }, 0);\n\n    return (Math.abs(suma) < 0.000005 ? 0 : suma)\n      .toLocaleString(\"pl-PL\", {\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2\n      });\n  })()\n}}",
   "textAlign": "RIGHT",
   "textColor": "#3b82f6",
   "topRow": 5,
