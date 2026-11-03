@@ -1,3 +1,4 @@
+
 INSERT INTO uchwaly
 (
     nabory_id,
@@ -15,7 +16,8 @@ INSERT INTO uchwaly
     proj_rws_rez,
     kwota_rws_rez,
     proj_z_bp_rez,
-    kwota_bp_rez
+    kwota_bp_rez,
+    uwagi
 )
 VALUES
 (
@@ -46,6 +48,8 @@ VALUES
     NULLIF({{ String(CurrencyRWSrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
 
     NULLIF({{ String(InputIleBPrez.text ?? "") }}, '')::integer,
-    NULLIF({{ String(CurrencyBPrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric
+    NULLIF({{ String(CurrencyBPrez.value ?? "").replace(/\s/g, "").replace(",", ".") }}, '')::numeric,
+
+    NULLIF({{ InputUwagi.text ?? "" }}, '')
 )
 RETURNING *;

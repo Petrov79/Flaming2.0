@@ -1,0 +1,61 @@
+
+WITH wynik AS (
+    SELECT
+        n.id AS nabor_id,
+        n.nr_naboru,
+
+        COALESCE(SUM(u.proj_rmr_rez), 0) AS proj_rmr_rez,
+        COALESCE(SUM(u.kwota_rmr_rez), 0) AS kwota_rmr_rez,
+
+        COALESCE(SUM(u.proj_rws_rez), 0) AS proj_rws_rez,
+        COALESCE(SUM(u.kwota_rws_rez), 0) AS kwota_rws_rez,
+
+        COALESCE(SUM(u.proj_z_bp_rez), 0) AS proj_z_bp_rez,
+        COALESCE(SUM(u.kwota_bp_rez), 0) AS kwota_bp_rez,
+
+        COALESCE(SUM(u.proj_rmr_rez), 0)
+        + COALESCE(SUM(u.proj_rws_rez), 0)
+            AS liczba_projektow_rezerwowych
+
+    FROM uchwaly u
+    JOIN nabory n ON n.id = u.nabory_id
+
+    GROUP BY n.id, n.nr_naboru
+
+    HAVING
+        COALESCE(SUM(u.proj_rmr_rez), 0)
+        + COALESCE(SUM(u.proj_rws_rez), 0) > 0
+)
+
+SELECT
+    nabor_id,
+    nr_naboru,
+    proj_rmr_rez,
+    kwota_rmr_rez,
+    proj_rws_rez,
+    kwota_rws_rez,
+    proj_z_bp_rez,
+    kwota_bp_rez,
+    liczba_projektow_rezerwowych
+FROM (
+    SELECT
+        0 AS kolejnosc,
+        *
+    FROM wynik
+
+    UNION ALL
+
+    SELECT
+        1,
+        NULL,
+        'RAZEM',
+        SUM(proj_rmr_rez),
+        SUM(kwota_rmr_rez),
+        SUM(proj_rws_rez),
+        SUM(kwota_rws_rez),
+				SUM(proj_z_bp_rez),
+				SUM(kwota_bp_rez),
+        SUM(liczba_projektow_rezerwowych)
+    FROM wynik
+) raport
+ORDER BY kolejnosc, nr_naboru;

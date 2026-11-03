@@ -1,0 +1,68 @@
+WITH podsumowanie AS (
+    SELECT
+        u.nabory_id,
+        n.nr_naboru,
+        COUNT(*) AS liczba_uchwal,
+
+        COALESCE(SUM(u.proj_rmr_rez), 0) AS proj_rmr,
+        COALESCE(SUM(u.kwota_rmr_rez), 0) AS kwota_rmr,
+
+        COALESCE(SUM(u.proj_rws_rez), 0) AS proj_rws,
+        COALESCE(SUM(u.kwota_rws_rez), 0) AS kwota_rws,
+
+        COALESCE(SUM(u.proj_z_bp_rez), 0) AS proj_bp,
+        COALESCE(SUM(u.kwota_bp_rez), 0) AS kwota_bp
+
+    FROM uchwaly u
+    LEFT JOIN nabory n ON n.id = u.nabory_id
+    GROUP BY u.nabory_id, n.nr_naboru
+)
+SELECT
+    *,
+    CONCAT_WS('; ',
+        CASE
+            WHEN proj_rmr = 0 AND kwota_rmr <> 0
+            THEN 'RMR: brak projektów, ale pozostała kwota'
+            WHEN proj_rmr > 0 AND kwota_rmr = 0
+            THEN 'RMR: projekty bez kwoty'
+            WHEN proj_rmr < 0 OR kwota_rmr < 0
+            THEN 'RMR: ujemny stan końcowy'
+        END,
+        CASE
+            WHEN proj_rws = 0 AND kwota_rws <> 0
+            THEN 'RWS: brak projektów, ale pozostała kwota'
+            WHEN proj_rws > 0 AND kwota_rws = 0
+            THEN 'RWS: projekty bez kwoty'
+            WHEN proj_rws < 0 OR kwota_rws < 0
+            THEN 'RWS: ujemny stan końcowy'
+        END,
+        CASE
+            WHEN proj_bp = 0 AND kwota_bp <> 0
+            THEN 'BP: brak projektów, ale pozostała kwota'
+            WHEN proj_bp > 0 AND kwota_bp = 0
+            THEN 'BP: projekty bez kwoty'
+            WHEN proj_bp < 0 OR kwota_bp < 0
+            THEN 'BP: ujemny stan końcowy'
+            WHEN proj_bp > proj_rws
+            THEN 'BP: liczba projektów większa niż RWS'
+        END
+    ) AS opis_bledu
+FROM podsumowanie
+WHERE
+       (proj_rmr = 0 AND kwota_rmr <> 0)
+    OR (proj_rmr > 0 AND kwota_rmr = 0)
+    OR proj_rmr < 0
+    OR kwota_rmr < 0
+
+    OR (proj_rws = 0 AND kwota_rws <> 0)
+    OR (proj_rws > 0 AND kwota_rws = 0)
+    OR proj_rws < 0
+    OR kwota_rws < 0
+
+    OR (proj_bp = 0 AND kwota_bp <> 0)
+    OR (proj_bp > 0 AND kwota_bp = 0)
+    OR proj_bp < 0
+    OR kwota_bp < 0
+    OR proj_bp > proj_rws
+
+ORDER BY nr_naboru;

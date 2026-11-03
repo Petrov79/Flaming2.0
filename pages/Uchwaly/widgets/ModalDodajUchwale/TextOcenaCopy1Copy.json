@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "#ffffffff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 36,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -49,7 +49,7 @@
   "text": "Projekty RWS",
   "textAlign": "LEFT",
   "textColor": "#1e3a8a",
-  "topRow": 36,
+  "topRow": 32,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
