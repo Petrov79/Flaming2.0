@@ -28,7 +28,7 @@
   "iconAlign": "left",
   "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{\n  !SelectNrNaboru.selectedOptionValue ||\n  !SelectRodzaj.selectedOptionValue ||\n  !DateZatwierdzenie.selectedDate ||\n\n  [\n    InputIleRMR.text,\n    InputIleRWS.text,\n    InputIleBP.text,\n    InputIleRMRrez.text,\n    InputIleRWSrez.text,\n    InputIleBPrez.text,\n\n    CurrencyRMR.value,\n    CurrencyRWS.value,\n    CurrencyBP.value,\n    CurrencyRMRrez.value,\n    CurrencyRWSrez.value,\n    CurrencyBPrez.value\n  ].some(v =>\n    v === null ||\n    v === undefined ||\n    String(v).trim() === \"\"\n  )\n}}\t",
+  "isDisabled": "\n{{\n  appsmith.store.edycjaUchwalyId\n    ? false\n    : (\n        !SelectNrNaboru.selectedOptionValue ||\n        !SelectRodzaj.selectedOptionValue ||\n        !DateZatwierdzenie.selectedDate ||\n\n        [\n          InputIleRMR.text,\n          InputIleRWS.text,\n          InputIleBP.text,\n          InputIleRMRrez.text,\n          InputIleRWSrez.text,\n          InputIleBPrez.text,\n\n          CurrencyRMR.value,\n          CurrencyRWS.value,\n          CurrencyBP.value,\n          CurrencyRMRrez.value,\n          CurrencyRWSrez.value,\n          CurrencyBPrez.value\n        ].some(v =>\n          v === null ||\n          v === undefined ||\n          String(v).trim() === \"\"\n        )\n      )\n}}\n",
   "isLoading": false,
   "isVisible": true,
   "key": "ev51tus2kf",

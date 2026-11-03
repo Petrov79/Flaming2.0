@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6ae483863142d7a127861996_41b7ff41-55ef-4356-acaf-dcf75270a307",
+  "gitSyncId": "6ae483863142d7a127861996_bfc98ef4-66ab-4da3-b3db-10f7bc124cd6",
   "id": "Zdrowie ( AOS )_Auth.initialize",
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -25,7 +25,7 @@
     "fullyQualifiedName": "Auth.initialize",
     "name": "initialize",
     "pageId": "Zdrowie ( AOS )",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }
