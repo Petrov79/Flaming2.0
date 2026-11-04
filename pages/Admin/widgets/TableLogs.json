@@ -122,7 +122,7 @@
   "isVisibleDownload": false,
   "isVisibleFilters": false,
   "isVisiblePagination": false,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "9f4f2wnxgr",
   "label": "Data",
   "leftColumn": 0,
