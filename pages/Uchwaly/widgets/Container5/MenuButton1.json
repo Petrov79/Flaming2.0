@@ -33,7 +33,7 @@
       "isDisabled": false,
       "isVisible": true,
       "label": "Nabory z listami rezerwowymi",
-      "onClick": "{{showModal(ModalRaportRezerwa.name);}}",
+      "onClick": "{{showModal(ModalRaportRezerwa.name);\ngetNaboryRezerwa.run()}}",
       "widgetId": ""
     },
     "menuItem2": {
@@ -42,7 +42,7 @@
       "isDisabled": false,
       "isVisible": true,
       "label": "Błędy w uchwałach",
-      "onClick": "{{showModal(ModalRaportRezerwa.name);}}",
+      "onClick": "{{showModal(ModalBledyUchwal.name);\ngetBledyUchwaly.run();}}",
       "widgetId": ""
     }
   },
