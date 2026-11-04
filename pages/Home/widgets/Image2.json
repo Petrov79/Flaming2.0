@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 65,
   "boxShadow": "none",
-  "defaultImage": "https://i.imgur.com/SiQqm1d.png",
+  "defaultImage": "https://i.imgur.com/I6XqvcA.png",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -13,7 +13,7 @@
   "enableDownload": false,
   "enableRotation": false,
   "flexVerticalAlignment": "start",
-  "image": "",
+  "image": "https://i.imgur.com/I6XqvcA.png",
   "imageShape": "RECTANGLE",
   "isLoading": false,
   "isVisible": true,
