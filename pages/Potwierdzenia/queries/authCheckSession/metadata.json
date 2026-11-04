@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Potwierdzenia",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

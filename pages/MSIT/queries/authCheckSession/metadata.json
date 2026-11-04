@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "MSIT",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
