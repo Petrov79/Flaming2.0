@@ -26,6 +26,6 @@
     "name": "isAdmin",
     "pageId": "Admin",
     "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
