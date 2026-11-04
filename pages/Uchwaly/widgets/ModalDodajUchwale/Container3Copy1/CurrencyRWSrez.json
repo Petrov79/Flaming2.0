@@ -8,7 +8,7 @@
   "boxShadow": "none",
   "decimals": 2,
   "defaultCurrencyCode": "PLN",
-  "defaultText": "{{ appsmith.store.edycjaUchwalyId ? (TableUchwaly.selectedRow.kwota_rws_rez ?? 0) : 0 }}",
+  "defaultText": "{{\n  appsmith.store.edycjaUchwalyId\n    ? Number(\n        String(TableUchwaly.selectedRow?.kwota_rws_rez ?? 0)\n          .replace(/\\s/g, \"\")\n          .replace(\",\", \".\")\n      )\n    : 0\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
