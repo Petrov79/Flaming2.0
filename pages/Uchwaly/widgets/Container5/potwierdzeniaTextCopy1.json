@@ -49,7 +49,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 24,
   "shouldTruncate": false,
   "text": "\n{{\n  (() => {\n    const dane = Array.isArray(TableUchwaly.filteredTableData)\n      ? TableUchwaly.filteredTableData\n      : (Array.isArray(TableUchwaly.tableData)\n          ? TableUchwaly.tableData\n          : []);\n\n    const zatwierdzajace = dane.filter(\n      r => r.typ_uchwaly?.toLowerCase().trim() === \"zatwierdzająca\"\n    ).length;\n\n    const zmieniajace = dane.filter(\n      r => r.typ_uchwaly?.toLowerCase().trim() === \"zmieniająca\"\n    ).length;\n\n    return ` Liczba wszystkich uchwał: ${dane.length}   |   Zatwierdzające: ${zatwierdzajace}   |   Zmieniające: ${zmieniajace} `;\n  })()\n}}",
   "textAlign": "LEFT",

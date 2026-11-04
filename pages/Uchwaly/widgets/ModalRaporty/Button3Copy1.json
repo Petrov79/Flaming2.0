@@ -1,17 +1,17 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
-  "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "TERTIARY",
+  "bottomRow": 12,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#f4f4f5",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "buttonColor"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "labelTextColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -26,7 +26,8 @@
   "isLoading": false,
   "isVisible": true,
   "key": "kzcugxl8m3",
-  "leftColumn": 0,
+  "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
+  "leftColumn": 11,
   "minWidth": 120,
   "mobileBottomRow": 95,
   "mobileLeftColumn": 30,
@@ -35,18 +36,18 @@
   "needsErrorInfo": false,
   "onClick": "{{showModal(ModalRaportRezerwa.name);\ngetNaboryRezerwa.run()}}",
   "parentColumnSpace": 20.25,
-  "parentId": "rgrllgh079",
+  "parentId": "icjqs3iitj",
   "parentRowSpace": 10,
-  "placement": "CENTER",
+  "placement": "START",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 12,
+  "rightColumn": 38,
   "text": "Nabory z listą rezerwową",
-  "topRow": 0,
+  "topRow": 8,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "51fanaxpxm",
-  "widgetName": "Button3"
+  "widgetId": "t9fz80wo1f",
+  "widgetName": "Button3Copy1"
 }
