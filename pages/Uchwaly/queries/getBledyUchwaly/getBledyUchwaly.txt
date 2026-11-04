@@ -1,68 +1,297 @@
-WITH podsumowanie AS (
+WITH duplikaty_nr_uchwaly AS (
+    SELECT
+        TRIM(u.nr_uchwaly) AS nr_uchwaly,
+        COUNT(*) AS liczba_wystapien,
+        COUNT(DISTINCT u.nabory_id) AS liczba_naborow
+    FROM uchwaly u
+    WHERE NULLIF(TRIM(u.nr_uchwaly), '') IS NOT NULL
+    GROUP BY TRIM(u.nr_uchwaly)
+    HAVING COUNT(*) > 1
+),
+
+duplikaty_w_naborach AS (
     SELECT
         u.nabory_id,
-        n.nr_naboru,
-        COUNT(*) AS liczba_uchwal,
+        STRING_AGG(
+            DISTINCT d.nr_uchwaly,
+            ', '
+            ORDER BY d.nr_uchwaly
+        ) AS lista_duplikatow
+    FROM uchwaly u
+    INNER JOIN duplikaty_nr_uchwaly d
+        ON TRIM(u.nr_uchwaly) = d.nr_uchwaly
+    GROUP BY u.nabory_id
+),
 
-        COALESCE(SUM(u.proj_rmr_rez), 0) AS proj_rmr,
-        COALESCE(SUM(u.kwota_rmr_rez), 0) AS kwota_rmr,
+duplikaty_w_roznych_naborach AS (
+    SELECT
+        u.nabory_id,
+        STRING_AGG(
+            DISTINCT d.nr_uchwaly,
+            ', '
+            ORDER BY d.nr_uchwaly
+        ) AS lista_duplikatow_rozne_nabory
+    FROM uchwaly u
+    INNER JOIN duplikaty_nr_uchwaly d
+        ON TRIM(u.nr_uchwaly) = d.nr_uchwaly
+       AND d.liczba_naborow > 1
+    GROUP BY u.nabory_id
+),
 
-        COALESCE(SUM(u.proj_rws_rez), 0) AS proj_rws,
-        COALESCE(SUM(u.kwota_rws_rez), 0) AS kwota_rws,
+liczba_uchwal_w_naborze AS (
+    SELECT
+        nabory_id,
+        COUNT(*) AS liczba
+    FROM uchwaly
+    GROUP BY nabory_id
+),
 
-        COALESCE(SUM(u.proj_z_bp_rez), 0) AS proj_bp,
-        COALESCE(SUM(u.kwota_bp_rez), 0) AS kwota_bp
+bledy_rekordow AS (
+    SELECT
+        u.nabory_id,
+
+        CONCAT_WS('; ',
+
+            -- 1. Brak numeru uchwały
+            CASE
+                WHEN NULLIF(TRIM(u.nr_uchwaly), '') IS NULL
+                THEN 'ID ' || u.id ||
+                     ': brak numeru uchwały'
+            END,
+
+            -- 2. Brak daty zatwierdzenia
+            CASE
+                WHEN u.data_zatwierdzenia IS NULL
+                THEN 'ID ' || u.id ||
+                     ': brak daty zatwierdzenia'
+            END,
+
+            -- 3. Brak przypisanego naboru
+            CASE
+                WHEN u.nabory_id IS NULL
+                THEN 'ID ' || u.id ||
+                     ': brak przypisanego naboru'
+            END,
+
+            -- 4. Nieprawidłowy typ uchwały
+            CASE
+                WHEN COALESCE(
+                    NULLIF(TRIM(LOWER(u.typ_uchwaly)), ''),
+                    ''
+                ) NOT IN (
+                    'zatwierdzająca',
+                    'zmieniająca'
+                )
+                THEN 'ID ' || u.id ||
+                     ': nieprawidłowy typ uchwały' ||
+                     COALESCE(
+                         ' (' || u.typ_uchwaly || ')',
+                         ''
+                     )
+            END,
+
+            -- 5. Brak wartości liczbowych
+            -- Tylko nabory z co najmniej 2 uchwałami
+            -- Sprawdza wszystkie kolumny proj_* i kwota_*
+            CASE
+                WHEN COALESCE(lu.liczba, 0) > 1
+                AND NOT EXISTS (
+                    SELECT 1
+                    FROM jsonb_each(to_jsonb(u))
+                        AS pole(nazwa, wartosc)
+                    WHERE (
+                        nazwa LIKE 'proj\_%' ESCAPE '\'
+                        OR nazwa LIKE 'kwota\_%' ESCAPE '\'
+                    )
+                    AND jsonb_typeof(wartosc) = 'number'
+                    AND (wartosc #>> '{}')::numeric <> 0
+                )
+                THEN 'ID ' || u.id ||
+                     ': brak wartości liczbowych'
+            END,
+
+            -- 9. Data zatwierdzenia w przyszłości
+            CASE
+                WHEN u.data_zatwierdzenia > CURRENT_DATE
+                THEN 'ID ' || u.id ||
+                     ': data zatwierdzenia w przyszłości (' ||
+                     TO_CHAR(
+                         u.data_zatwierdzenia,
+                         'YYYY-MM-DD'
+                     ) || ')'
+            END
+
+        ) AS opis_bledu_rekordu
 
     FROM uchwaly u
-    LEFT JOIN nabory n ON n.id = u.nabory_id
-    GROUP BY u.nabory_id, n.nr_naboru
+
+    LEFT JOIN liczba_uchwal_w_naborze lu
+        ON lu.nabory_id
+           IS NOT DISTINCT FROM u.nabory_id
+),
+
+agregacja_bledow_rekordow AS (
+    SELECT
+        b.nabory_id,
+        STRING_AGG(
+            b.opis_bledu_rekordu,
+            '; '
+            ORDER BY b.opis_bledu_rekordu
+        ) AS bledy_rekordow
+    FROM bledy_rekordow b
+    WHERE NULLIF(b.opis_bledu_rekordu, '') IS NOT NULL
+    GROUP BY b.nabory_id
+),
+
+podsumowanie AS (
+    SELECT
+        u.nabory_id,
+
+        COALESCE(
+            n.nr_naboru,
+            '[BRAK NABORU]'
+        ) AS nr_naboru,
+
+        COUNT(*) AS liczba_uchwal,
+
+        -- RMR: lista rezerwowa
+        COALESCE(
+            SUM(u.proj_rmr_rez), 0
+        ) AS proj_rmr,
+
+        COALESCE(
+            SUM(u.kwota_rmr_rez), 0
+        ) AS kwota_rmr,
+
+        -- RWS: lista rezerwowa
+        COALESCE(
+            SUM(u.proj_rws_rez), 0
+        ) AS proj_rws,
+
+        COALESCE(
+            SUM(u.kwota_rws_rez), 0
+        ) AS kwota_rws,
+
+        -- BP: lista rezerwowa
+        COALESCE(
+            SUM(u.proj_z_bp_rez), 0
+        ) AS proj_bp,
+
+        COALESCE(
+            SUM(u.kwota_bp_rez), 0
+        ) AS kwota_bp
+
+    FROM uchwaly u
+    LEFT JOIN nabory n
+        ON n.id = u.nabory_id
+
+    GROUP BY
+        u.nabory_id,
+        COALESCE(
+            n.nr_naboru,
+            '[BRAK NABORU]'
+        )
+),
+
+wynik AS (
+    SELECT
+        p.*,
+
+        CONCAT_WS('; ',
+
+            -- RMR: kontrola salda końcowego
+            CASE
+                WHEN p.proj_rmr < 0
+                  OR p.kwota_rmr < 0
+                THEN 'RMR: ujemny stan końcowy'
+
+                WHEN p.proj_rmr = 0
+                 AND p.kwota_rmr <> 0
+                THEN 'RMR: brak projektów, ale pozostała kwota'
+
+                WHEN p.proj_rmr > 0
+                 AND p.kwota_rmr = 0
+                THEN 'RMR: projekty bez kwoty'
+            END,
+
+            -- RWS: kontrola salda końcowego
+            CASE
+                WHEN p.proj_rws < 0
+                  OR p.kwota_rws < 0
+                THEN 'RWS: ujemny stan końcowy'
+
+                WHEN p.proj_rws = 0
+                 AND p.kwota_rws <> 0
+                THEN 'RWS: brak projektów, ale pozostała kwota'
+
+                WHEN p.proj_rws > 0
+                 AND p.kwota_rws = 0
+                THEN 'RWS: projekty bez kwoty'
+            END,
+
+            -- BP: kontrola salda końcowego
+            CASE
+                WHEN p.proj_bp < 0
+                  OR p.kwota_bp < 0
+                THEN 'BP: ujemny stan końcowy'
+
+                WHEN p.proj_bp = 0
+                 AND p.kwota_bp <> 0
+                THEN 'BP: brak projektów, ale pozostała kwota'
+
+                WHEN p.proj_bp > 0
+                 AND p.kwota_bp = 0
+                THEN 'BP: projekty bez kwoty'
+            END,
+
+            -- 6. Liczba projektów BP większa niż RWS
+            CASE
+                WHEN p.proj_bp > p.proj_rws
+                THEN 'BP: liczba projektów większa niż RWS'
+            END,
+
+            -- 7. Kwota BP większa niż RWS
+            CASE
+                WHEN p.kwota_bp > p.kwota_rws
+                THEN 'BP: kwota projektów większa niż RWS – wymaga weryfikacji'
+            END,
+
+            -- 8. Duplikaty numerów uchwał
+            CASE
+                WHEN dwn.lista_duplikatow IS NOT NULL
+                THEN 'Duplikaty numerów uchwał: ' ||
+                     dwn.lista_duplikatow
+            END,
+
+            -- Duplikaty w różnych naborach
+            CASE
+                WHEN dwrn.lista_duplikatow_rozne_nabory
+                     IS NOT NULL
+                THEN 'Numery uchwał przypisane do różnych naborów: ' ||
+                     dwrn.lista_duplikatow_rozne_nabory
+            END,
+
+            -- Błędy pojedynczych uchwał
+            abr.bledy_rekordow
+
+        ) AS opis_bledu
+
+    FROM podsumowanie p
+
+    LEFT JOIN duplikaty_w_naborach dwn
+        ON dwn.nabory_id
+           IS NOT DISTINCT FROM p.nabory_id
+
+    LEFT JOIN duplikaty_w_roznych_naborach dwrn
+        ON dwrn.nabory_id
+           IS NOT DISTINCT FROM p.nabory_id
+
+    LEFT JOIN agregacja_bledow_rekordow abr
+        ON abr.nabory_id
+           IS NOT DISTINCT FROM p.nabory_id
 )
-SELECT
-    *,
-    CONCAT_WS('; ',
-        CASE
-            WHEN proj_rmr = 0 AND kwota_rmr <> 0
-            THEN 'RMR: brak projektów, ale pozostała kwota'
-            WHEN proj_rmr > 0 AND kwota_rmr = 0
-            THEN 'RMR: projekty bez kwoty'
-            WHEN proj_rmr < 0 OR kwota_rmr < 0
-            THEN 'RMR: ujemny stan końcowy'
-        END,
-        CASE
-            WHEN proj_rws = 0 AND kwota_rws <> 0
-            THEN 'RWS: brak projektów, ale pozostała kwota'
-            WHEN proj_rws > 0 AND kwota_rws = 0
-            THEN 'RWS: projekty bez kwoty'
-            WHEN proj_rws < 0 OR kwota_rws < 0
-            THEN 'RWS: ujemny stan końcowy'
-        END,
-        CASE
-            WHEN proj_bp = 0 AND kwota_bp <> 0
-            THEN 'BP: brak projektów, ale pozostała kwota'
-            WHEN proj_bp > 0 AND kwota_bp = 0
-            THEN 'BP: projekty bez kwoty'
-            WHEN proj_bp < 0 OR kwota_bp < 0
-            THEN 'BP: ujemny stan końcowy'
-            WHEN proj_bp > proj_rws
-            THEN 'BP: liczba projektów większa niż RWS'
-        END
-    ) AS opis_bledu
-FROM podsumowanie
-WHERE
-       (proj_rmr = 0 AND kwota_rmr <> 0)
-    OR (proj_rmr > 0 AND kwota_rmr = 0)
-    OR proj_rmr < 0
-    OR kwota_rmr < 0
 
-    OR (proj_rws = 0 AND kwota_rws <> 0)
-    OR (proj_rws > 0 AND kwota_rws = 0)
-    OR proj_rws < 0
-    OR kwota_rws < 0
-
-    OR (proj_bp = 0 AND kwota_bp <> 0)
-    OR (proj_bp > 0 AND kwota_bp = 0)
-    OR proj_bp < 0
-    OR kwota_bp < 0
-    OR proj_bp > proj_rws
-
+SELECT *
+FROM wynik
+WHERE NULLIF(opis_bledu, '') IS NOT NULL
 ORDER BY nr_naboru;
