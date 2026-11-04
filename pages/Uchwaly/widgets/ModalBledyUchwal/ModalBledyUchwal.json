@@ -58,11 +58,7 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClose"
-    }
-  ],
+  "dynamicTriggerPathList": [],
   "height": 420,
   "isCanvas": true,
   "isLoading": false,
@@ -76,7 +72,7 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 90,
   "needsErrorInfo": false,
-  "onClose": "{{showModal(ModalRaporty.name);}}",
+  "onClose": "{{}}",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,
