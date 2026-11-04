@@ -1,3 +1,4 @@
+
 SELECT
     u.*,
     n.nr_naboru
@@ -6,25 +7,22 @@ LEFT JOIN nabory n
     ON u.nabory_id = n.id
 WHERE
 (
-    {{ !SelectNabor.selectedOptionValues?.length }}
-    OR u.nabory_id = ANY(
-        {{ SelectNabor.selectedOptionValues?.map(Number) || [] }}::integer[]
-    )
+    {{ !SelectId.selectedOptionValue }}
+    OR u.id = {{ Number(SelectId.selectedOptionValue || 0) }}
 )
 AND
 (
-    {{ !SelectTyp.selectedOptionValues?.length }}
-    OR u.typ_uchwaly = ANY(
-        string_to_array(
-            {{ (SelectTyp.selectedOptionValues || []).join(",") }},
-            ','
-        )
-    )
+    {{ !SelectNabor.selectedOptionValue }}
+    OR u.nabory_id = {{ Number(SelectNabor.selectedOptionValue || 0) }}
 )
 AND
-    u.data_zatwierdzenia >=
-    {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+(
+    {{ !SelectTyp.selectedOptionValue }}
+    OR u.typ_uchwaly = {{ SelectTyp.selectedOptionValue || "" }}
+)
 AND
-    u.data_zatwierdzenia <=
-    {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+    u.data_zatwierdzenia >= {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+AND
+    u.data_zatwierdzenia <= {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+
 ORDER BY u.data_zatwierdzenia;
