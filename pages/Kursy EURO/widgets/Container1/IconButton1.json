@@ -1,0 +1,40 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "calendar",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "z7yidk8mlg",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 4,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 18.09033203125,
+  "parentId": "kgfg7421rv",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 3,
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "3406nzf6y3",
+  "widgetName": "IconButton1"
+}
