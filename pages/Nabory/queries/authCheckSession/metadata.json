@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Nabory",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
