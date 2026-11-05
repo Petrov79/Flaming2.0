@@ -3,12 +3,8 @@
   "bottomRow": 4,
   "capSide": -1,
   "capType": "nc",
-  "dividerColor": "{{appsmith.theme.colors.primaryColor}}",
-  "dynamicBindingPathList": [
-    {
-      "key": "dividerColor"
-    }
-  ],
+  "dividerColor": "#e0dede",
+  "dynamicBindingPathList": [],
   "dynamicTriggerPathList": [],
   "isLoading": false,
   "isVisible": true,
