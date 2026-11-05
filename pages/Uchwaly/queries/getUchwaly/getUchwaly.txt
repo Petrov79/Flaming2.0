@@ -21,8 +21,16 @@ AND
     OR u.typ_uchwaly = {{ SelectTyp.selectedOptionValue || "" }}
 )
 AND
-    u.data_zatwierdzenia >= {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+(
+    {{ !SelectNr.selectedOptionValue }}
+    OR u.nr_uchwaly = {{ SelectNr.selectedOptionValue || "" }}
+)
 AND
-    u.data_zatwierdzenia <= {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+    u.data_zatwierdzenia >=
+    {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+AND
+    u.data_zatwierdzenia <=
+    {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
 
 ORDER BY u.data_zatwierdzenia;
+
