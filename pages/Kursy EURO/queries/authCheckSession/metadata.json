@@ -29,7 +29,7 @@
     ],
     "name": "authCheckSession",
     "pageId": "Kursy EURO",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
