@@ -1,26 +1,60 @@
 SELECT
-  id,
-  nr_naboru,
-  typ_naboru,
-  opiekun1,
-  opiekun2,
-  TO_CHAR(data_naboru, 'YYYY-MM-DD') AS data_naboru,
-  ile_zlozonych,
-  TO_CHAR(data_przekazania, 'YYYY-MM-DD') AS data_przekazania,
-  ile_przekazanych,
-  TO_CHAR(data_oceny, 'YYYY-MM-DD') AS data_oceny,
-  TO_CHAR(data_protokolu, 'YYYY-MM-DD') AS data_protokolu,
-  nr_uchwaly,
-  TO_CHAR(data_uchwaly, 'YYYY-MM-DD') AS data_uchwaly,
-  rezerwa,
-  uwagi,
-  czas_oceny,
-  typ_projektu,
-  status,
-  budzet_panstwa,
-  stawka_panel,
-  stawka_fin,
-  stawka_omw,
-  stawka_om
-FROM nabory 
-ORDER BY nr_naboru
+    id,
+    nr_naboru,
+    typ_naboru,
+    opiekun1,
+    opiekun2,
+    TO_CHAR(data_naboru, 'YYYY-MM-DD') AS data_naboru,
+    ile_zlozonych,
+    TO_CHAR(data_przekazania, 'YYYY-MM-DD') AS data_przekazania,
+    ile_przekazanych,
+    TO_CHAR(data_oceny, 'YYYY-MM-DD') AS data_oceny,
+    TO_CHAR(data_protokolu, 'YYYY-MM-DD') AS data_protokolu,
+    nr_uchwaly,
+    TO_CHAR(data_uchwaly, 'YYYY-MM-DD') AS data_uchwaly,
+    rezerwa,
+    uwagi,
+    czas_oceny,
+    typ_projektu,
+    status,
+    budzet_panstwa,
+    stawka_panel,
+    stawka_fin,
+    stawka_omw,
+    stawka_om
+FROM nabory
+WHERE
+(
+    {{ !SelectNr.selectedOptionValue }}
+    OR nr_naboru = {{ SelectNr.selectedOptionValue || "" }}
+)
+AND
+(
+    {{ !SelectTyp.selectedOptionValue }}
+    OR typ_naboru = {{ SelectTyp.selectedOptionValue || "" }}
+)
+AND
+(
+    {{ !SelectStat.selectedOptionValue }}
+    OR status = {{ SelectStat.selectedOptionValue || "" }}
+)
+AND
+(
+    {{ !SelectOpiekun.selectedOptionValue }}
+    OR opiekun1 = {{ SelectOpiekun.selectedOptionValue || "" }}
+    OR opiekun2 = {{ SelectOpiekun.selectedOptionValue || "" }}
+)
+AND
+(
+    {{ !DatePickerOd.selectedDate }}
+    OR data_naboru >=
+       {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+)
+AND
+(
+    {{ !DatePickerDo.selectedDate }}
+    OR data_naboru <=
+       {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+)
+
+ORDER BY nr_naboru;

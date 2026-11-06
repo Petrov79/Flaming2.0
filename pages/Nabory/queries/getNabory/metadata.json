@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  id,\n  nr_naboru,\n  typ_naboru,\n  opiekun1,\n  opiekun2,\n  TO_CHAR(data_naboru, 'YYYY-MM-DD') AS data_naboru,\n  ile_zlozonych,\n  TO_CHAR(data_przekazania, 'YYYY-MM-DD') AS data_przekazania,\n  ile_przekazanych,\n  TO_CHAR(data_oceny, 'YYYY-MM-DD') AS data_oceny,\n  TO_CHAR(data_protokolu, 'YYYY-MM-DD') AS data_protokolu,\n  nr_uchwaly,\n  TO_CHAR(data_uchwaly, 'YYYY-MM-DD') AS data_uchwaly,\n  rezerwa,\n  uwagi,\n  czas_oceny,\n  typ_projektu,\n  status,\n  budzet_panstwa,\n  stawka_panel,\n  stawka_fin,\n  stawka_omw,\n  stawka_om\nFROM nabory \nORDER BY nr_naboru",
+      "body": "SELECT\n    id,\n    nr_naboru,\n    typ_naboru,\n    opiekun1,\n    opiekun2,\n    TO_CHAR(data_naboru, 'YYYY-MM-DD') AS data_naboru,\n    ile_zlozonych,\n    TO_CHAR(data_przekazania, 'YYYY-MM-DD') AS data_przekazania,\n    ile_przekazanych,\n    TO_CHAR(data_oceny, 'YYYY-MM-DD') AS data_oceny,\n    TO_CHAR(data_protokolu, 'YYYY-MM-DD') AS data_protokolu,\n    nr_uchwaly,\n    TO_CHAR(data_uchwaly, 'YYYY-MM-DD') AS data_uchwaly,\n    rezerwa,\n    uwagi,\n    czas_oceny,\n    typ_projektu,\n    status,\n    budzet_panstwa,\n    stawka_panel,\n    stawka_fin,\n    stawka_omw,\n    stawka_om\nFROM nabory\nWHERE\n(\n    {{ !SelectNr.selectedOptionValue }}\n    OR nr_naboru = {{ SelectNr.selectedOptionValue || \"\" }}\n)\nAND\n(\n    {{ !SelectTyp.selectedOptionValue }}\n    OR typ_naboru = {{ SelectTyp.selectedOptionValue || \"\" }}\n)\nAND\n(\n    {{ !SelectStat.selectedOptionValue }}\n    OR status = {{ SelectStat.selectedOptionValue || \"\" }}\n)\nAND\n(\n    {{ !SelectOpiekun.selectedOptionValue }}\n    OR opiekun1 = {{ SelectOpiekun.selectedOptionValue || \"\" }}\n    OR opiekun2 = {{ SelectOpiekun.selectedOptionValue || \"\" }}\n)\nAND\n(\n    {{ !DatePickerOd.selectedDate }}\n    OR data_naboru >=\n       {{ DatePickerOd.selectedDate?.slice(0, 10) || \"0001-01-01\" }}::date\n)\nAND\n(\n    {{ !DatePickerDo.selectedDate }}\n    OR data_naboru <=\n       {{ DatePickerDo.selectedDate?.slice(0, 10) || \"9999-12-31\" }}::date\n)\n\nORDER BY nr_naboru;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,7 +22,11 @@
       "name": "Supabase",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "getNabory",
     "pageId": "Nabory",
     "runBehaviour": "AUTOMATIC",
