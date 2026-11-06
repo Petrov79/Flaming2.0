@@ -13,10 +13,10 @@ WHERE
 )
 AND
 (
-    {{ !SelectTyp.selectedOptionValues?.length }}
+    {{ !SelectStat.selectedOptionValues?.length }}
     OR u.typ_uchwaly = ANY(
         string_to_array(
-            {{ (SelectTyp.selectedOptionValues || []).join(",") }},
+            {{ (SelectStat.selectedOptionValues || []).join(",") }},
             ','
         )
     )
