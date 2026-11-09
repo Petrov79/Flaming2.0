@@ -8,4 +8,5 @@ SELECT
   eksperci.telefon1,
   eksperci.umowa
 FROM eksperci
+WHERE eksperci."W_wykazie" = 'Tak'
 ORDER BY eksperci.nazwisko COLLATE "pl-x-icu" ASC;

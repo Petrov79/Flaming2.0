@@ -36,11 +36,9 @@
     "dopasowanie",
     "dziedzina_nazwa",
     "priorytet",
-    "dziedzina_id",
-    "NR_KAT_",
-    "NAZWA_KATEGORII"
+    "dziedzina_id"
   ],
-  "columnUpdatedAt": 1793198152795,
+  "columnUpdatedAt": 1794229627574,
   "columnWidthMap": {
     "NR_KAT_": 99,
     "dopasowanie": 245,
@@ -93,12 +91,6 @@
     },
     {
       "key": "primaryColumns.dopasowanie.computedValue"
-    },
-    {
-      "key": "primaryColumns.NR_KAT_.computedValue"
-    },
-    {
-      "key": "primaryColumns.NAZWA_KATEGORII.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -156,76 +148,6 @@
   "parentId": "trbkjg6u3i",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "NAZWA_KATEGORII": {
-      "alias": "NAZWA KATEGORII",
-      "allowCellWrapping": false,
-      "allowHeaderWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{(() => { const tableData = dziedzinyKatTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"NAZWA KATEGORII\"])) : NAZWA KATEGORII })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "NAZWA_KATEGORII",
-      "index": 1,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "NAZWA KATEGORII",
-      "notation": "standard",
-      "originalId": "NAZWA KATEGORII",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "NR_KAT_": {
-      "alias": "NR KAT.",
-      "allowCellWrapping": false,
-      "allowHeaderWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = dziedzinyKatTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"NR KAT.\"])) : NR KAT. })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "NR_KAT_",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "NR KAT.",
-      "notation": "standard",
-      "originalId": "NR KAT.",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "dopasowanie": {
       "alias": "dopasowanie",
       "allowCellWrapping": false,

@@ -15,7 +15,8 @@ FROM (
     INNER JOIN obszary
         ON obszary.id = wykaz_obszary.obszar_id
     WHERE
-        obszary.id = ANY(
+        eksperci."W_wykazie" = 'Tak'
+        AND obszary.id = ANY(
             string_to_array(
                 '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
                 ','

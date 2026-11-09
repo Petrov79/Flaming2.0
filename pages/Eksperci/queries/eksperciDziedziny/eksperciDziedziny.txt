@@ -13,7 +13,8 @@ FROM (
     JOIN wykaz_ekspertow we
         ON e.id = we.eksperci_id
     WHERE
-        we.dziedziny_id = ANY(
+        e."W_wykazie" = 'Tak'
+        AND we.dziedziny_id = ANY(
             string_to_array(
                 '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
                 ','
