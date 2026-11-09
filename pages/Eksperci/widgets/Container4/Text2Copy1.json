@@ -47,7 +47,7 @@
   "shouldScrollContents": true,
   "shouldTruncate": false,
   "text": "Liczba ekspertów:",
-  "textAlign": "LEFT",
+  "textAlign": "RIGHT",
   "textColor": "#4a5768",
   "topRow": 58,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",

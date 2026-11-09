@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  eksperci.id AS ekspert_id,\n  NULL::integer AS dziedzina_id,\n  NULL::integer AS kategoria_id,\n  NULL::integer AS obszar_id,\n  eksperci.nazwisko,\n  eksperci.email,\n  eksperci.telefon1,\n  eksperci.umowa\nFROM eksperci\nORDER BY eksperci.nazwisko COLLATE \"pl-x-icu\" ASC;",
+      "body": "SELECT\n  eksperci.id AS ekspert_id,\n  NULL::integer AS dziedzina_id,\n  NULL::integer AS kategoria_id,\n  NULL::integer AS obszar_id,\n  eksperci.nazwisko,\n  eksperci.email,\n  eksperci.telefon1,\n  eksperci.umowa\nFROM eksperci\nWHERE eksperci.\"W_wykazie\" = 'Tak'\nORDER BY eksperci.nazwisko COLLATE \"pl-x-icu\" ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

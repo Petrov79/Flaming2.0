@@ -17,7 +17,8 @@ FROM (
     INNER JOIN kategorie_dziedziny
         ON dziedziny.id = kategorie_dziedziny.dziedziny_id
     WHERE
-        kategorie_dziedziny.kategorie_id = ANY(
+        eksperci."W_wykazie" = 'Tak'
+        AND kategorie_dziedziny.kategorie_id = ANY(
             string_to_array(
                 '{{ SelectWyszukaj.selectedOptionValues.join(",") }}',
                 ','

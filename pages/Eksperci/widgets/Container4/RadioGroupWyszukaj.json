@@ -34,6 +34,7 @@
   "labelStyle": "BOLD",
   "labelTextColor": "#64748b",
   "labelTextSize": "1rem",
+  "labelTooltip": "",
   "labelWidth": "11",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
