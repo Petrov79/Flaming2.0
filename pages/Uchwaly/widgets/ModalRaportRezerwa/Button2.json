@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 37,
+  "bottomRow": 50,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY",
@@ -41,7 +41,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "ZAMKNIJ",
-  "topRow": 33,
+  "topRow": 46,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "65130v6fqf",
