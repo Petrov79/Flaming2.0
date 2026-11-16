@@ -42,7 +42,7 @@
   "labelAlignment": "left",
   "labelPosition": "Left",
   "labelStyle": "BOLD",
-  "labelText": "ID uchwały",
+  "labelText": "Działanie",
   "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
   "labelTextSize": "0.875rem",
   "labelWidth": "3",
@@ -61,15 +61,15 @@
   "parentColumnSpace": 20.25,
   "parentId": "dd79vid6hp",
   "parentRowSpace": 10,
-  "placeholderText": "Wybierz ID",
+  "placeholderText": "Wybierz działanie",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 14,
   "serverSideFiltering": false,
-  "sourceData": "{{ getUchwaly.data.map(item => ({\n  label: String(item.id),\n  value: item.id\n})) }}",
+  "sourceData": "\n{{\n  (getDzialania.data || []).map(row => ({\n    label: row.dzialanie,\n    value: row.dzialanie\n  }))\n}}\n",
   "topRow": 4,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "9p0ov79izv",
-  "widgetName": "SelectId"
+  "widgetName": "SelectDzialanie"
 }
