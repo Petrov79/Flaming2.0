@@ -1,12 +1,20 @@
 UPDATE eksperci
 SET
-  email = '{{ inputMail1.text.replaceAll("'", "''") }}',
-  email2 = '{{ inputMail2.text.replaceAll("'", "''") }}',
-  telefon1 = '{{ inputTelefon1.text.replaceAll("'", "''") }}',
-  telefon2 = '{{ inputTelefon2.text.replaceAll("'", "''") }}',
-  umowa = '{{ dropdownUmowa.selectedOptionLabel }}',
-  nr_umowy = '{{ inputNumerUmowy.text.replaceAll("'", "''") }}',
-  data_umowy = {{ datepickerUmowa.selectedDate ? "'" + moment(datepickerUmowa.selectedDate).format("YYYY-MM-DD") + "'" : "NULL" }},
-  uwagi = '{{ inputUwagi.text.replaceAll("'", "''") }}'
+    email = {{ inputMail1.text || "" }},
+    email2 = {{ inputMail2.text || "" }},
+    telefon1 = {{ inputTelefon1.text || "" }},
+    telefon2 = {{ inputTelefon2.text || "" }},
+    umowa = {{ dropdownUmowa.selectedOptionLabel || "" }},
+    nr_umowy = {{ inputNumerUmowy.text || "" }},
+
+    data_umowy = NULLIF(
+        {{ datepickerUmowa.selectedDate
+            ? moment(datepickerUmowa.selectedDate).format("YYYY-MM-DD")
+            : "" }},
+        ''
+    )::date,
+
+    uwagi = {{ inputUwagi.text || "" }}
+
 WHERE id = {{ eksperciTable.selectedRow.ekspert_id }}
 RETURNING *;
