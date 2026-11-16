@@ -69,6 +69,7 @@
       "key": "primaryColumns.obszar_id.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

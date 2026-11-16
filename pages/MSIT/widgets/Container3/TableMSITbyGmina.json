@@ -79,6 +79,7 @@
       "key": "primaryColumns.id_msit.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

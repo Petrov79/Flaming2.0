@@ -424,6 +424,7 @@
       "key": "primaryColumns.ID.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
