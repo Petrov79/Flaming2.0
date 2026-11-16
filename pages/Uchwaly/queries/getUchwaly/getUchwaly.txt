@@ -7,11 +7,6 @@ LEFT JOIN nabory n
     ON u.nabory_id = n.id
 WHERE
 (
-    {{ !SelectId.selectedOptionValue }}
-    OR u.id = {{ Number(SelectId.selectedOptionValue || 0) }}
-)
-AND
-(
     {{ !SelectNabor.selectedOptionValue }}
     OR u.nabory_id = {{ Number(SelectNabor.selectedOptionValue || 0) }}
 )
@@ -26,11 +21,22 @@ AND
     OR u.nr_uchwaly = {{ SelectNr.selectedOptionValue || "" }}
 )
 AND
-    u.data_zatwierdzenia >=
-    {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+(
+    {{ !SelectDzialanie.selectedOptionValue }}
+    OR n.nr_naboru LIKE
+        {{ "FEMA." + (SelectDzialanie.selectedOptionValue || "") + "-%" }}
+)
 AND
-    u.data_zatwierdzenia <=
-    {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+(
+    {{ !DatePickerOd.selectedDate }}
+    OR u.data_zatwierdzenia >=
+        {{ DatePickerOd.selectedDate?.slice(0, 10) || "0001-01-01" }}::date
+)
+AND
+(
+    {{ !DatePickerDo.selectedDate }}
+    OR u.data_zatwierdzenia <=
+        {{ DatePickerDo.selectedDate?.slice(0, 10) || "9999-12-31" }}::date
+)
 
 ORDER BY u.data_zatwierdzenia;
-
