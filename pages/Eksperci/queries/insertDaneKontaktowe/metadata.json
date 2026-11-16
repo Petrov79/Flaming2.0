@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE eksperci\nSET\n  email = '{{ inputMail1.text.replaceAll(\"'\", \"''\") }}',\n  email2 = '{{ inputMail2.text.replaceAll(\"'\", \"''\") }}',\n  telefon1 = '{{ inputTelefon1.text.replaceAll(\"'\", \"''\") }}',\n  telefon2 = '{{ inputTelefon2.text.replaceAll(\"'\", \"''\") }}',\n  umowa = '{{ dropdownUmowa.selectedOptionLabel }}',\n  nr_umowy = '{{ inputNumerUmowy.text.replaceAll(\"'\", \"''\") }}',\n  data_umowy = {{ datepickerUmowa.selectedDate ? \"'\" + moment(datepickerUmowa.selectedDate).format(\"YYYY-MM-DD\") + \"'\" : \"NULL\" }},\n  uwagi = '{{ inputUwagi.text.replaceAll(\"'\", \"''\") }}'\nWHERE id = {{ eksperciTable.selectedRow.ekspert_id }}\nRETURNING *;",
+      "body": "UPDATE eksperci\nSET\n    email = {{ inputMail1.text || \"\" }},\n    email2 = {{ inputMail2.text || \"\" }},\n    telefon1 = {{ inputTelefon1.text || \"\" }},\n    telefon2 = {{ inputTelefon2.text || \"\" }},\n    umowa = {{ dropdownUmowa.selectedOptionLabel || \"\" }},\n    nr_umowy = {{ inputNumerUmowy.text || \"\" }},\n\n    data_umowy = NULLIF(\n        {{ datepickerUmowa.selectedDate\n            ? moment(datepickerUmowa.selectedDate).format(\"YYYY-MM-DD\")\n            : \"\" }},\n        ''\n    )::date,\n\n    uwagi = {{ inputUwagi.text || \"\" }}\n\nWHERE id = {{ eksperciTable.selectedRow.ekspert_id }}\nRETURNING *;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

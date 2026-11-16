@@ -69,6 +69,7 @@
       "key": "primaryColumns.data_kursu_txt.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

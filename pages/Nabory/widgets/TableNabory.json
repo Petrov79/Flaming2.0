@@ -172,6 +172,7 @@
       "key": "primaryColumns.status.cellBackground"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

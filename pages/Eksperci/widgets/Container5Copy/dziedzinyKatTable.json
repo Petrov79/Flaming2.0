@@ -93,6 +93,7 @@
       "key": "primaryColumns.dopasowanie.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

@@ -104,6 +104,7 @@
       "key": "primaryColumns.pracownik.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

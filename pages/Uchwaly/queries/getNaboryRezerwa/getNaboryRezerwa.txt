@@ -31,11 +31,11 @@ SELECT
     nabor_id,
     nr_naboru,
     proj_rmr_rez,
-    kwota_rmr_rez,
+    kwota_rmr_rez::double precision AS kwota_rmr_rez,
     proj_rws_rez,
-    kwota_rws_rez,
+    kwota_rws_rez::double precision AS kwota_rws_rez,
     proj_z_bp_rez,
-    kwota_bp_rez,
+    kwota_bp_rez::double precision AS kwota_bp_rez,
     liczba_projektow_rezerwowych
 FROM (
     SELECT
@@ -53,8 +53,8 @@ FROM (
         SUM(kwota_rmr_rez),
         SUM(proj_rws_rez),
         SUM(kwota_rws_rez),
-				SUM(proj_z_bp_rez),
-				SUM(kwota_bp_rez),
+        SUM(proj_z_bp_rez),
+        SUM(kwota_bp_rez),
         SUM(liczba_projektow_rezerwowych)
     FROM wynik
 ) raport
