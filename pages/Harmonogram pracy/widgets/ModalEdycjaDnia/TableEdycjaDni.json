@@ -412,6 +412,7 @@
       "key": "headerTextColor"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

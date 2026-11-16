@@ -150,6 +150,7 @@
       "key": "primaryColumns.uwagi.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

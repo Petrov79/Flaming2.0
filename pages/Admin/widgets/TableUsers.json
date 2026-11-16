@@ -183,6 +183,7 @@
       "key": "primaryColumns.customColumn5.cellBackground"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"

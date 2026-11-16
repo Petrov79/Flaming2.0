@@ -92,6 +92,7 @@
       "key": "primaryColumns.lp.computedValue"
     }
   ],
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
