@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6afae024e1c7381336697277_2a24440f-f8af-40a1-9f8b-9299f32925e9",
+  "id": "Potwierdzenia_ImportPotwierdzenia",
+  "unpublishedCollection": {
+    "name": "ImportPotwierdzenia",
+    "pageId": "Potwierdzenia",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

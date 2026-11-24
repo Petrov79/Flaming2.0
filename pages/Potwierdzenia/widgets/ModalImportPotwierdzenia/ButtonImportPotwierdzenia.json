@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 59,
+  "boxShadow": "none",
+  "buttonColor": "#fde047",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  !FilePickerImport.files.length ||\n  !appsmith.store.importPotwierdzenia?.length ||\n  [...(appsmith.store.importPotwierdzenia || [])].some(\n    row => row.status !== \"OK\"\n  ) ||\n  getImportId.isLoading ||\n  insertImportPotwierdzenia.isLoading\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "xtxg180iiv",
+  "leftColumn": 14,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  insertImportPotwierdzenia.run()\n    .then(async wynik => {\n      if (!wynik.length) {\n        showAlert(\n          \"Nie zapisano danych. Sprawdź ważność sesji.\",\n          \"error\"\n        );\n        return;\n      }\n\n      showAlert(\n        \"Zaimportowano \" + wynik.length + \" rekordów.\",\n        \"success\"\n      );\n\n      await removeValue(\"importPotwierdzenia\");\n      await resetWidget(\"FilePickerImport\", true);\n      closeModal(\"ModalImportPotwierdzenia\");\n\n      try {\n        await getPotwierdzenia.run();\n      } catch (error) {\n        showAlert(\n          \"Import zakończony, ale nie udało się odświeżyć tabeli.\",\n          \"warning\"\n        );\n      }\n    })\n    .catch(error => {\n      showAlert(\n        \"Błąd importu: \" + error.message,\n        \"error\"\n      );\n    })\n}}\n\n",
+  "originalBottomRow": 59,
+  "originalTopRow": 55,
+  "parentId": "u5367semld",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 24,
+  "text": "IMPORTUJ",
+  "topRow": 55,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "wb9xiry2ys",
+  "widgetName": "ButtonImportPotwierdzenia"
+}
