@@ -1,0 +1,23 @@
+SELECT
+    'ekspert' AS typ,
+    id,
+    nazwisko AS nazwa
+FROM eksperci
+
+UNION ALL
+
+SELECT
+    'nabor' AS typ,
+    id,
+    nr_naboru AS nazwa
+FROM nabory
+
+UNION ALL
+
+SELECT
+    'opiekun' AS typ,
+    id,
+    imie AS nazwa
+FROM pracownicy
+
+ORDER BY typ, nazwa;
